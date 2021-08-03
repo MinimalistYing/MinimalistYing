@@ -56,10 +56,12 @@ import Unicode from '@blog/Unicode.md'
 import NpmLinkError from '@blog/NpmLinkError.md'
 import InfluencePeople from '@blog/InfluencePeople.md'
 import ImportCaseSensitiveError from '@blog/ImportCaseSensitiveError.md'
+import AudioElementError from '@blog/AudioElementError.md'
 
 import cat from './category'
 
 const blogs = {
+	AudioElementError,
 	ImportCaseSensitiveError,
 	InfluencePeople,
 	NpmLinkError,

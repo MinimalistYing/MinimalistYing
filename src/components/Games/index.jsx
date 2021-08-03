@@ -49,6 +49,27 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '阿尼玛回忆之门-无名之史 Anima Gate of Memories - The Nameless Chronicles',
+  url: 'https://pic.imgdb.cn/item/60eaed6e5132923bf84aa6e7.jpg',
+}, {
+  title: '蜜蜂酿蜜之所 Where the Bees Make Honey',
+  url: 'https://pic.imgdb.cn/item/60e323d75132923bf8621980.jpg',
+}, {
+  title: '刺客信条3：解放 Assassins Creed III',
+  url: 'https://pic.imgdb.cn/item/60e1c85e5132923bf8b61524.jpg',
+}, {
+  title: '部落与弯刀',
+  url: 'https://pic.imgdb.cn/item/60e0519d5132923bf82b58a0.jpg',
+}, {
+  title: '忍者之印 Mark of The Ninja',
+  url: 'https://pic.imgdb.cn/item/60e0519a5132923bf82b4829.jpg',
+}, {
+  title: '斩服少女：异布 Kill la Kill the Game：IF',
+  url: 'https://pic.imgdb.cn/item/60cf54fb844ef46bb28139b4.jpg',
+}, {
+  title: '刺客信条3 Assassin’s Creed III',
+  url: 'https://pic.imgdb.cn/item/60cf54f7844ef46bb2810764.jpg',
+}, {
   title: '刺客信条 启示录 Assassin’s Creed Revelations',
   url: 'https://ftp.bmp.ovh/imgs/2021/06/e6f751864afb7ae8.webp',
 }, {

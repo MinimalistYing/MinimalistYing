@@ -14,7 +14,6 @@ export default function Tools () {
         <a target='_blank' href='http://youmightnotneedjquery.com/'>You Don't Need Jquery</a>
         <a target='_blank' href='https://colorhunt.co/'>Color Palettes for Designers and Artists</a>
         <a target='_blank' href='https://www.json.cn/'>JSON 在线解析</a>
-        <a target='_blank' href='https://unbug.github.io/codelf/'>Find Real-World Usage Variable Names</a>
         <a target='_blank' href='https://bit.dev/'>Bit.Dev</a>
         <a target='_blank' href='https://whatwg.org/'>WHATWG - HTML / Fetch / DOM / ... 协议 </a>
         <a target='_blank' href='http://es5.github.io/#x10.5'>ES5 协议 </a>
@@ -51,6 +50,7 @@ export default function Tools () {
           <a target='_blank' href='https://medium.com/dailyjs'>JavaScript Daily</a>
           <a target='_blank' href='https://javascriptweekly.com/'>JavaScript Weekly</a>
           <a target='_blank' href='https://bigfrontend.dev/'>BFE.dev</a>
+          <a target='_blank' href='https://web.dev/learn/css/'>Learn CSS</a>
         </div>
       </div>
       
@@ -88,6 +88,7 @@ export default function Tools () {
         <a target='_blank' href='https://hacks.mozilla.org/'>Mozilla Hacks</a>
         <a target='_blank' href='https://isux.tencent.com/'>ISUX</a>
         <a target='_blank' href='https://www.alloyteam.com/'>AlloyTeam</a>
+        <a target='_blank' href='https://www.ruanyifeng.com/blog/'>阮一峰</a>
       </div>
     </div>
 

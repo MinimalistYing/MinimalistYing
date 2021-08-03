@@ -558,9 +558,9 @@ function createStore(reducer, initState) {
     state = reducer(state, action)
 
     for (let i = 0; i < listeners.length; i++) {
-			const listener = listeners[i]
-			listener()
-		}
+		const listener = listeners[i]
+		listener()
+	}
   }
 
   dispatch({ type: "INIT" })

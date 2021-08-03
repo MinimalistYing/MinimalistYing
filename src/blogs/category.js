@@ -1,5 +1,11 @@
 module.exports = [
 	{
+		key: "AudioElementError",
+		img: "https://pic.imgdb.cn/item/6109164f5132923bf81c65e0.jpg",
+		date: '2021-08-03',
+		tags: ['错误', '经验', '浏览器', 'React'],
+	},
+	{
 			key: "ImportCaseSensitiveError",
 			img: "https://p5.toutiaoimg.com/origin/pgc-image/6a02549d66624edd803441803ed52daa",
 			date: '2021-06-01',

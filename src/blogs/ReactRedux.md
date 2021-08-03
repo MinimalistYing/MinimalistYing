@@ -6,52 +6,6 @@ Redux 作为一个简单的用于管理应用状态的工具，可以与任何�
 React-Redux 利用高阶组件(HOC) / Context  
 将 React UI 的更新与 Redux Store 的变化绑定在了一起
 
-## How to use
-首先，用 `<Provider>` 包裹根组件
-```js
-// 新建Redux的Store
-const store = createStore(reducers)
-
-ReactDOM.render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById('root')
-)
-```
-然后通过
-```js
-connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options])(Comp)
-```
-这样就能得到注入 Redux 后的新组件  
-如果不传入`mapStateToProps`，则不会在该组件中去监听`store`的变化  
-如果不传入`mapDispatchToProps`，则默认只将`dipatch`注入组件  
-```js
-export default connect()(Comp)
-```
-将`dispatch`注入组件  
-这样在组件中就可以通过`this.props.dispatch(action)`来修改Redux的`store`  
-但不会去监听`store`的变化
-```js
-const mapStateToProps = (state, ownProps) => {
-	return { all: state.total + ownProps.total }
-}
-export default connect(mapStateToProps)(Comp)
-```
-注入`all`以及`dispatch`，并且监听`store`的变化  
-当`store`中的`total`或者组件自身的`total`发生变化时都会重绘组件
-```js
-const mapDispatchToProps = dispatch => {
-	return {
-		addTodo: todo => dispatch(todoActionCreator(todo))
-		// 可以在此处借助bindActionCreators
-		// addTodo: bindActionCreators(todoActionCreator, dispatch)
-	}
-}
-export default connect(null, mapDispatchToProps)(Comp)
-```
-不监听 `store` 在组件中可以通过调用`this.props.addTodo('xx')`来改变应用状态
-
 ## 源码中学习到的小技巧
 React-Redux 默认通过以下方法来比较组件的Props是否相等  
 如果不等则意味着组件需要进行重绘
