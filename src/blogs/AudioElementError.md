@@ -3,11 +3,9 @@
 ## 起因
 正在做的 IM 项目，通过如下组件（简化版）来展示语音消息：
 ```jsx
-const Audio = ({ url }) => {
-  return (
-    <audio controls src={url} />
-  );
-};
+const Audio = ({ url }) => (
+  <audio controls src={url} />
+)
 ```
 然后聊天窗口切着切着就发现音频文件无法正常加载了，并且控制台出现如下报错：
 ```
@@ -19,28 +17,26 @@ const Audio = ({ url }) => {
 
 ![公告](https://pic.imgdb.cn/item/610911f85132923bf812cfff.jpg)
 
-但是实际上同时页面上并没有渲染这么多 `<audio />` 标签，所以考虑是否是资源没有及时释放导致的问题。
+但是实际页面上并没有同时渲染这么多标签，所以考虑是否是由于资源没有及时释放导致的问题。
 
 ## 解决方案
 需要在组件销毁时手动释放一下 Audio 占用的资源，这可能是 React 需要修复的问题？
 ```jsx
 const Audio = ({ url }) => {
-  const audioDom = useRef(null);
+  const audioDom = useRef(null)
 
   useEffect(() => {
     return () => {
       if (audioDom.current) {
-        audioDom.current.removeAttribute('src');
-        audioDom.current.srcObject = null;
-        audioDom.current.remove();
+        audioDom.current.removeAttribute('src')
+        audioDom.current.srcObject = null
+        audioDom.current.remove()
       }
-    };
-  }, []);
+    }
+  }, [])
 
-  return (
-    <audio ref={audioDom} controls src={url} />
-  );
-};
+  return <audio ref={audioDom} controls src={url} />
+}
 ```
 
 ### 参考

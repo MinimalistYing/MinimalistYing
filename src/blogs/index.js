@@ -57,10 +57,12 @@ import NpmLinkError from '@blog/NpmLinkError.md'
 import InfluencePeople from '@blog/InfluencePeople.md'
 import ImportCaseSensitiveError from '@blog/ImportCaseSensitiveError.md'
 import AudioElementError from '@blog/AudioElementError.md'
+import HackersAndPainters from '@blog/HackersAndPainters.md'
 
 import cat from './category'
 
 const blogs = {
+	HackersAndPainters,
 	AudioElementError,
 	ImportCaseSensitiveError,
 	InfluencePeople,

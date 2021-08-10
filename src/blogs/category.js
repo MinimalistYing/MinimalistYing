@@ -1,5 +1,11 @@
 module.exports = [
 	{
+		key: "HackersAndPainters",
+		img: "https://pic.imgdb.cn/item/610b9ea05132923bf8372a25.jpg",
+		date: '2021-08-10',
+		tags: ['阅读', '人文'],
+	},
+	{
 		key: "AudioElementError",
 		img: "https://pic.imgdb.cn/item/6109164f5132923bf81c65e0.jpg",
 		date: '2021-08-03',
