@@ -49,6 +49,21 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '荣耀战魂 For Honor',
+  url: 'https://pic.imgdb.cn/item/6126592244eaada739c4fd47.jpg',
+}, {
+  title: '神佑释放 Bless Unleashed',
+  url: 'https://pic.imgdb.cn/item/611759125132923bf829a401.jpg',
+}, {
+  title: '热血少女物语 River City Girls',
+  url: 'https://pic.imgdb.cn/item/6117590d5132923bf8298ccc.jpg',
+}, {
+  title: '漫威复仇者 Marvel’s Avengers',
+  url: 'https://pic.imgdb.cn/item/611759065132923bf829687e.jpg',
+}, {
+  title: '幽林怪谈 Bladed Fury',
+  url: 'https://pic.imgdb.cn/item/611759015132923bf8294fca.jpg',
+}, {
   title: '阿尼玛回忆之门-无名之史 Anima Gate of Memories - The Nameless Chronicles',
   url: 'https://pic.imgdb.cn/item/60eaed6e5132923bf84aa6e7.jpg',
 }, {

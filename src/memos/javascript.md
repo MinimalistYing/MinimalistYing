@@ -16,16 +16,6 @@ String.replace(reg, replacement)
 
 ---
 
-利用原生的JS即可输出格式化后的JSON字符串
-```js
-JSON.stringify(value[, replacer[, space]])
-// space即是缩进数，默认无缩进，最大为10
-// replacer可以是一个过滤函数，用来筛选或替换最后的输出结果
-```
-具体参数意义以及接口可见[这篇文档](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-
----
-
 Javascript中的Array其实是一种类数组的对象，效率比真正的数组要低，所以会有如下一些奇怪的行为
 ```js
 var arr = [1,2,3]
@@ -427,7 +417,7 @@ const arr = [1,2,3,4,5,6,7,8,9,10]
 // Calling comparefn(a,b) always returns the same value v when given a specific pair of values a and b as its two arguments.
 arr.sort(() => Math.random() - 0.5)
 
-// 进阶班 保证对于相同的a,b arr.sort()比较产生的结果相同
+// 进阶版 保证对于相同的a,b arr.sort()比较产生的结果相同
 const random = arr.map(Math.random);
 arr.sort((a, b) => random[a] - random[b]);
 

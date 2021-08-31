@@ -1,5 +1,17 @@
 module.exports = [
 	{
+		key: "ModuleSystem",
+		img: "https://pic.imgdb.cn/item/6112413b5132923bf85e9d2f.jpg",
+		date: '2021-08-xx',
+		tags: ['技术', 'Javascript', '模块化'],
+	},
+	{
+		key: "PuppeteerError",
+		img: "https://pic.imgdb.cn/item/612dd0cd44eaada739266829.jpg",
+		date: '2021-08-31',
+		tags: ['技术', '错误', '经验', 'Puppeteer'],
+	},
+	{
 		key: "HackersAndPainters",
 		img: "https://pic.imgdb.cn/item/610b9ea05132923bf8372a25.jpg",
 		date: '2021-08-10',

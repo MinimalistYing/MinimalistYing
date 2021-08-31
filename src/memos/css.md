@@ -70,10 +70,6 @@ a {
 
 ---
 
-一种提高使用transform以及opacity来做过度效果性能的思路[FLIP](https://aerotwist.com/blog/flip-your-animations/)
-
----
-
 关于实现背景透明但文字不透明的效果，首先考虑的是使用 `opacity` 但其子元素都会继承这个属性，
 且无法单独为其子元素设置一个值，所以不可行。如果只是背景色透明的话，
 使用 `rgba()` 来设置透明 `background-color` 是一种不错的方法，兼容至IE9。

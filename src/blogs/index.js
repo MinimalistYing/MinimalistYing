@@ -58,10 +58,14 @@ import InfluencePeople from '@blog/InfluencePeople.md'
 import ImportCaseSensitiveError from '@blog/ImportCaseSensitiveError.md'
 import AudioElementError from '@blog/AudioElementError.md'
 import HackersAndPainters from '@blog/HackersAndPainters.md'
+import ModuleSystem from '@blog/ModuleSystem.md';
+import PuppeteerError from '@blog/PuppeteerError.md';
 
 import cat from './category'
 
 const blogs = {
+	PuppeteerError,
+	ModuleSystem,
 	HackersAndPainters,
 	AudioElementError,
 	ImportCaseSensitiveError,
