@@ -29,7 +29,7 @@ class Main extends Component {
                   className={this.props.history.location.pathname.endsWith(`${item.key}.html`) ? 'selected' : ''}
                 >
                   <figure>
-                    <LazyLoad style={{ height: 'calc(100% - 110px)' }} once>
+                    <LazyLoad style={{ height: 'calc(100% - 100px)' }} once>
                       <img src={item.img} alt="图" loading="lazy" />
                     </LazyLoad>
                     <figcaption>

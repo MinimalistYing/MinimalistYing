@@ -40,7 +40,7 @@ require(['myModule'], function (myModule) {
 
 
 ## UMD
-为了使定义的模块可以被多种模块系统使用的兼容模式。（Ps: 主要是指 AMD 以及 CJS）
+为了使定义的模块可以被多种模块系统使用的兼容模式，另外这种形式打包支持直接通过 `<script>` 标签全局引入。（Ps: 主要是指 AMD 以及 CJS）
 ```js
 /**
  * exports object based version, if you need to make a
