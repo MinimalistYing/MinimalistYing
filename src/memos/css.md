@@ -59,17 +59,6 @@ html {
 
 ---
 
-可以通过给锚点设置一个向上的负偏移量来实现调至锚点位置时不会将锚点至于页面最顶部(避免被顶部所固定的Header遮挡)，
-类似: 
-```css
-a {
-	position: relative;
-	top: -66px;
-}
-```
-
----
-
 关于实现背景透明但文字不透明的效果，首先考虑的是使用 `opacity` 但其子元素都会继承这个属性，
 且无法单独为其子元素设置一个值，所以不可行。如果只是背景色透明的话，
 使用 `rgba()` 来设置透明 `background-color` 是一种不错的方法，兼容至IE9。
@@ -124,41 +113,6 @@ CSS 中如下几个伪类选择器中 n 的值不止支持数字类型还支持�
 
 ---
 
-假设有如下俩个锚
-```html
-<a>不带 href</a>
-<a href="www.xxx.com">带有 href</a>
-```
-设置如下样式
-```css
-a:link {
-	color: red;
-}
-```
-只有第二个真正代表链接第锚标签会变为红色  
-如果通过
-```css
-a {
-	color: red;
-}
-```
-来设置未访问链接的字体颜色会发现页面上所有的 `<a>` 都字体都变成了红色
-
----
-
-Css 伪类也可以结合起来使用，例如
-```css
-a:link:hover {
-	color: red;
-}
-a:visited:hover {
-	color: green;
-}
-```
-可以使得鼠标悬浮未访问过的链接时字体为红色，悬浮访问过的链接字体为绿色
-
----
-
 为什么说使用无单位的数字来设置 `line-height` 最好  
 ```html
 <div style="font-size: 12px; line-height: 1.5em; width: 60px;">
@@ -182,10 +136,6 @@ Ps: `line-height` 的值最好不要设置小于 1.5 ，这样才能保持文本
 
 关于清除浮动的各种方法以及其适用场景  
 [what-methods-of-clearfix-can-i-use](https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use)
-
----
-
-可以借助 `position: sticky` 来快速实现元素滚动吸顶功能
 
 ---
 

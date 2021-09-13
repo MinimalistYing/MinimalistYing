@@ -49,27 +49,6 @@ React.creatElement('button', null)
 
 ---
 
-在 React `children` 属性有着特殊的含义，所以如下代码
-
-```js
-function MyComponent (props) {
-	return (
-		<p>{props.children}</p>
-	)
-}
-
-<MyComponent children='舒客舒克'>
-	<button>按钮</button>
-</MyComponent>
-```
-最终显示出来的是按钮而不是舒客舒克，但是如果是按照如下方式调用则会显示舒客舒克
-```js
-<MyComponent children='舒客舒克' />
-```
-由此可见在 React 中 `props.children` 会优先被传入的子元素覆盖
-
----
-
 利用 *React Hooks* 模拟 Vue 的计算属性
 
 ```js

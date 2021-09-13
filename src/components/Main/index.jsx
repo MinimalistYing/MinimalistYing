@@ -18,7 +18,6 @@ class Main extends Component {
   render () {
     return (
       <main className='home'>
-        <h1>Blogs</h1>
         <ul className='blogs-category'>
           {
             this.state.categories.map((item, index) => (

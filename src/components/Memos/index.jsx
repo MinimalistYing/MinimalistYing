@@ -10,8 +10,7 @@ const {
 	jquery,
 	js,
 	other,
-	react,
-	vue
+	react
 } = memos
 const all = [
 	...compability.split('---'),
@@ -20,8 +19,7 @@ const all = [
 	...jquery.split('---'),
 	...js.split('---'),
 	...other.split('---'),
-	...react.split('---'),
-	...vue.split('---')
+	...react.split('---')
 ]
 
 // 按照字数从多到少排列

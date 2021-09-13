@@ -16,49 +16,6 @@ String.replace(reg, replacement)
 
 ---
 
-Javascript中的Array其实是一种类数组的对象，效率比真正的数组要低，所以会有如下一些奇怪的行为
-```js
-var arr = [1,2,3]
-// arr[0] => 1
-// arr['0'] => 1
-arr.name = 'Hello'
-// arr.name => 'Hello'
-arr[10] = 10
-// arr[6] => undefined
-arr.length = 1
-// arr => [1]
-```
-
----
-
-关于
-```js
-String.prototype.split([separator[, limit]])
-// 'abc'.split() => ['abc']
-// 'abc'.split('') => ['a','b','c']
-// 'a,b'.split(/(,)/) => ['a', ',', 'b']
-'abc'.split('').reverse().join('') // 字符串倒序
-```
-
----
-
-使用Javascript时如果选择在行尾不加上 `;` 是比较危险的行为，例如
-```js
-var arr = [1,2,3]
-var b = arr
-[2].toString()
-console.info(b)
-```
-的结果可能会出人意料，自动加分号的结果是
-```js
-var arr = [1,2,3];
-var b = arr[2].toString();
-console.info(b);
-```
-在第二行以 `( [ + -` 开头时都需要注意避免以上情况
-
----
-
 Javascript中的整数在超过9007199254740992也就是 `Math.pow(2, 53)` 时精度无法精确至个位  
 会出现 `Math.pow(2, 53) + 1 === Math.pow(2, 53)` 的情况  
 关于其它数字过大时存在的问题可见[这篇Blog](http://www.plqblog.com/views/article.php?id=29)
@@ -113,12 +70,6 @@ console.log(str2.foo) // undefined
 
 ---
 
-在使用ES6的Default Parameter时需要注意  
-调用函数时如果希望传入空参数应该传 `undefined` 而不是 `null`  
-例如 `foo(undefined, 66)`
-
----
-
 在使用ES6的Concise Methods时要注意
 ```js
 const o = {
@@ -157,14 +108,6 @@ const o2 = {
 Object.setPrototypeOf(o2, o1)
 o2.foo() // 1 2
 ```
-
----
-
-关于ES6 Module
-* 基于文件，每个文件为一个Module，不可能一个文件中包含多个Module
-* 静态，不能动态的去修改一个Module对外export的API
-* 单例，所有的import都是指向同一实例
-* import和export只能出现在一个Module的最顶层，也就是说不能出现在任何块中或函数中
 
 ---
 
@@ -315,14 +258,6 @@ let arr = [1, 2, 3]
 // 不然有可能会碰到被上一行接着执行的问题
 ;[arr[2], arr[1]] = [arr[1], arr[2]]
 console.log(arr) // [1, 3, 2]
-```
-
----
-
-利用Function.prototype更快捷的创建一个空函数
-
-```js
-var cb = Function.prototype; // 相当于 var cb = function(){}
 ```
 
 ---
@@ -529,20 +464,6 @@ function Foo() {
 	}	
 }
 ```
-
----
-
-```js
-// 因为都是构造函数？
-typepf Object // => function
-typeof Array // => function
-typeof Symbol // => function
-```
-
----
-
-使用 Fetch API 可以通过 `res.ok === true` 来判断请求是否成功  
-相当于 `res.status >= 200 && res.status < 300`
 
 ---
 
