@@ -60,10 +60,12 @@ import AudioElementError from '@blog/AudioElementError.md'
 import HackersAndPainters from '@blog/HackersAndPainters.md'
 import ModuleSystem from '@blog/ModuleSystem.md';
 import PuppeteerError from '@blog/PuppeteerError.md';
+import BoxSizing from '@blog/BoxSizing.md'
 
 import cat from './category'
 
 const blogs = {
+	BoxSizing,
 	PuppeteerError,
 	ModuleSystem,
 	HackersAndPainters,

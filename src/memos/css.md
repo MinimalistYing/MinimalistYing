@@ -46,29 +46,9 @@ display : inline-block
 
 ---
 
-一种将全部元素reset为 `box-sizing: border-box` 的方法
-```css
-html {
-	box-sizing: border-box;
-}
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-```
-可能会有更好的方法？详情可见[这篇文章](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)
-
----
-
 关于实现背景透明但文字不透明的效果，首先考虑的是使用 `opacity` 但其子元素都会继承这个属性，
 且无法单独为其子元素设置一个值，所以不可行。如果只是背景色透明的话，
 使用 `rgba()` 来设置透明 `background-color` 是一种不错的方法，兼容至IE9。
-
----
-
-关于 `box-sizing: content-box` 以及 `box-sizing: border-box`  
-前者其实是W3C提出，后者是早期IE6、7quirk mode下的盒模型实现。但后来人们发现其实后者更符合人的逻辑，所以加了这个属性。  
-对于 `content-box` 盒子宽度等于 `width` + `padding` + `border`   
-对于 `border-box` 盒子宽度就等于所设的 `width`  减去 `padding` 以及 `border` 才是真正展示内容的宽度
 
 ---
 

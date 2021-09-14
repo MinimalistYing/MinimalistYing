@@ -22,17 +22,3 @@ $() // 1.4以后返回空的jQuery对象
 $('<div></div>') // 将Html字符串包装成jQuery对象
 $('<div>', {'class': 'a'}) // 生成一个标签并包装成jQuery对象
 ```
-
----
-
-关于 `$.trim()` IE9+应该已经实现了原生的 `String.prototype.trim()` 
-低版本浏览器可以使用jQuery的方式来实现Polyfill
-```js
-function( text ) {
-	return text == null ?
-		''
-		:
-		( text + '' ).replace( /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '' )
-}
-```
-其正则中的 `\xA0` 代表全角空格 `\uFEFF` 代表BOM头

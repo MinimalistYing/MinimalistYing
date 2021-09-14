@@ -1,5 +1,11 @@
 module.exports = [
 	{
+		key: "BoxSizing",
+		img: "https://pic.imgdb.cn/item/61403bb044eaada739d2ce0d.jpg",
+		date: '2021-09-14',
+		tags: ['技术', 'CSS', '盒模型'],
+	},
+	{
 		key: "ModuleSystem",
 		img: "https://pic.imgdb.cn/item/6112413b5132923bf85e9d2f.jpg",
 		date: '2021-09-03',
