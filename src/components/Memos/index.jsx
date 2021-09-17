@@ -16,7 +16,6 @@ const all = [
 	...compability.split('---'),
 	...css.split('---'),
 	...http.split('---'),
-	...jquery.split('---'),
 	...js.split('---'),
 	...other.split('---'),
 	...react.split('---')

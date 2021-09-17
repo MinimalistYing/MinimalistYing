@@ -13,20 +13,6 @@ overflow: hidden;
 
 ---
 
-想实现鼠标悬浮在一个父元素上能触发其子元素在 `:hover` 下的样式，
-之前的思路是通过借助jQuery `$(parent).hover(() => $(son).hover())`来实现，
-今天突然发现原来的方法太复杂，其实只需要几行CSS即可实现想要的效果，类似 
-```css
-.parent:hover .son {
-	// 这里是鼠标悬浮在父元素上时子元素的样式
-}
-```
-先前的思路在使用原生的Javascript时更难实现，因为原生的规范中并没有hover事件，
-与之相关的是鼠标的 `mouseenter/mouseleave/mousemove` 事件，
-而即使是在代码中触发了这些事件也是无法触发CSS的 `:hover` 状态的
-
----
-
 当一个
 ```css
 display: inline-block
@@ -109,10 +95,6 @@ CSS 中如下几个伪类选择器中 n 的值不止支持数字类型还支持�
 Ps: `line-height` 的值最好不要设置小于 1.5 ，这样才能保持文本良好的可读性
 
 ---
-
-`z-index` 属性只有设置在定位元素也就是 `position` 不是 `static` 的元素上才会生效
-
---- 
 
 关于清除浮动的各种方法以及其适用场景  
 [what-methods-of-clearfix-can-i-use](https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use)

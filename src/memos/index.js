@@ -1,7 +1,6 @@
 export { default as compability } from './compability.md'
 export { default as css } from './css.md'
 export { default as http } from './http.md'
-export { default as jquery } from './jquery.md'
 export { default as js } from './javascript.md'
 export { default as other } from './other.md'
 export { default as react } from './react.md'

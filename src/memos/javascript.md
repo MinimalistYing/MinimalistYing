@@ -123,26 +123,6 @@ console.log(str) // => 'abc'
 
 ---
 
-在WebView中动态设置title
-```js
-setTimeout(() => {
-	// 利用iframe的onload事件刷新页面
-	document.title = 'xxxxxxxx'
-	const iframe = document.createElement('iframe')
-	iframe.style.visibility = 'hidden'
-	iframe.style.width = '1px'
-	iframe.style.height = '1px'
-	iframe.onload = () => {
-		setTimeout(() => {
-			document.body.removeChild(iframe)
-		}, 0)
-	}
-	document.body.appendChild(iframe)
-}, 0)
-```
-
----
-
 关于`Object.keys()`以及`Object.getOwnPropertyNames()`的区别  
 相同的是俩者都不会列出从原型上继承的属性key值  
 区别在于前者只会列出所有可枚举属性的key值，而后者会列出所有属性的key值，包括不可枚举的  
@@ -241,23 +221,6 @@ let a = {a : 1}
 let test4 = [a , a,  {a:1}]
 unique(test4)
 uniqueBySet(test4)
-```
-
----
-
-利用解构实现交换俩个变量的值，优点是无需中间变量
-```js
-let x = 1, y = 2
-;[ y, x ] = [ x, y ];
-console.log(x, y) // 2 1
-```
-交换数组中不同下标的俩个值
-```js
-let arr = [1, 2, 3]
-// 使用这种方法时最好在前面加上分号 如果你的代码风格是末尾不加分号的话
-// 不然有可能会碰到被上一行接着执行的问题
-;[arr[2], arr[1]] = [arr[1], arr[2]]
-console.log(arr) // [1, 3, 2]
 ```
 
 ---
@@ -526,22 +489,3 @@ document.getElementsByTagName("iframe")[0].contentWindow.postMessage('你好 儿
 window.addEventListener('message', e => console.log(e))
 ```
 有安全方面顾虑的话最好把 * 改为特定的域名
-
----
-
-在试图通过数组的 `forEach` `map` 等方法对数组内部存储对值进行修改时需要注意
-```js
-const a = {val: 1}
-const b = {val: 2}
-const c = {val: 3}
-const arr = [a, b, c]
-arr.forEach(o => o.val = 0)
-console.log(arr) // [{val: 0}, {val: 0}, {val: 0}]
-``` 
-以上这种修改方式是正确的，因为 `o` 是作为一个临时变量指向的是每次循环过程中的对象  
-但是下面这种修改方式就是错误的，因为我们只不过是把临时变量 `num` 重新赋值了一次而已，并不会对数组本来的数据造成影响
-```js
-const arr = [1, 2, 3]
-arr.forEach(num => num = 0)
-console.log(arr) // [0, 0 ,0]
-```

@@ -49,16 +49,19 @@ header {
         list-style: none;
 
         & > li {
-            transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			border-top: 3px solid transparent;
+			border-bottom: 3px solid transparent;
     
             &:hover,&.active {
-                background: @tiffany;
+				border-top: 3px solid @tiffany;
+				border-bottom: 3px solid @tiffany;
 
                 > a.active {
-                    color: #fff;
+                    color: #333;
                 }
                 > a {
-                    color: #fff;
+                    color: #333;
                 }
             }
 
@@ -71,12 +74,12 @@ header {
                 padding: 15px 23px;
         
                 &.active {
-                    color: #212121;
+                    color:#333;
                 }
         
                 &:hover {
                     cursor: pointer;
-                    color: #fff;
+                    color: #333;
                 }
             }
         }

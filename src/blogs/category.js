@@ -1,5 +1,11 @@
 module.exports = [
 	{
+		key: "MobileProblem",
+		img: "https://pic.imgdb.cn/item/61406af244eaada739277ee6.jpg",
+		date: '2021-09-17',
+		tags: ['技术', '移动端', '兼容'],
+	},
+	{
 		key: "BoxSizing",
 		img: "https://pic.imgdb.cn/item/61403bb044eaada739d2ce0d.jpg",
 		date: '2021-09-14',
