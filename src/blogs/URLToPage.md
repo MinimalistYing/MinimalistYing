@@ -7,6 +7,11 @@
 
 ## 浏览器本地缓存
 
+`Cache-Control : no-store` 禁止代理缓存 `Cache-Control : no-cache  Pragma : no-cache// 兼容HTTP/1.0` 
+允许缓存，但必须先与服务器进行新鲜度验证，之后才能将内容返回给客户端
+`Cache-Control : max-age:66,must-revalidate` 允许缓存，
+并且只有在内容过期后才必须进行新鲜度验证（在缓存过期时即使服务器错误也不会将这个陈旧的缓存返回给客户端）
+
 ## DNS
 浏览器缓存->系统缓存(hosts 文件)->路由器缓存->IPS服务器缓存，根域名服务器缓存，顶级域名服务器缓存，主域名服务器缓存
 

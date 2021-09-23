@@ -1,59 +1,6 @@
-实现类似改变一个DOM元素的滚动条位置但不触发绑定在上面的onscroll函数  
-或者改变一个input元素的值不触发绑定在上面的onchange函数的一种思路：在改变值之前先将其绑定的事件函数解绑  
-改变完成后再将原有函数绑定回元素上注意如果值的改变如果是连续的，也就是这个过程会短时间内重复多次执行时  
-需要将解绑和绑定操作放在延时函数中执行，避免反复多次的绑定事件和解绑事件消耗过多资源，导致浏览器卡顿
-
----
-
-Javascript中字符串替换API
-```js
-const replacement = (match, $1, $2, offset, string) =>{}
-// 其中的replacement可以是一个回调函数
-String.replace(reg, replacement)
-```
-通过种方法可以实现将被匹配的文本做特殊的转化后再替换的功能  
-具体参数意义以及接口可见[这篇文档](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
-
----
-
 Javascript中的整数在超过9007199254740992也就是 `Math.pow(2, 53)` 时精度无法精确至个位  
 会出现 `Math.pow(2, 53) + 1 === Math.pow(2, 53)` 的情况  
 关于其它数字过大时存在的问题可见[这篇Blog](http://www.plqblog.com/views/article.php?id=29)
-
----
-
-获取浏览器当前滚动条位置可通过 `window.scrollY(Chrome Safari FF)||window.pageYOffset(IE9+)`   
-横向位置则通过 `window.scrollX||window.pageXOffset`
-
----
-
-在Javascript中 `Object` 是 `truthy value`,所以哪怕是 `new Boolean(false)` 也会在类型转化时被判断为true
-```js
-false && console.log(1) // false
-new Boolean(false) && console.log(1) // 1
-```
-这里的关键其实不在于布尔值的判断，而是通过构造函数和直接使用字面量来初始化基本类型的区别。  
-
-例如比较如下三种生成字符串的方式：
-```js
-const str1 = new String('a')
-const str2 = 'a'
-const str3 = String('a')
-
-// 所以 'a' 和 String('a') 是一样的
-str1 === str2 // false
-str1 === str3 // false
-str2 === str3 // true
-
-// 可以看到这就是最主要的区别，以及后续差异的根本原因
-typeof str1 // object
-typeof str2 // string
-
-str1.foo = 'foo'
-str2.foo = 'foo'
-console.log(str1.foo) // foo
-console.log(str2.foo) // undefined
-```
 
 ---
 
@@ -61,65 +8,6 @@ console.log(str2.foo) // undefined
 区别在于前者默认接受的是一个完整的URL所以不会对所有的字符进行编解码  
 而后者会对所有需要被编解码的字符进行编解码，例如对`http://www.a.com?a=1+1`进行`encodeURI`  
 不会发生任何变化而进行`encodeURIComponent`的结果是`http%3A%2F%2Fwww.a.com%3Fa%3D1%2B1`
-
----
-
-关于 `location.href = 'xx' || location.assign('xx')` 与 `location.replace('xx')` 
-俩者的区别在于采用前者当前的地址会被计入History中而后者不会，所以通过后者跳转到新页面后无法通过后退返回，
-这点在实现某些中间页面跳转页面是会很有用
-
----
-
-在使用ES6的Concise Methods时要注意
-```js
-const o = {
-	f() {
-		// ....
-		f() // Error: f is not a function
-	}
-}
-```
-其实等同于
-```js
-const o = {
-	f: function() {
-		// ...
-		f() // Error: f is not a function
-	}
-}
-```
-所以如果想要在函数`f()`通过`f()`来递归调用函数会导致报错，因为`f()`其实是一个匿名函数
-
----
-
-关于ES6的Object super关键字
-```js
-const o1 = {
-	foo() { console.log(1) }
-}
-const o2 = {
-	foo() {
-		// 只能在Object concise methods 中使用
-		// 且只能以super.XXX这种形式调用
-		super.foo()
-		console.log(2)
-	}
-}
-Object.setPrototypeOf(o2, o1)
-o2.foo() // 1 2
-```
-
----
-
-可以借助`\`来实现跨行书写单行字符串  
-ES6的Template String也支持这种写法
-```js
-const str = 'a\
-b\
-c'
-
-console.log(str) // => 'abc'
-```
 
 ---
 
@@ -152,79 +40,6 @@ decodeURIComponent(escape(window.atob(str)))
 
 ---
 
-在条件语句中申明函数会出现的情况
-
-```js
-// 不建议使用这种形式
-// 估计许多语法校验工具会视这种写法为错误写法
-
-// 按照ES6的  Block-Scoped Function
-// 理论上调用a()和b()时应该报错
-if (true) {
-	function a(){
-		console.log('1')
-	}
-} else {
-	function a(){
-		console.log('2')
-	}
-} 
-a() // 1
-
-if (false) {
-	function b(){
-		console.log('1')
-	}
-} else {
-	function b(){
-		console.log('2')
-	}
-} 
-b() // 2
-```
-
----
-
-一种特殊的数组去重方法，不考虑兼容性的话最好直接使用 `Array.from(new Set(originArr))` 
-
-```js
-// 该方法有个缺陷
-// 不能兼容一些特殊情况 因为JSON.stringify()方法有一些特例
-function unique(arr) {
-	let obj = {}
-  
-  arr.map(item => {
-  	let key = JSON.stringify(item) + typeof item // 避免基本类型 类似 1与'1' stringify后作为key相同
-    
-    obj[key] = item// 利用JS对象的key不能重复的特性
-  })
-  
-  console.log(Object.values(obj))// 打印结果数组
-}
-// 注意以下特例
-unique([undefined,'undefined',null,'null',NaN,'NaN',Infinity,'Infinity',-Infinity,'-Infinity'])
-// 无法进行深度比较 也就无法区分 [1,2,3] 和 [1,2,3] 类似这样的引用类型
-function uniqueBySet(arr) {
-	console.log(Array.from(new Set(arr)))
-}
-
-let test1 = [1,'1',1,true,true,'true']
-unique(test1)
-uniqueBySet(test1)
-let test2 = [[1,2,3], [1,2,3], {a : 1}, {a : '1'}, {b : 1}, {b : 1}]
-unique(test2)
-uniqueBySet(test2)
-let test3 = [undefined, 'undefined', undefined, null, 'null']
-unique(test3)
-uniqueBySet(test3)
-let a = {a : 1}
-let test4 = [a , a,  {a:1}]
-unique(test4)
-uniqueBySet(test4)
-```
-
----
-
 关于函数参数同时采用解构以及默认参数时的细微不同
 
 ```js
@@ -233,54 +48,6 @@ function test( { x = 1 } = {}, { y } = { y: 1 }) {
 }
 test() // 1,1
 test({}, {}) // 1,undefined
-```
-
----
-
-在 ES6 的对象方法中使用 `super` 
-```js
-// 注意只能在采用简写的函数中使用且只能用super,xx()的形式不能用super()的形式
-var parent = {
-	foo() {
-  	console.log('parent')
-  }
-}
-
-var son = {
-	foo() {
-  	super.foo()
-    console.log('son')
-  }
-}
-
-Object.setPrototypeOf(son, parent)
-son.foo() // parent son
-```
-
----
-
-JavaScript 实现大数相加
-```js
-/**
-*	在JS中超出Math.pow(2,53) 也就是 9007199254740992 的整数会失去精度
-* 	包括通过parseInt()无法正确转化 在console中无法直接输出等 只能通过字符串的形式进行操作或传输
-**/
-// 入参 字符串形式的大数a和b
-function sum(a, b) {
-	a = a.split('')
-  b = b.split('')
-  let c = 0
-  let result = ''
-  while (a.length || b.length || c > 0) {
-  	c += ~~a.pop() + ~~b.pop() //各位对应相加 结果可能是0~18
-    result = c%10 + result
-    c = c>9 ? ~~(c/10) : 0 // 处理可能的进位
-  }
-  
-  return result.replace(/^0+/,'') // 处理以0开头的数字
-}
-
-console.log(sum('9007199254740992', '1007199254740992'))
 ```
 
 ---
@@ -413,23 +180,6 @@ function onClick() {
 
 ---
 
-如何判断一个函数是正常被调用还是通过 `new` 当作构造函数调用
-```js
-function Foo() {
-	// 严格模式下 this 为 undefined
-	if (this === window || typeof this === undefined) {
-		console.log('普通调用')
-	}
-	
-	// 构造函数中的 this 指向新创建的实例
-	if (this instanceof Foo) {
-		console.log('构造函数调用')
-	}	
-}
-```
-
----
-
 关于在 Promise 中使用 `return Promise.reject()` 以及 `return new Error()` 的不同
 ```js
 Promise.resolve('a')
@@ -476,16 +226,3 @@ for (let listener of listeners) {
 }
 ```
 理解这个问题关键在于认识到数组在 Javascript 中其实只是一种特殊的对象
-
----
-
-Iframe 内嵌的子页面与父页面间可以通过 postMessage 来相互通信
-```js
-// 子页面发送
-window.parent.postMessage('你好 爸爸', '*')
-// 父页面发送
-document.getElementsByTagName("iframe")[0].contentWindow.postMessage('你好 儿子', '*')
-// 接受页面
-window.addEventListener('message', e => console.log(e))
-```
-有安全方面顾虑的话最好把 * 改为特定的域名

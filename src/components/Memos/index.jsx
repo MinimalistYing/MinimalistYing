@@ -9,16 +9,14 @@ const {
 	http,
 	jquery,
 	js,
-	other,
-	react
+	other
 } = memos
 const all = [
 	...compability.split('---'),
 	...css.split('---'),
 	...http.split('---'),
 	...js.split('---'),
-	...other.split('---'),
-	...react.split('---')
+	...other.split('---')
 ]
 
 // 按照字数从多到少排列

@@ -49,6 +49,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '逆水寒',
+  url: 'https://pic.imgdb.cn/item/614601e32ab3f51d9113edac.jpg',
+}, {
   title: '非常英雄 Unruly Heroes',
   url: 'https://pic.imgdb.cn/item/613dedfe44eaada73979811f.jpg',
 }, {
