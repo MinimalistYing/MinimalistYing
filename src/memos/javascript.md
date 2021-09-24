@@ -1,21 +1,7 @@
-Javascript中的整数在超过9007199254740992也就是 `Math.pow(2, 53)` 时精度无法精确至个位  
-会出现 `Math.pow(2, 53) + 1 === Math.pow(2, 53)` 的情况  
-关于其它数字过大时存在的问题可见[这篇Blog](http://www.plqblog.com/views/article.php?id=29)
-
----
-
 关于`encodeURI|decodeURI`以及`encodeURIComponent|decodeURIComponent`，俩者都是用于对URI进行编解码操作  
 区别在于前者默认接受的是一个完整的URL所以不会对所有的字符进行编解码  
 而后者会对所有需要被编解码的字符进行编解码，例如对`http://www.a.com?a=1+1`进行`encodeURI`  
 不会发生任何变化而进行`encodeURIComponent`的结果是`http%3A%2F%2Fwww.a.com%3Fa%3D1%2B1`
-
----
-
-关于`Object.keys()`以及`Object.getOwnPropertyNames()`的区别  
-相同的是俩者都不会列出从原型上继承的属性key值  
-区别在于前者只会列出所有可枚举属性的key值，而后者会列出所有属性的key值，包括不可枚举的  
-所谓不可枚举的属性，即是通过类似  
-`Object.defineProperty(o, 'a', { enumerable: false, value: 0 })`定义的属性
 
 ---
 
@@ -72,31 +58,6 @@ console.log(regSticky.lastIndex) // 0 匹配失败会将lastIndex重置为0
 
 ---
 
-JavaScript 实现数组乱序
-```js
-const arr = [1,2,3,4,5,6,7,8,9,10]
-
-// 错误的方法 以下代码并不能做到真正乱序
-// 由于Array.sort()内部的实现方式导致
-// Array.prototype.sort(comparefn)
-// Calling comparefn(a,b) always returns the same value v when given a specific pair of values a and b as its two arguments.
-arr.sort(() => Math.random() - 0.5)
-
-// 进阶版 保证对于相同的a,b arr.sort()比较产生的结果相同
-const random = arr.map(Math.random);
-arr.sort((a, b) => random[a] - random[b]);
-
-// Fisher–Yates shuffle
-let i = arr.length
-while(i) {
-	const random = Math.floor(Math.random()*i);
-  i--;
-  [arr[i], arr[random]] = [arr[random], arr[i]]
-}
-```
-
----
-
 给定一组数 `1 2 3 4 5 6 7 8 9` 在其间隔处任意加上 `+ - * / 空白` 五种操作符  
 列出其所有计算结果为 `100` 的组合
 ```js
@@ -119,47 +80,6 @@ function recursive(t, i) {
 recursive('1', 0)
 
 ```
-
----
-
-关于 JavaScript 中的 Timer `setTimeout` 以及 `setInterval`
-* 每次调用会返回一个自增的 ID 用于传入 `clearTimeout` 以及`clearInterval` 来清除计时器
-* 由于 JavacScript 是单线程的，所以这俩个函数并不能确保一定会在指定时间到达后立即执行  
-
-```js
-// 超出 100ms 一段时间后才会输出
-// 因为线程被循环阻塞
-console.time('执行间隔')
-setTimeout(() => console.timeEnd('执行间隔'), 100)
-
-for (let i=0; i<1000000000; i++){}
-```
-* 不传入延时参数时默认为 0ms，哪怕延时 0ms 也是异步，只有主线程空闲时才执行
-
-```js
-// 输出顺序为 2 1
-// 并不会按正常执行顺序输出
-setTimeout(() => console.log(1))
-
-console.log(2)
-```
-* `setInterval` 所指的间隔并不是指多长时间执行一次，而是多长时间将该函数放到执行队列中一次  
-所以当传入其中的函数执行时间超过所设的间隔时间时，函数真实的执行间隔可能为 0ms
-
-```js
-let i = 0;
-const start = Date.now();
-const timer = setInterval(() => {
-    i++;
-    i === 5 && clearInterval(timer);
-    console.log(`第${i}次开始`, Date.now() - start);
-    for(let i = 0; i < 100000000; i++) {}
-    console.log(`第${i}次结束`, Date.now() - start);
-}, 100);
-```
-
-Ps: 还有一个 IE 专属的 `setImmediate` 可以理解为 `setTimeout(0)` 的替代，在此不做展开
-
 ---
 
 项目中开发接入支付宝跳转流程时碰到了一个问题  

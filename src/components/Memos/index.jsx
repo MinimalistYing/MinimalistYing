@@ -12,9 +12,7 @@ const {
 	other
 } = memos
 const all = [
-	...compability.split('---'),
 	...css.split('---'),
-	...http.split('---'),
 	...js.split('---'),
 	...other.split('---')
 ]
