@@ -46,7 +46,12 @@ header {
         height: 54px;
         margin: 0;
         display: flex;
-        list-style: none;
+		list-style: none;
+		
+		img {
+			width: 20px;
+    		transform: scale(1.6);
+		}
 
         & > li {
 			transition: all .5s ease-in-out;
@@ -55,7 +60,6 @@ header {
     
             &:hover,&.active {
 				border-top: 3px solid @tiffany;
-				border-bottom: 3px solid @tiffany;
 
                 > a.active {
                     color: #333;
@@ -71,7 +75,7 @@ header {
                 color: inherit;
                 transition: all .3s linear;
                 display: block;
-                padding: 15px 23px;
+				padding: 15px 32px;
         
                 &.active {
                     color:#333;

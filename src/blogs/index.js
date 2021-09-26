@@ -62,10 +62,12 @@ import ModuleSystem from '@blog/ModuleSystem.md';
 import PuppeteerError from '@blog/PuppeteerError.md';
 import BoxSizing from '@blog/BoxSizing.md'
 import MobileProblem from '@blog/MobileProblem.md'
+import BetterWorld from '@blog/BetterWorld.md'
 
 import cat from './category'
 
 const blogs = {
+	BetterWorld,
 	MobileProblem,
 	BoxSizing,
 	PuppeteerError,

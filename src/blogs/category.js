@@ -1,5 +1,11 @@
 module.exports = [
 	{
+		key: "BetterWorld",
+		img: "https://pic.imgdb.cn/item/614d81b62ab3f51d91dbbb2a.jpg",
+		date: '2021-09-xx',
+		tags: ['阅读', '人文', '经济'],
+	},
+	{
 		key: "MobileProblem",
 		img: "https://pic.imgdb.cn/item/61406af244eaada739277ee6.jpg",
 		date: '2021-09-17',

@@ -2,6 +2,11 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
+import Article from './article.png'
+import Mine from './mine.png'
+import Game from './game.png'
+import Bookmark from './bookmark.png'
+
 import './style.less'
 
 const iconStyle = {
@@ -30,19 +35,16 @@ class Header extends React.Component {
 			    <nav>
 			        <ul>
 			            <li className={href.endsWith('index.html') || !href.endsWith('html') ? 'active' : ''}>
-			            	<NavLink to="/index.html" exact>文章</NavLink>
+			            	<NavLink to="/index.html" exact><img src={Article} /></NavLink>
 			            </li>
-			            <li className={href.endsWith('memo.html') ? 'active' : ''}>
-			            	<NavLink to="/memo.html" exact>备忘</NavLink>
-			           	</li>
 						<li className={href.endsWith('tools.html') ? 'active' : ''}>
-			            	<NavLink to="/tools.html" exact>收藏</NavLink>
+			            	<NavLink to="/tools.html" exact><img src={Bookmark} /></NavLink>
 			           	</li>
 						<li className={href.endsWith('games.html') ? 'active' : ''}>
-			            	<NavLink to="/games.html" exact>玩世</NavLink>
+			            	<NavLink to="/games.html" exact><img src={Game} /></NavLink>
 			           	</li>
 						<li className='mine'>
-			            	<NavLink to="#" exact>我的</NavLink>
+			            	<NavLink to="#" exact><img src={Mine} /></NavLink>
 										<ul>
 											<li><a href="https://github.com/MinimalistYing" target="_blank">{github}Github</a></li>
 											<li><a href="https://leetcode.com/MinimalistYing" target="_blank">{leetcode}Leetcode</a></li>
