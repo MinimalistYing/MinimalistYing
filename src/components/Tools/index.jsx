@@ -98,7 +98,6 @@ export default function Tools () {
         <a target='_blank' href='https://www.airpano.com/'>AirPano - 世界各地 360 度全景摄影</a>
         <a target='_blank' href='https://uimovement.com/'>UI Movement - 设计师创意设计分享</a>
         <a target='_blank' href='https://www.artstation.com/'>ArtStation</a>
-        <a target='_blank' href='https://dos.zczc.cz/'>浏览器上玩 DOS 游戏</a>
         <a target='_blank' href='https://app.diagrams.net/'>diagrams.net</a>
       </div>
     </div>

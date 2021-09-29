@@ -2,7 +2,7 @@ module.exports = [
 	{
 		key: "BetterWorld",
 		img: "https://pic.imgdb.cn/item/614d81b62ab3f51d91dbbb2a.jpg",
-		date: '2021-09-xx',
+		date: '2021-09-29',
 		tags: ['阅读', '人文', '经济'],
 	},
 	{
