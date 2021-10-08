@@ -270,3 +270,28 @@ function copyImageToClipboard(img) {
   });
 }
 ```
+
+## 如何使文字消息中的图片能连同文字一起被复制
+用户聊天过程中经常会使用表情，然后文字消息中的微信表情其实是借助图片来实现的。  
+
+用户希望复制一条聊天消息时能连带表情代码一起复制出来，可以直接粘贴继续发送。
+
+最简单的方法就是借助 `title` 属性：
+```html
+<p>文字<img src="xxx.jpg" title="[图片]" />文字</p>
+```
+上述例子复制出来的就是 `文字[图片]文字`。
+
+但是我实现表情是借助 `<span>` 标签加上 `background` 属性，所以只能想了一个另外的方法：
+```html
+<span
+  className="emoji-item__icon"
+  style={{
+	backgroundPosition: `0px -${emoji.pos}px`,
+	color: transparent,
+  }}
+>
+  [图片]
+</span>
+```
+这样标签中的 `[图片]` 会被当作普通文本被一起选中复制，同时由于设置了 `color: transparent` 所以从界面上也看不到这个文字。

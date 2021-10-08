@@ -18,7 +18,7 @@ export default function Games () {
 function ImageCard ({ image }) {
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
-  const width = window.innerWidth * 3.5 / 5;
+  const width = window.innerWidth * 4 / 5;
   const halfWidth = width / 2;
   const height = width * ( 9 / 16 );
   const halfHeight = height / 2;
@@ -49,6 +49,15 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '小小噩梦 Little Nightmares',
+  url: 'https://pic.imgdb.cn/item/615f8b972ab3f51d911daca2.jpg',
+}, {
+  title: '神明在上',
+  url: 'https://pic.imgdb.cn/item/615f8b922ab3f51d911da607.jpg',
+}, {
+  title: '超凡双生 Beyond Two Souls',
+  url: 'https://pic.imgdb.cn/item/615f8b8e2ab3f51d911da048.jpg',
+}, {
   title: '逆水寒',
   url: 'https://pic.imgdb.cn/item/614601e32ab3f51d9113edac.jpg',
 }, {

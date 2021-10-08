@@ -108,3 +108,6 @@ import hoistNonReactStatic from 'hoist-non-react-statics'
 const EnhancedComponent = hoistNonReactStatic(HOC(WrappedComponent), WrappedComponent)
 EnhancedComponent.staticMethod // => () => {}
 ```
+
+## 参考
+* [react-redux-history-implementation](https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/)
