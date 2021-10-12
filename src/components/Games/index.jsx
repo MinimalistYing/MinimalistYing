@@ -49,6 +49,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '永劫回廊',
+  url: 'https://pic.imgdb.cn/item/616278c32ab3f51d9153c431.jpg',
+}, {
   title: '小小噩梦 Little Nightmares',
   url: 'https://pic.imgdb.cn/item/615f8b972ab3f51d911daca2.jpg',
 }, {
