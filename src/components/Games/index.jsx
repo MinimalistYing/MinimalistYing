@@ -49,6 +49,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '超激斗梦境',
+  url: 'https://pic.imgdb.cn/item/617123cc2ab3f51d919a8106.jpg',
+}, {
   title: '永劫回廊',
   url: 'https://pic.imgdb.cn/item/616278c32ab3f51d9153c431.jpg',
 }, {
