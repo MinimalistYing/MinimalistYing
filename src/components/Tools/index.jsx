@@ -88,6 +88,7 @@ export default function Tools () {
         <a target='_blank' href='https://isux.tencent.com/'>ISUX</a>
         <a target='_blank' href='https://www.alloyteam.com/'>AlloyTeam</a>
         <a target='_blank' href='https://www.ruanyifeng.com/blog/'>阮一峰</a>
+		    <a target='_blank' href='https://ltsoj.com/all-posts'>旅行熱炒店PODCAST X 終身旅人JEROME</a>
       </div>
     </div>
 

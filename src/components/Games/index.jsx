@@ -49,6 +49,12 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '天地劫：幽城再临',
+  url: 'https://pic.imgdb.cn/item/618142342ab3f51d911f2939.jpg',
+}, {
+  title: '泰坦之旅十周年纪念版  Titan Quest Anniversary Edition',
+  url: 'https://pic.imgdb.cn/item/618142302ab3f51d911f21e4.jpg',
+}, {
   title: '超激斗梦境',
   url: 'https://pic.imgdb.cn/item/617123cc2ab3f51d919a8106.jpg',
 }, {
