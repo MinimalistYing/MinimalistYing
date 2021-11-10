@@ -15,6 +15,14 @@
 		figure {
 			margin: 0;
 			position: relative;
+			overflow: hidden;
+			border-radius: 8px 8px 0 0;
+
+			&:hover {
+				.blog-img {
+					transform: scale(1.1);
+				}
+			}
 
 			.blog-img {
 				width: 100%;
@@ -22,6 +30,7 @@
 				margin: 0;
 				border-radius: 8px 8px 0 0;
 				height: 360px;
+				transition: all .6s;
 			}
 
 			figcaption {

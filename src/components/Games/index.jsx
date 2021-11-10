@@ -49,6 +49,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '影子战场 Shadow Arena',
+  url: 'https://pic.imgdb.cn/item/61891b722ab3f51d919d90b6.jpg',
+}, {
   title: '天地劫：幽城再临',
   url: 'https://pic.imgdb.cn/item/618142342ab3f51d911f2939.jpg',
 }, {
