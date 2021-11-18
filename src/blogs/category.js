@@ -1,5 +1,11 @@
 module.exports = [
 	{
+		key: "YDKJSAsyncPerformance",
+		img: "https://pic.imgdb.cn/item/619376662ab3f51d918fcc0f.jpg",
+		date: '2021-11-16',
+		tags: ['技术', 'Javascript'],
+	},
+	{
 		key: "BetterWorld",
 		img: "https://pic.imgdb.cn/item/614d81b62ab3f51d91dbbb2a.jpg",
 		date: '2021-09-29',
@@ -201,7 +207,7 @@ module.exports = [
 			key: "AntdForm",
 			img: "https://pic.imgdb.cn/item/60b7334f39f6859bc230169a.jpg",
 			date: '2019-12-10',
-			tags: ['技术', 'Ant Design'],
+			tags: ['@Deprecated'],
 	},
 	{
 			key: "CSSModules",
@@ -387,6 +393,6 @@ module.exports = [
 			key: "WebpackBaseConfig",
 			img: "https://pic.imgdb.cn/item/60b7450d39f6859bc23d2c45.jpg",
 			date: '2017-10-29',
-			tags: ['技术', 'Webpack'],
+			tags: ['@Deprecated'],
 	}
 ]

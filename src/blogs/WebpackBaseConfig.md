@@ -1,5 +1,19 @@
-# Webpack(v3.8.1)
-```
+# Webpack(v3.8.1)「弃」
+
+## 新
+想想当时整个项目的 Webpack 都是自己翻文档一项项配是真不容易。  
+
+放到现在（2021.11.16）来看再去研究这些 Webpack 的配置项已经没有太大意义。  
+
+一方面是 Webpack 已经从当年的 V3 升级到了现在的 V5，不少配置项都有了变化。  
+
+另一方面各种脚手架遍地开花，想来已经没有几个人会自己从头开始去配置了吧。  
+
+虽然没用但是文章还是舍不得删，毕竟当年着实花了不少时间在上面。
+
+## 旧
+开发环境
+```js
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -96,7 +110,7 @@ module.exports = {
 
 ```
 生产环境
-```
+```js
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')

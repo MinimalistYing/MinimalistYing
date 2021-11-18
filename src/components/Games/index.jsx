@@ -49,6 +49,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '梦幻新诛仙',
+  url: 'https://pic.imgdb.cn/item/618bbd972ab3f51d91065f8b.jpg',
+},{
   title: '影子战场 Shadow Arena',
   url: 'https://pic.imgdb.cn/item/61891b722ab3f51d919d90b6.jpg',
 }, {
