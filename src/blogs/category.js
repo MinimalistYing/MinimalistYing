@@ -375,7 +375,7 @@ module.exports = [
 			key: "WebpackV3ToV4",
 			img: "https://pic.imgdb.cn/item/6131c52144eaada7391e12b8.jpg",
 			date: '2018-07-25',
-			tags: ['技术', 'Webpack'],
+			tags: ['@Deprecated'],
 	},
 	{
 			key: "IteratorBlog",

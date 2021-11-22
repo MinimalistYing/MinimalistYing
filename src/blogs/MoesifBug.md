@@ -13,7 +13,7 @@ If an opaque response serves your needs, set the request's mode to 'no-cors' to 
 ```
 
 ## 探究原因
-出现这个错误时我的第一想法是会不会后端做了什么改动，因为此时我的另一个项目是可以正常跨域的。  
+出现这个错误时我的第一想法是会不会后端做了什么改动，因为此时我的另一个项目是可以正常发起跨域请求的。  
 
 但是仔细想想又不对，因为 Moesif 插件是通过在所有响应的 ReponsseHeader 中加上相关的 Access-Control-Allow-xxx 响应头来绕开浏览器限制的。  
 
@@ -36,7 +36,9 @@ If an opaque response serves your needs, set the request's mode to 'no-cors' to 
 通过打断点的方式，我发现俩者最终的区别仅在于我封装后发起的请求会多设置一个请求头 Content-Type: application/json 。尝试着手动把该请求头去掉，Bingo !  
 
 问题探究到这里基本已经确定了导致故障的原因，但还是很奇怪。为什么？  
+
 为什么加个请求头就会有问题？  
+
 为什么之前都有这个请求头就没问题？  
 
 去 MDN 上查找发现

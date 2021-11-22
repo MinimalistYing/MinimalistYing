@@ -1,9 +1,9 @@
 # 关于跨域
 
 ## 什么叫跨域?
-提到跨域首要要说的就是浏览器的同源策略（Same-origin policy）。  
+提到跨域首先要说的就是浏览器的同源策略（Same-origin policy）。  
 
-在浏览器中无法通过 JavaScript 获取不同域下的 Cookie/LocalStorage/IndexDB，无法操纵或读取不同域页面下的 DOM（例如无法获取通过 iframe 内嵌页面的 DOM），无法向不同域的服务器发起 AJAX 请求。  
+在浏览器中无法通过 JavaScript 获取不同域下的 Cookie/LocalStorage/IndexDB，无法操作或读取不同域页面下的 DOM（例如无法获取通过 iframe 内嵌页面的 DOM），无法向不同域的服务器发起 AJAX 请求。  
 
 所谓的同域指的是域名/协议/端口号完全一致，就算父域名相同子域名不同也算跨域，例如从 `http://www.a.xx.com` 向 `http://www.b.xx.com` 发起请求也算跨域请求。  
 
