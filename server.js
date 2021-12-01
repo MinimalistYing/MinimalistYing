@@ -2,10 +2,14 @@ const express = require('express')
 const https = require('https')
 const http = require('http')
 const fs = require('fs')
+const compression = require('compression')
 
 const app = express()
 
-app.use(express.static('./dist'))
+// gzip
+app.use(compression())
+
+app.use(express.static('./dist', { extensions: ['html'] }))
 
 /**
  * 代理请求，获取 00 后黑话翻译

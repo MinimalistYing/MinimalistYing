@@ -1,0 +1,72 @@
+.demo {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  background: #f3f3f3;
+
+  :global(.btn-box) {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 12px #ddd;
+  }
+
+  :global(button) {
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 10px;
+    background: white;
+    font-size: 20px;
+    padding: 12px 20px;
+    transition: all .3s;
+    outline: 0;
+    height: 60px;
+    margin: 15px;
+  }
+
+  :global(.info-btn) {
+    color: #fff;
+    background: #1890ff;
+
+    &:hover {
+      color: #000;
+      background: #fff;
+      border-color: #1890ff;
+    }
+  }
+
+  :global(.success-btn) {
+    color: #fff;
+    background: #52c41a;
+
+    &:hover {
+      color: #000;
+      background: #fff;
+      border-color: #52c41a;
+    }
+  }
+
+  :global(.error-btn) {
+    color: #fff;
+    background: #f5222d;
+
+    &:hover {
+      color: #000;
+      background: #fff;
+      border-color: #f5222d;
+    }
+  }
+
+  :global(.warn-btn) {
+    color: #fff;
+    background: #faad14;
+
+    &:hover {
+      color: #000;
+      background: #fff;
+      border-color: #faad14;
+    }
+  }
+}
