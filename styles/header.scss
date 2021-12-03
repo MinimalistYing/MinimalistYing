@@ -14,9 +14,12 @@ header {
 
   .header-title {
     display: inline-block;
-    margin: 15px;
+    margin: 12px;
     cursor: pointer;
     color: var(--tiffany);
+    font-size: 24px;
+
+    font-family: "Patrick Hand", cursive;
   }
 
   nav {
@@ -30,7 +33,7 @@ header {
     display: flex;
     list-style: none;
 
-    li {
+    > li {
       transition: all .5s ease-in-out;
       border-top: 3px solid transparent;
       border-bottom: 3px solid transparent;
@@ -38,12 +41,12 @@ header {
         &:hover,&.active {
           border-top: 3px solid var(--tiffany);
     
-          a {
+          > a {
             animation: bounce .8s linear;
           }
         }
 
-        a {
+        > a {
             text-decoration: none;
     
             color: inherit;
@@ -71,14 +74,14 @@ header {
         display: flex;
         flex-direction: column;
         top: 60px;
-        left: -40px;
+        left: -30px;
         opacity: 0;
         transition: all .3s;
         list-style: none;
         padding: 0;
         transform: scale(0);
 
-        li {
+        > li {
             transition: all .3s ease;
             width: 153px;
 
@@ -109,7 +112,7 @@ header {
           transition: all .3s;
 
           &:hover {
-            background: var(--tiffany)-hover;
+            background: var(--tiffany-hover);
             color: #fff;
           }
         }

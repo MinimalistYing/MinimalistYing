@@ -20,20 +20,23 @@ export default function Home() {
         <ul className={styles.category}>
           {
             category.map((item, index) => (
-              <Link href={`${item.key}.html`} key={item.key}>
+              <Link href={`${item.key}`} key={item.key}>
                 <li
                   id={item.key}
                 >
                   <figure>
-                    <LazyLoad style={{ height: 'calc(100% - 100px)' }} once>
+                    <LazyLoad style={{ height: 'calc(100% - 90px)' }} once>
                       <img src={item.img} alt="图" loading="lazy" />
                     </LazyLoad>
                     <figcaption>
                       <div className={styles.blogName}>{item.name}</div>
-                      <div className={styles.blogDate}>{item.date}</div>
 
-                      <div className={styles.tagBox}>
-                        {item.tags.map(tag => <div key={tag} className={styles.tag}>{tag}</div>)}
+                      <div className={styles.blogInfo}>
+                        <div className={styles.blogDate}>{item.date}</div>
+
+                        <div className={styles.tagBox}>
+                          {item.tags.map(tag => <div key={tag} className={styles.tag}>{tag}</div>)}
+                        </div>
                       </div>
                     </figcaption>
                   </figure>

@@ -3,6 +3,7 @@
 
 :root {
   --tiffany: #81D8D0;
+  --tiffany-hover: #81D8D0;
   --deep-pink: #ff1493;
   --dark-pink: #ff90cd;
   --white-bg: #fafafa;
@@ -78,6 +79,11 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-family: "Patrick Hand", cursive;
+  font-size: 20px;
 }
 
 blockquote {
@@ -255,7 +261,7 @@ blockquote {
 	    overflow-x: auto;
 	    color: rgb(197, 200, 198);
 	    background: rgb(29, 31, 33);
-	    border-radius: 3px;
+      border-radius: 3px;
 	    font: normal 10pt Consolas, Monaco, monospace;
 	    font-size: 15px;
 	}

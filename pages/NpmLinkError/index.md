@@ -6,7 +6,7 @@
 
 再三确认了一下代码内的 Hook 使用没有问题，百度一下发现不少人都碰到过该问题，例如 [这里](https://blog.csdn.net/u011393161/article/details/107807496)、[这里](https://zhuanlan.zhihu.com/p/272694482)、[还有这里](https://blog.csdn.net/qq_38506368/article/details/113504759)。  
 
-最终确定是因为 `npm link` 而引起的错误，实际上 [官方文档](https://reactjs.org/warnings/invalid-hook-call-warning.html) 有特意提到过这个问题和解决方案：
+最终确定是因为 `npm link` 而引起的错误，实际上 [React Document](https://reactjs.org/warnings/invalid-hook-call-warning.html) 有特意提到过这个问题和解决方案：
 
 ![解决方案](https://pic.imgdb.cn/item/60a765dc6ae4f77d3579b9e5.jpg)
 

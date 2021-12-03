@@ -39,6 +39,6 @@ module.exports = {
 
 上述只是针对我之前项目配置的升级，并不完整，仅供参考
 
-Webpack 官方有提供详细的迁移[文档](https://webpack.js.org/migrate/4/)
+Webpack 官方有提供详细的迁移[Document](https://webpack.js.org/migrate/4/)
 
 遇到问题也可以通过报错信息很快定位到原因，再去相应的Github库上找一找解决办法，迁移过程还是比较顺利的
