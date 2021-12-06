@@ -91,27 +91,6 @@ blockquote {
   padding-left: 10px;
 }
 
-
-// @import '../../less/color';
-
-// @keyframes header-title-animation {
-//   each(range(0%, 50%, 0.5), {
-//       @{value} {
-//           background: linear-gradient(90deg, #5fdbd1, (100% - @value * 2), #9e5ac9);
-//           background-clip: text;
-//           -webkit-background-clip: text;
-//       }
-//   });
-
-//   each(range(50%, 100%, 0.5), {
-//       @{value} {
-//           background: linear-gradient(90deg, #5fdbd1, (@value * 2 - 100%), #9e5ac9);
-//           background-clip: text;
-//           -webkit-background-clip: text;
-//       }
-//   });
-// }
-
 .blogs {
 	margin: 80px 0;
 
