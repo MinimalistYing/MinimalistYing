@@ -16,34 +16,22 @@ export default function Tools () {
         <div className={styles.card}>
           <h2>日常开发</h2>
           <div className={styles.content}>
+            <a target="_blank" rel="noreferrer" href='https://jsoneditoronline.org/'>JSON Editor</a>
             <a target="_blank" rel="noreferrer" href='https://squoosh.app/'>Google 出品，图片在线压缩</a>
             <a target="_blank" rel="noreferrer" href='https://www.iconfont.cn/'>Alibaba Iconfont 图标库</a>
-            <a target="_blank" rel="noreferrer" href='https://regexper.com/'>正则表达式可视化</a>
+            <a target="_blank" rel="noreferrer" href='https://regexper.com/'>Regexper</a>
             <a target="_blank" rel="noreferrer" href='https://www.jq22.com/code2861'>CSS3 渐变色选择器</a>
             <a target="_blank" rel="noreferrer" href='https://colorable.jxnblk.com'>颜色组合对比度测试</a>
             <a target="_blank" rel="noreferrer" href='http://youmightnotneedjquery.com/'>You Don&apos;t Need Jquery</a>
             <a target="_blank" rel="noreferrer" href='https://colorhunt.co/'>Color Palettes for Designers and Artists</a>
-            <a target="_blank" rel="noreferrer" href='https://www.json.cn/'>JSON 在线解析</a>
             <a target="_blank" rel="noreferrer" href='https://bit.dev/'>Bit.Dev</a>
             <a target="_blank" rel="noreferrer" href='https://whatwg.org/'>WHATWG - HTML / Fetch / DOM / ... 协议 </a>
-            <a target="_blank" rel="noreferrer" href='http://es5.github.io/#x10.5'>ES5 协议 </a>
+            <a target="_blank" rel="noreferrer" href='http://es5.github.io/#x10.5'>Annotated ECMAScript 5.1</a>
             <a target="_blank" rel="noreferrer" href='http://shijuechuanda.com/screen/index.htm'>屏幕尺寸 / 设计规范</a>
             <a target="_blank" rel="noreferrer" href='http://ecma-international.org/publications/standards/Standard.htm'>ECMA Standard</a>
             <a target="_blank" rel="noreferrer" href='https://tc39.es/'>Ecma International&apos;s TC39</a>
             <a target="_blank" rel="noreferrer" href='https://www.w3.org/TR/'>W3C</a>
             <a target="_blank" rel="noreferrer" href='https://www.fileformat.info/'>FileFormat.Info</a>
-          </div>
-        </div>
-
-        <div className={styles.card}>
-          <h2>GitHub 开源</h2>
-          <div className={styles.content}>
-            <a target="_blank" rel="noreferrer" href='https://ianlunn.github.io/Hover/'>Hover.css - 基于 CSS3 的鼠标悬停特效大全</a>
-            <a target="_blank" rel="noreferrer" href='https://reacttraining.com/react-router/'>React-Router 英文文档</a>
-            <a target="_blank" rel="noreferrer" href='https://surmon-china.github.io/vue-codemirror/'>Vue Codemirror - 用于展示代码的 Vue 组件</a>
-            <a target="_blank" rel="noreferrer" href='https://introjs.com/'>Intro.js - Web 应用新手指引</a>
-            <a target="_blank" rel="noreferrer" href='https://standardjs.com/'>Standard.js - 基于 ESLint 的编程规范</a>
-            <a target="_blank" rel="noreferrer" href='https://usehooks.com/'>useHooks - React Hook recipes</a>
             <a target="_blank" rel="noreferrer" href='https://astexplorer.net/'>AST Explorer</a>
           </div>
         </div>
@@ -99,15 +87,17 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='https://www.alloyteam.com/'>AlloyTeam</a>
             <a target="_blank" rel="noreferrer" href='https://www.ruanyifeng.com/blog/'>阮一峰</a>
             <a target="_blank" rel="noreferrer" href='https://ltsoj.com/all-posts'>旅行熱炒店PODCAST X 終身旅人JEROME</a>
+            <a target="_blank" rel="noreferrer" href='https://surmon.me/'>Surmon</a>
           </div>
         </div>
 
         <div className={styles.card}>
           <h2>其它</h2>
           <div className={styles.content}>
-            <a target="_blank" rel="noreferrer" href='https://www.airpano.com/'>AirPano - 世界各地 360 度全景摄影</a>
-            <a target="_blank" rel="noreferrer" href='https://uimovement.com/'>UI Movement - 设计师创意设计分享</a>
-            <a target="_blank" rel="noreferrer" href='https://www.artstation.com/'>ArtStation</a>
+            <a target="_blank" rel="noreferrer" href='https://www.airpano.com/'>AirPano</a>
+            <a target="_blank" rel="noreferrer" href='https://uimovement.com/'>Screenlane</a>
+            <a target="_blank" rel="noreferrer" href='https://dribbble.com/'>Dribbble</a>
+            <a target="_blank" rel="noreferrer" href='https://screenlane.com/'>ArtStation</a>
             <a target="_blank" rel="noreferrer" href='https://app.diagrams.net/'>diagrams.net</a>
           </div>
         </div>
