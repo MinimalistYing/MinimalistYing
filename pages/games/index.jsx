@@ -59,6 +59,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '世纪 灰烬纪元 Century Age of Ashes',
+  url: 'https://pic.imgdb.cn/item/61b0ad682ab3f51d914ddcb3.jpg',
+}, {
   title: '剑网三怀旧服',
   url: 'https://pic.imgdb.cn/item/61ac98012ab3f51d91031feb.jpg',
 }, {
