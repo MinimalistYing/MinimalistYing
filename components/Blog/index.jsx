@@ -16,22 +16,21 @@ export default function Blog ({ content }) {
       </Head>
 
       <Header />
-      <div className='blogs'>
-        <div className='blog'>
-          <figure>
-            <img className="blog-img" src={cat?.img} />
-            <figcaption>
-              <div className="blog-name">{title}</div>
-              <div className="blog-date">{cat?.date}</div>
-              <div className="tag-box">
-                {cat?.tags?.map(tag => <div key={tag} className="tag">{tag}</div>)}
-              </div>
-            </figcaption>
-          </figure>
-          
-          <div className="md-box">
-            <Markdown data={body} />
-          </div>
+
+      <div className='blog'>
+        <figure>
+          <img className="blog-img" src={cat?.img} />
+          <figcaption>
+            <div className="blog-name">{title}</div>
+            <div className="blog-date">{cat?.date}</div>
+            <div className="tag-box">
+              {cat?.tags?.map(tag => <div key={tag} className="tag">{tag}</div>)}
+            </div>
+          </figcaption>
+        </figure>
+
+        <div className="md-box">
+          <Markdown data={body} />
         </div>
       </div>
     </>
