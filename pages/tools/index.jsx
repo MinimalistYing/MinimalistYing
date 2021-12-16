@@ -88,6 +88,7 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='https://www.ruanyifeng.com/blog/'>阮一峰</a>
             <a target="_blank" rel="noreferrer" href='https://ltsoj.com/all-posts'>旅行熱炒店PODCAST X 終身旅人JEROME</a>
             <a target="_blank" rel="noreferrer" href='https://surmon.me/'>Surmon</a>
+            <a target="_blank" rel="noreferrer" href='https://blog.yitianshijie.net/'>一天世界</a>
           </div>
         </div>
 

@@ -59,6 +59,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '空洞骑士 Hollow Knight',
+  url: 'https://pic.imgdb.cn/item/61b9f9ae2ab3f51d917b0c88.jpg',
+}, {
   title: '世纪 灰烬纪元 Century Age of Ashes',
   url: 'https://pic.imgdb.cn/item/61b0ad682ab3f51d914ddcb3.jpg',
 }, {
