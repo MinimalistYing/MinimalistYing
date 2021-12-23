@@ -55,6 +55,7 @@ export default function Tools () {
           <div className={`${styles.card} ${styles.cardHalf}`}>
             <h2>金融</h2>
             <div className={styles.content}>
+              <a target="_blank" rel="noreferrer" href='https://www.ceicdata.com/zh-hans'>CEIC</a>
               <a target="_blank" rel="noreferrer" href='https://cn.tradingview.com/'>TradingView</a>
               <a target="_blank" rel="noreferrer" href='http://www.cninfo.com.cn/new/index'>巨潮资讯</a>
               <a target="_blank" rel="noreferrer" href='https://duibiao.info/'>职级对标</a>
@@ -89,6 +90,7 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='https://ltsoj.com/all-posts'>旅行熱炒店PODCAST X 終身旅人JEROME</a>
             <a target="_blank" rel="noreferrer" href='https://surmon.me/'>Surmon</a>
             <a target="_blank" rel="noreferrer" href='https://blog.yitianshijie.net/'>一天世界</a>
+            <a target="_blank" rel="noreferrer" href='https://matters.news/'>Matters</a>
           </div>
         </div>
 

@@ -5,6 +5,8 @@
 ## AMD (Asynchronous Module Definition) 
 时代的眼泪，略微了解即可。  
 
+[Document](https://github.com/amdjs/amdjs-api)
+
 定义模块:
 ```js
 define(
@@ -15,7 +17,7 @@ define(
 
 define('myModule', [],
   // module definition function
-  function () {
+  function (require, exports, beta) {
     // return a value that defines the module export
     // (i.e the functionality we want to expose for consumption)
 
@@ -92,8 +94,7 @@ const { add } = require('myModule')
 add(1, 1)
 ```
 特点：
-* 同步
-* 更适用于服务端，nodejs 默认使用的模块系统
+* 同步，更适用于服务端，nodejs 默认使用的模块系统
 * 不支持 TreeShaking
 
 

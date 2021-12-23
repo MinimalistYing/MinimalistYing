@@ -1,7 +1,7 @@
 # 「YDKJS Up & Going」
 
 ## JavaScript 是解释性语言吗
-通常来说我们会理所当然的认为它毋庸置疑是解释性语言，因为它不需要在本地编译成字节码才能发布运行，并且最终它都是运行在类似 V8 的引擎之上。  
+通常来说我们会理所当然的认为它毋庸置疑是解释性语言，因为它不需要在本地编译成字节码才能发布运行，并且最终都是运行在类似 V8 的引擎之上。  
 
 但是实际上我们运行在浏览器中的 JavaScript 是会被 V8 进行实时编译（JIT）的，所以可以看 MDN 给出的最新定义：
 
@@ -9,7 +9,7 @@
 
 所以说 JavaScript 是解释性语言，因为它的源代码需要在每次运行前被处理，但同时现代浏览器的引擎也会对其进行实时编译来优化性能。  
 
-还可以看看 [这篇文章](https://segmentfault.com/a/1190000013126460)。
+Ps: 推荐看看 [JavaScript 到底是解释型语言还是编译型语言?](https://segmentfault.com/a/1190000013126460)。
 
 ## typeof
 `typeof` 通常用来判断一个变量当前存储值的类型，它有如下几个可能的返回值：
@@ -80,12 +80,12 @@ void function iife() {
 typeof iife // => undefined
 ```
 
-可以用来阻止链接跳转，当然现在不建议这么使用，只是大家在互联网上肯定还是能见到这种写法，能明白为什么就行：
+可以用来阻止链接跳转，当然现在不建议这么使用，只是在网上肯定还是能见到这种写法，能明白为什么就行：
 ```html
 <a href="javascript:void(0);">不会跳转的链接</a>
 ```
 
-因为简写的箭头函数是会有返回的，如果大家想偷懒写成一行但是不希望有返回可以这么做：
+因为简写的箭头函数是会有返回的，如果想偷懒写成一行但是不希望有返回可以这么做：
 ```js
 function doSomething () {
   return 'hello'
@@ -171,7 +171,7 @@ const o = {
   fn: function named() {}
 }
 ```
-可以简单通过 `function` 是不是出现在一条语句的最前方来判断函数表达式以及函数声明。  
+可以简单通过 `function` 是不是出现在一条语句的最前方来区分函数表达式和函数声明。  
 
 主要的区别在于函数声明会存在函数提升的情况而函数表达式不会：
 ```js
@@ -183,7 +183,7 @@ const o = {
       return 2
    }
    var bar = function () { // 函数表达式
-   		return 2
+      return 2
    }
 })()
 ```
@@ -221,7 +221,7 @@ const baz = function named () {
 typeof named // => undefined
 ```
 
-关于函数表达式以及函数声明的更多差别可见 [这篇文章](http://kangax.github.io/nfe/)  
+关于函数表达式以及函数声明的更多差别可见 [Named function expressions demystified](http://kangax.github.io/nfe/)  
 
 ## 其它
 > Code without comments is suboptimal.Too many commentsis probably a sign of poorly written code.Comments should explain why,not what.They can optionally explain how if what's written is particularly confusing.

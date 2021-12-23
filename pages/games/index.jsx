@@ -59,6 +59,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '花之灵 Hoa',
+  url: 'https://pic.imgdb.cn/item/61bf2d902ab3f51d91a5ef3e.jpg',
+}, {
   title: '空洞骑士 Hollow Knight',
   url: 'https://pic.imgdb.cn/item/61b9f9ae2ab3f51d917b0c88.jpg',
 }, {

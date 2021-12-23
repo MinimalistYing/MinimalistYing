@@ -20,7 +20,7 @@ import { TablePaginationConfig } from 'antd/lib/table'
 ```
 Emmmmmm...  
 
-明明大小写错了，为什么本地可以正常工作呢？网上搜了下，发现碰到相关问题的人还不少，因为 Mac OSX 默认对文件路径的大小写不敏感，而服务器使用的 Unix 是对大小写敏感的。  
+明明大小写错了，为什么本地可以正常工作呢？网上搜了下，发现碰到相关问题的人还不少。因为 Mac OSX 默认对文件路径的大小写不敏感，而服务器使用的 Unix 是对大小写敏感的。  
 
 甚至有人专门写了个 [Webpack Plugin](https://github.com/Urthen/case-sensitive-paths-webpack-plugin) 来强制在所有操作系统上对引入依赖的路径进行大小写敏感的全等校验。
 

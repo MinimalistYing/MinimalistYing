@@ -19,7 +19,7 @@
   
 ## JavaScript 中字符串有最大长度吗
 MDN:
-> ECMAScript 2016 (ed. 7) established a maximum length of 2^53 - 1 elements. Previously, no maximum length was specified. In Firefox, strings have a maximum length of 2\*\*30 - 2 (~1GB). In versions prior to Firefox 65, the maximum length was 2\*\*28 - 1 (~256MB).
+> ECMAScript 2016 (ed. 7) established a maximum length of 2^53 - 1 elements. Previously, no maximum length was specified. In Firefox, strings have a maximum length of 2\*\*30 - 2 (\~1GB). In versions prior to Firefox 65, the maximum length was 2\*\*28 - 1 (\~256MB).
 
 所以答案是有的，并且最新的协议也规定了最大长度为 `2^53 - 1`。
 
@@ -94,7 +94,7 @@ for (let i of febonacci) {
 ## 装箱与拆箱
 事实上 JavaScript 的装箱和拆箱并不像 Java 等语言里那样常见，甚至说其实在 JavaScript 并不存在，因为在协议中并没有相关的定义，在 MDN 中也搜索不到关于 `boxing` 或者 `unboxing` 等定义的相关词条。  
 
-在协议中把相关的行为解释为 `conversion` 或者 `coercion`，可以参考 [这篇回答](https://stackoverflow.com/questions/34067261/is-boxing-coercion-in-javascript?noredirect=1&lq=1)。  
+在协议中把相关的行为解释为 `conversion` 或者 `coercion`，可以参考 [Is boxing coercion in JavaScript?](https://stackoverflow.com/questions/34067261/is-boxing-coercion-in-javascript?noredirect=1&lq=1)。  
 
 当出现下列俩种情况时，原始类型会被转化为对象（通俗来讲被称为装箱）：
 * 把原始类型当作 `this` 使用，例如 `Object.prototype.toString.call(true)`
@@ -286,9 +286,9 @@ When it comes to inheritance, JavaScript only has one construct: objects. Each o
 
 那么如果我们维护了一个庞大的样式库，页面上有几十个按钮和边框都使用了这种颜色，产品一句改一下颜色可能需要我们花上几小时去找到并一个个修改。  
 
-当然谁都不想被这种 Dirty Work 浪费时间，所以如果我们使用了 `Less/Sass` 等 CSS 预处理器会发现它们都提供了变量的功能，如果维护得当的话再碰到这种需求只需要改一下变量的设置的颜色即可。  
+当然谁都不想被这种 Dirty Work 浪费时间，所以 `Less/Sass` 等 CSS 预处理器都提供了变量的功能，如果维护得当的话再碰到这种需求只需要改一下变量的设置的颜色即可。  
 
-好消息是现在 CSS 原生支持了 `CSS Variables`，借助这一特性我们可以更方便的实现一键切换网站主题色的功能。  
+好消息是现在 CSS 原生支持 `CSS Variables`，借助这一特性我们可以更方便的实现一键切换网站主题色的功能。  
 
 首先提一下伪类 `:root` 代表着文档的根元素，在 HTML 中通常就是 `<html>` ，但是它的优先级会比元素选择器 `html` 高，因为伪类选择器的优先级高于元素选择器。  
 

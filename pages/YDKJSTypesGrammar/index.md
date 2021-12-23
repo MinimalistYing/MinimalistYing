@@ -92,7 +92,7 @@ JSON.stringify({ o })
 ```
 
 ## Global DOM Variables
-在新的HTML5规范中，如果一个元素拥有 ID 属性，或者下列标签中的元素拥有 name 属性：
+在新的 HTML5 规范中，如果一个元素拥有 ID 属性，或者下列标签中的元素拥有 name 属性：
 * `<a>`
 * `<applet>`
 * `<area>`

@@ -3,7 +3,7 @@
 ## 序
 最近翻看以前的备忘时发现解决过不少移动端的兼容性问题。  
 
-但这些问题不具备普适性，删了又怕以后再碰到，所以在此进行一下整合。
+但这些问题不具备普适性，删了又怕以后再碰到，所以在此进行一下整理。
 
 ## Andriod 部分机型页面跳转失败
 Andriod 部分机型的 WebView 不支持通过
@@ -25,7 +25,7 @@ Andriod 中调用 WebView 来访问 H5 页面时 HTML5 的 DOMStorage 也就是`
 ## IOS 点击上一页渲染白屏
 在用 Vue 开发 IOS WebView 内嵌 H5 SPA 页面时碰到点击APP返回上一页时出现页面白屏的问题，需要滑动一下页面，内容才会显示。  
 
-具体问题以及解决方式可以参考[issue](https://github.com/vuejs/vue/issues/5533#issuecomment-343864468)  
+具体问题以及解决方式可以参考 [issue](https://github.com/vuejs/vue/issues/5533#issuecomment-343864468)  
 
 导致这个问题的主要原因应该还是在返回时仍去异步加载数据，最佳解决方式应该是缓存相应的异步请求数据。  
 
