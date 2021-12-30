@@ -1,4 +1,11 @@
 module.exports = [
+  {
+    name: "Baseline JPEG vs Progressive JPEG",
+		key: "ProgressiveJPEG",
+		img: "https://pic.imgdb.cn/item/61cd24fd2ab3f51d91753097.jpg",
+		date: '2021-12-30',
+		tags: ['技术', '图片', 'JPEG', '用户体验'],
+	},
 	{
     name: "「YDKJS Async & Performance」",
 		key: "YDKJSAsyncPerformance",

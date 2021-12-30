@@ -59,6 +59,12 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '二之国 交错世界',
+  url: 'https://pic.imgdb.cn/item/61ca97892ab3f51d91a250b6.png',
+}, {
+  title: '不思议的皇冠',
+  url: 'https://pic.imgdb.cn/item/61c872532ab3f51d91d61de4.jpg',
+}, {
   title: '花之灵 Hoa',
   url: 'https://pic.imgdb.cn/item/61bf2d902ab3f51d91a5ef3e.jpg',
 }, {

@@ -18,7 +18,7 @@ export default function Tools () {
           <div className={styles.content}>
             <a target="_blank" rel="noreferrer" href='https://jsoneditoronline.org/'>JSON Editor</a>
             <a target="_blank" rel="noreferrer" href='https://squoosh.app/'>Google 出品，图片在线压缩</a>
-            <a target="_blank" rel="noreferrer" href='https://www.iconfont.cn/'>Alibaba Iconfont 图标库</a>
+            <a target="_blank" rel="noreferrer" href='https://www.iconfont.cn/'>Iconfont</a>
             <a target="_blank" rel="noreferrer" href='https://regexper.com/'>Regexper</a>
             <a target="_blank" rel="noreferrer" href='https://www.jq22.com/code2861'>CSS3 渐变色选择器</a>
             <a target="_blank" rel="noreferrer" href='https://colorable.jxnblk.com'>颜色组合对比度测试</a>
@@ -67,7 +67,7 @@ export default function Tools () {
             <div className={styles.content}>
               <a target="_blank" rel="noreferrer" href='https://steamcharts.com/'>Steam Charts</a>
               <a target="_blank" rel="noreferrer" href='https://www.metacritic.com/'>Metacritic - Movie / TV / Game Reviews</a>
-              <a target="_blank" rel="noreferrer" href='https://www.nexusmods.com/'>Nexus Mods - 游戏 Mod 社区</a>
+              <a target="_blank" rel="noreferrer" href='https://www.nexusmods.com/'>Nexus Mods</a>
               <a target="_blank" rel="noreferrer" href='https://indienova.com/'>独立精神</a>
               <a target="_blank" rel="noreferrer" href='https://www.qimai.cn/'>七麦数据</a>
             </div>
@@ -98,10 +98,11 @@ export default function Tools () {
           <h2>其它</h2>
           <div className={styles.content}>
             <a target="_blank" rel="noreferrer" href='https://www.airpano.com/'>AirPano</a>
-            <a target="_blank" rel="noreferrer" href='https://uimovement.com/'>Screenlane</a>
+            <a target="_blank" rel="noreferrer" href='https://screenlane.com/'>Screenlane</a>
             <a target="_blank" rel="noreferrer" href='https://dribbble.com/'>Dribbble</a>
-            <a target="_blank" rel="noreferrer" href='https://screenlane.com/'>ArtStation</a>
+            <a target="_blank" rel="noreferrer" href='https://www.artstation.com/'>ArtStation</a>
             <a target="_blank" rel="noreferrer" href='https://app.diagrams.net/'>diagrams.net</a>
+            <a target="_blank" rel="noreferrer" href='https://www.chiphell.com/'>Chip Hell</a>
           </div>
         </div>
       </div>

@@ -150,11 +150,11 @@ o + '' // null
 
 首先我们需要了解一下 JavaScript 的原型链是如何工作的。  
 
-之前在学习相关知识的经常会被搞晕，因为相关属性有的是标准有的是内部实现有的只是部分浏览器的单独实现，并且从最早期的 JavaScript 到现在很多之前的内容应该是已经过时了。  
+之前在学习相关知识的经常会被搞晕，因为相关属性有的是标准，有的是内部实现，更有的只是部分浏览器的单独实现，并且从最早期的 JavaScript 到现在很多应该是已经过时了。  
 
 所以我先来理清楚原型链工作中起到重要作用的几个属性。
 
-首先是 `__proto__` 以及 `[[Prototype]]`，它们其实是同一个东西，都指的是当前对象的原型联指向的对象或者 `null` (原型链最顶端) 。并且现在推荐使用 `Object.getPrototypeOf` 以及 `Object.setPrototypeOf` 来替代 `__proto__`，因为这其实是一个不在规范中的定义只是现在的浏览器为了保证兼容性大都实现了它，最后来看看 MDN 的定义：
+首先是 `__proto__` 以及 `[[Prototype]]`，它们其实是同一个东西，都指的是当前对象的原型联指向的对象或者 `null` (原型链最顶端) 。并且现在更推荐使用 `Object.getPrototypeOf` 以及 `Object.setPrototypeOf` 来替代 `__proto__`，因为这其实不是一个规范中的定义。只是现在的浏览器为了保证兼容性大都实现了它，最后来看看 MDN 的定义：
 > The `__proto__` property of `Object.prototype` is an accessor property (a getter function and a setter function) that exposes the internal `[[Prototype]]` (either an object or null) of the object through which it is accessed.
 
 再来看看 `prototype` ，这个属性很容易和前面的搞混，事实上只有构造函数上存在这个属性：
