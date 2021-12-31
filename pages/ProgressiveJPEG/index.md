@@ -13,7 +13,7 @@
 
 对于用户来讲肯定是 Progressive JPEG 体验更好，并且付出的代价仅仅是更消耗硬件性能。  
 
-## 如何判断
+## 如何判断 JPEG 图片是何种类型
 推荐该网站 [IMGonline.com.ua](https://www.imgonline.com.ua/eng/progressive-or-baseline-jpeg.php)
 
 ## 参考

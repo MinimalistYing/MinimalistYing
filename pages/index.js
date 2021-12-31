@@ -46,6 +46,10 @@ export default function Home() {
           }
         </ul>
       </main>
+      
+      <div className={styles.footer}>
+        <a className={styles.beian} rel="noreferrer" href="https://beian.miit.gov.cn/" target="_blank">浙ICP备19052360号</a>
+      </div>
     </>
   )
 }
