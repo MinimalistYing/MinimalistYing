@@ -3,9 +3,10 @@
 > A CSS Module is a CSS file in which all class names and animation names are scoped locally by default.
 
 ## CSS Modules 解决了什么问题
-* 避免全局样式冲突
-* 为了避免冲突而导致的样式嵌套层级过深(Less / Sass)
-* 为了避免冲突而导致的样式命名过于复杂(BEM)
+* 完全避免全局样式冲突
+* 不会为了避免冲突而导致样式嵌套层级过深(Less / Sass)
+* 不会为了避免冲突而导致样式命名过于复杂(BEM)
+* 由于显示的建立了样式与元素之间的联系，通过编辑器插件等辅助手段可以更方便的清理无用的 CSS
 
 ## 如何使用
 Webpack 的 `css-loader` 就实现了 CSS Modules，只需在配置 `css-loader` 时加上 `modules: true` 即可，如下
@@ -94,4 +95,7 @@ CSS Modules 还可以通过 `composes` 支持样式的复用。
 ## 总结
 工具归工具，正确的使用才能更好的解决问题。  
 
-Ps：个人观点，如果让我决定技术选型的话，我应该不会用 CSS Modules 。从视觉上和代码体验来讲，不如直接使用类名更清晰。
+Ps：个人观点，如果让我决定技术选型的话，我应该不会用 CSS Modules 。从视觉上和代码体验来讲，不如直接使用类名更清晰。  
+
+**Ps：2021 年了，俩年过去，我的观点也有所改变。是否使用 CSS Modules 可能更需要视项目规模而定。对于大型项目而言，
+CSS Modules 带来的样式绝对不会冲突的特性还是有优势的。例外也可以考虑使用 Styled-Component 作为替代。**

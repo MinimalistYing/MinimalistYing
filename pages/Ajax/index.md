@@ -5,11 +5,12 @@
 
 随着 Web Application 的功能愈加复杂，每次提交表单都需要刷新页面显然对用户来说体验很糟糕。这个时候 Ajax 出现了(2005 年左右开始渐渐被广为使用)，Ajax 可以在不刷新页面的情况下通过 HTTP 请求与服务器异步的交换数据。  
 
-在浏览器中主要通过下面介绍的 `XMLHttpRequest` 对象来发起 Ajax 请求  
+在浏览器中主要通过下面介绍的 `XMLHttpRequest` 对象来发起 Ajax 请求。  
 (Ps: 名称中的 XML 其实很有误导性，只是因为该技术诞生之初时 XML 很火爆。大家可能本来认为 XML 会发展成为通用的数据交换格式，没想到现在 JSON 异军突起成为最流行的轻量格式，由此亦可见科技进步之快)
 
 ## XMLHttpRequest API
-由于该 API 是依据 HTTP 协议设计的，所以我们首先要来了解一下关于 HTTP 请求及响应的几个基础组成部分  
+由于该 API 是依据 HTTP 协议设计的，所以我们首先要来了解一下关于 HTTP 请求及响应的几个基础组成部分。  
+
 HTTP Request：
 * HTTP Method (Ps: GET/POST/DELETE...)
 * Request URL
@@ -73,7 +74,7 @@ request.onreadystatechange = () => {
 
 // 5. 设置 Request Body 并正式发送请求
 // 请求体中的数据格式需要与请求头 Content-Type 中的一致
-// 该例中我们采用 JSON 作为数据交换格式 所以这里需要将对象讲过 JSON.stringify() 处理
+// 该例中我们采用 JSON 作为数据交换格式 所以这里需要将对象经过 JSON.stringify() 处理
 // 如果不需要传递 Request Body 可以 request.send(null)
 request.send(JSON.stringify(data))
 ```

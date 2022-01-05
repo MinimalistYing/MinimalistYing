@@ -91,6 +91,7 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='https://surmon.me/'>Surmon</a>
             <a target="_blank" rel="noreferrer" href='https://blog.yitianshijie.net/'>一天世界</a>
             <a target="_blank" rel="noreferrer" href='https://matters.news/'>Matters</a>
+            <a target="_blank" rel="noreferrer" href='https://ishadeed.com/'>ishadeed</a>
           </div>
         </div>
 
@@ -103,6 +104,7 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='https://www.artstation.com/'>ArtStation</a>
             <a target="_blank" rel="noreferrer" href='https://app.diagrams.net/'>diagrams.net</a>
             <a target="_blank" rel="noreferrer" href='https://www.chiphell.com/'>Chip Hell</a>
+            <a target="_blank" rel="noreferrer" href='https://www.coursera.org/'>Coursera</a>
           </div>
         </div>
       </div>

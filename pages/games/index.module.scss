@@ -10,7 +10,7 @@
     transition: box-shadow .5s, transform .3s,;
     cursor: pointer;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
 
     &:hover {
       box-shadow: 0 24px 45px rgb(82, 82, 82);

@@ -1,15 +1,15 @@
 # Axios 源码解析
-Axios 是一个发送 Ajax 请求的类库  
-类似于 jQuery 的 `$.ajax()` 以及 Angular 的 `$http`   
-本文仅会针对其提供的特性对部分核心代码进行分析
+Axios 是一个发送 Ajax 请求的类库，类似于 jQuery 的 `$.ajax()` 以及 Angular 的 `$http`。  
+
+本文仅会针对其提供的特性对部分核心代码进行分析。
 
 ## Feature
-首先罗列一下 Axios 在对 `xhr` 进行封装的基础上提供的一些高级特性
+首先罗列一下 Axios 在对 `xhr` 进行封装的基础上提供的一些高级特性：
 * `Promise` API
-* 支持通过 `Interceptor` 在请求前后进行一些公共业务操作（例如对错误的处理）
-* 支持通过 `transformData` 对请求参数以及响应结果做统一处理
-* 支持通过 `axios.defaults` 进行全局的默认配置
-* 支持通过 `axios.get() | axios.put()` 以及类似 Fetch API 的 `axios(url, config)` 进行调用
+* 支持 `Interceptor` 在请求前后进行一些统一业务操作（例如对错误的处理）
+* 支持 `transformData` 对请求参数以及响应结果做统一处理
+* 支持 `axios.defaults` 进行全局的默认配置
+* 支持 `axios.get() | axios.put()` 以及类似 Fetch API 的 `axios(url, config)` 进行调用
 * 支持统一设置请求的 `BaseURL`
 * 支持从服务端（node.js）或者客户端（Browser）发起请求
 
