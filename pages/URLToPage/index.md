@@ -13,6 +13,10 @@
 并且只有在内容过期后才必须进行新鲜度验证（在缓存过期时即使服务器错误也不会将这个陈旧的缓存返回给客户端）
 
 ## DNS
+![DNS](https://pic.imgdb.cn/item/61d7b3bf2ab3f51d91cc1ddf.png)  
+
+**图片来自** [surmon.me](https://surmon.me/article/21)  
+
 浏览器缓存->系统缓存(hosts 文件)->路由器缓存->IPS服务器缓存，根域名服务器缓存，顶级域名服务器缓存，主域名服务器缓存
 
 ## HTTP 请求以及 HTTP 缓存

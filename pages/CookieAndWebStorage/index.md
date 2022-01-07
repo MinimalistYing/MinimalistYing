@@ -5,14 +5,14 @@
 * 存储一些用户对应用的自定义偏好设置，例如主题色、表格每页默认显示条数等
 * 一些广告商需要通过客户端端存储的一些用户行为数据来做一些更个性化的推荐
 
-恰当的利用客户端存储可以很好的优化用户体验
+恰当运用客户端存储可以很好的提升用户体验。
 
 ## Cookie
 
 ### Cookie 是什么
 Cookie 其实就是网站存储在客户端的一些数据，这些数据会自动的被加到网站发起的每个 HTTP 请求的 Request Header 中，通常情况下服务端和客户端都可以对 Cookies 进行 CRUD 操作。  
 
-[点这里查看 Cookie 协议](https://tools.ietf.org/html/rfc6265#section-5.2.1)
+[HTTP State Management Mechanism](https://tools.ietf.org/html/rfc6265#section-5.2.1)
 
 ### 如何在前端新增 Cookie
 ```js
@@ -46,7 +46,7 @@ navigator.cookieEnabled
 ```
 Ps: 经本人测试 禁用 Cookie 后 Github 淘宝 等网站都无法正常访问，感觉现在大多数用户都不会去禁用 Cookie，不然会有一堆网站访问不了。  
 
-Ps: 虽然大多数人不会完全禁用 Cookie，但是估计有少数注重隐私的人会禁用第三方 Cookie 。最近碰到个问题是由于一个同学在 Chrome 里禁用了第三方 Cookie 导致的，这种情况 `navigator.cookieEnabled` 是检测不了的。禁用第三方 Cookie 会影响到我们从本地 `localhost` 去请求预发环境。
+Ps: 虽然大多数人不会完全禁用 Cookie，但是估计有少数注重隐私的人会禁用第三方 Cookie 。最近碰到个问题是由于一个同学在 Chrome 里禁用了第三方 Cookie 导致的，这种情况 `navigator.cookieEnabled` 是检测不了的。禁用第三方 Cookie 会影响一些跨站的请求。
 
 ### 关于 Cookie 的属性
 * Domain  
@@ -91,7 +91,7 @@ Ps: 虽然大多数人不会完全禁用 Cookie，但是估计有少数注重隐
 ### WebStorage 是什么
 WebStorage 是 HTML5 新增的客户端存储机制，分为 `LocalStorage` 以及 `SessionStorage`，IE8+ 以及各现代浏览器对其都有良好的支持。  
 
-[点这里查看 WebStorage 规范](https://html.spec.whatwg.org/multipage/webstorage.html#storage)
+[WebStorage SPEC](https://html.spec.whatwg.org/multipage/webstorage.html#storage)
 
 ### LocalStorage
 永久存储（除非浏览器缓存被清除）在当前域下，遵循同源策略。  

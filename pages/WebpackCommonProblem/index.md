@@ -1,5 +1,7 @@
 # 记录配置 Webpack 过程中碰到的问题
-Ps: 基于 Webpack V4
+
+## FBI Warning
+> **⚠️ 现在 (2021年) Webpack 已经升级至 V5，而文章的大部分内容是基于 V4 的。**
 
 ## Vue
 

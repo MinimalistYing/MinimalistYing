@@ -77,7 +77,7 @@ function myErrorLog (message) {
   log('error', 'me', message)
 }
 ```
-相较而言柯里化的优点是更灵活一点吧，比如当我们需要更多的 `log` 函数时柯里化明显会方便一些：
+相较而言柯里化的优点是更灵活一点吧，比如当我们需要更多的 `log` 函数时柯里化会更方便一些：
 ```js
 const myErrorLog = curryLog('error', 'me')
 const myWarnLog = curryLog('warn', 'me')
@@ -89,7 +89,7 @@ const otherErrorLog = curryLog('error', 'other')
 ## 总结
 说实话，在日常的工作中可能很少有机会用到柯里化。  
 
-但是理解其定义以及原理对熟悉函数式编程以及相关的 `Closure` 等概念会有所帮助。
+但是理解其原理对熟悉函数式编程以及相关的 `Closure` 等概念会有所帮助。
 
 ## 参考文档
 * [https://javascript.info/currying-partials](https://javascript.info/currying-partials)

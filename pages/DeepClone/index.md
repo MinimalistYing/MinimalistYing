@@ -15,7 +15,9 @@ const test = {
   nan: NaN,
   symbol: Symbol('sys'),
   func: () => {},
-  object: {},
+  object: {
+    name: 'bar'
+  },
   array: [1, '2', true]
 }
 
