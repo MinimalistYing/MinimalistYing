@@ -33,6 +33,7 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='https://www.w3.org/TR/'>W3C</a>
             <a target="_blank" rel="noreferrer" href='https://www.fileformat.info/'>FileFormat.Info</a>
             <a target="_blank" rel="noreferrer" href='https://astexplorer.net/'>AST Explorer</a>
+            <a target="_blank" rel="noreferrer" href='https://www.proposals.es/'>ES Proposals</a>
           </div>
         </div>
 

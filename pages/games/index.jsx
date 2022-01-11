@@ -59,6 +59,12 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '少林 VS 武当',
+  url: 'https://pic.imgdb.cn/item/61da63262ab3f51d91a1a24f.jpg',
+}, {
+  title: '谓何 Tell Me Why',
+  url: 'https://pic.imgdb.cn/item/61da632b2ab3f51d91a1a751.jpg',
+}, {
   title: '三国赵云传',
   url: 'https://pic.imgdb.cn/item/61d634822ab3f51d91cddfa9.jpg',
 }, {
