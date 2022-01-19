@@ -15,7 +15,7 @@ function foo(cb) {
 	})
 }
 ```
-`Promise` 的出现为开发者提供了一种更优雅的方式来处理异步编程
+`Promise` 的出现为开发者提供了一种更优雅的方式来处理异步编程。
 
 ## 如何构造一个 `Promise`
 ```js
@@ -37,16 +37,14 @@ p.then(res => console.log(res))
 // 同上
 p.then(res => console.log(res), err => console.log(err))
 ```
-一个 `Promise` 最终只会有俩种状态 **fulfilled** 或 **rejected**  
+一个 `Promise` 最终只会有俩种状态 **fulfilled** 或 **rejected** 。 
 
-前者可以在 `then()` 的第一个参数中获得处理完成的结果，后者可以在 `then()` 的第二个参数或者 `catch()` 中获得处理失败的原因  
+前者可以在 `then()` 的第一个参数中获得处理完成的结果，后者可以在 `then()` 的第二个参数或者 `catch()` 中获得处理失败的原因。  
 
-每一个 `Promise` 只会被 resolve(fulfill 或 reject)一次，并且一旦当 `Promise` 执行完毕，它就成为了一个不可变的值  
+每一个 `Promise` 只会被 resolve(fulfill 或 reject)一次，并且一旦当 `Promise` 执行完毕，它就成为了一个不可变的值。  
 
 ## 为什么说 `Promise` 更优雅
-`Promise` 支持链式调用  
-
-我们将上例中重写一遍 高下立判
+`Promise` 支持链式调用。我们将上例中重写一遍，高下立判：
 ```js
 asyncFunc1().then(res => {
 	return asyncFunc2()

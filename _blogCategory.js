@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "富强、民主、文明、和谐",
+		key: "ChinaStatistic2020",
+		img: "https://pic.imgdb.cn/item/61e528c02ab3f51d910fefbf.jpg",
+		date: '2021-01-17',
+		tags: ['人文社科', '统计数据'],
+	},
+  {
     name: "Baseline JPEG vs Progressive JPEG",
 		key: "ProgressiveJPEG",
 		img: "https://pic.imgdb.cn/item/61cd24fd2ab3f51d91753097.jpg",
