@@ -4,7 +4,7 @@ module.exports = [
 		key: "ChinaStatistic2020",
 		img: "https://pic.imgdb.cn/item/61e528c02ab3f51d910fefbf.jpg",
 		date: '2021-01-17',
-		tags: ['人文社科', '统计数据'],
+		tags: ['人文社科', '统计数据'],
 	},
   {
     name: "Baseline JPEG vs Progressive JPEG",

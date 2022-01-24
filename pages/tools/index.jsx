@@ -82,7 +82,7 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='http://www.yinwang.org/'>王垠</a>
             <a target="_blank" rel="noreferrer" href='https://overreacted.io/'>Dan Abramov</a>
             <a target="_blank" rel="noreferrer" href='https://yinwang1.wordpress.com/author/yinwang0/'>正常人类收容所</a>
-            <a target="_blank" rel="noreferrer" href='https://jelly.jd.com/'>京东 JELLY</a>
+            <a target="_blank" rel="noreferrer" href='https://jelly.jd.com/'>JELLY</a>
             <a target="_blank" rel="noreferrer" href='https://tympanus.net/codrops/'>Codrops</a>
             <a target="_blank" rel="noreferrer" href='https://hacks.mozilla.org/'>Mozilla Hacks</a>
             <a target="_blank" rel="noreferrer" href='https://isux.tencent.com/'>ISUX</a>

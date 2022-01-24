@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
-
+import React, { useState } from 'react'
 import { Header } from '../../components'
 import styles from './index.module.scss'
+
 
 export default function Games () {
   return (
@@ -59,6 +59,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '遗迹：灰烬重生 Remnant From the Ashes',
+  url: 'https://pic.imgdb.cn/item/61ebdd4b2ab3f51d9104fc5f.jpg',
+}, {
   title: '少林 VS 武当',
   url: 'https://pic.imgdb.cn/item/61da63262ab3f51d91a1a24f.jpg',
 }, {
