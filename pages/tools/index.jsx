@@ -1,6 +1,5 @@
-import React from 'react'
 import Head from 'next/head'
-
+import React from 'react'
 import { Header } from '../../components'
 import styles from './index.module.scss'
 
@@ -93,6 +92,7 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='https://blog.yitianshijie.net/'>一天世界</a>
             <a target="_blank" rel="noreferrer" href='https://matters.news/'>Matters</a>
             <a target="_blank" rel="noreferrer" href='https://ishadeed.com/'>ishadeed</a>
+            <a target="_blank" rel="noreferrer" href='https://www.bruceyj.com/front-end-interview-summary/'>BY</a>
           </div>
         </div>
 

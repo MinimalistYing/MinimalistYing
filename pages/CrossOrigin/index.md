@@ -76,7 +76,7 @@ window.fetch('xxx', {
 
 下面介绍一下 CORS 用于验证跨域请求的一些相关 `HTTP Headers`  
 请求头：
-* Origin （请求来源域名也就是发起请求页面的域名）
+* Origin （发起请求页面的域名）
 * Access-Control-Request-Method （在预校验请求时预校验的 OPTIONS 请求中携带 告知服务端真实请求的类型）
 * Access-Control-Request-Headers （同上 在预校验请求中携带 告知服务端真实请求会携带的自定义请求头）
 
@@ -87,3 +87,10 @@ window.fetch('xxx', {
 * Access-Control-Allow-Crendentials （可选 当需要传递 Cookie 时设为 true）
 * Access-Control-Max-Age (预校验请求返回  告知浏览器在一段时间内缓存 不必再次发起预校验请求)
 * Access-Control-Expose-Headers （前端能通过 `xhr.getResponseHeader()` 获取到哪些请求头的具体值）
+
+### 哪些资源请求支持 CORS ？
+* Invocations of the XMLHttpRequest or Fetch APIs.
+* Web Fonts (for cross-domain font usage in @font-face within CSS).
+* [WebGL textures](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
+* Images/video frames drawn to a canvas using `drawImage()`.
+* [CSS Shapes from images](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images).

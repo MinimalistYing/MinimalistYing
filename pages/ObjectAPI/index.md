@@ -1,18 +1,17 @@
 # Object's New API In ES6
 
 ## Object.is()
-该方法用于比较俩个值是否全等，基本逻辑与 `===` 一致但更为严格。
+该方法用于比较俩个值是否全等，与 `===` 的区别仅在于下面俩个特例：
 ```js
 const x = NaN
-const y = 0
-const z = -0
-
 x === x // false
 Object.is(x, x) // true
+
+const y = 0
+const z = -0
 y === z // true
 Object.is(y, z) // false
 ```
-当不需要考虑这几种特殊情况时，用 `===` 更方便。
 
 ## Object.getOwnPropertySymbols()
 该方法可以获得对象上所有类型为 `Symbol` 的 Key ：

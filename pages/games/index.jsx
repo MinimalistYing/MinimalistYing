@@ -59,6 +59,12 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '真人快打 11',
+  url: 'https://pic.imgdb.cn/item/6203d1e42ab3f51d91667cd9.jpg',
+}, {
+  title: '嗜血印',
+  url: 'https://pic.imgdb.cn/item/61f5542a2ab3f51d918a4388.jpg',
+}, {
   title: '遗迹：灰烬重生 Remnant From the Ashes',
   url: 'https://pic.imgdb.cn/item/61ebdd4b2ab3f51d9104fc5f.jpg',
 }, {

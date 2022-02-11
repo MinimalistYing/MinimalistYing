@@ -1,11 +1,13 @@
 # Formatting Context
-以前经常听到说 BFC / IFC，但是一直只是知其然不知其所以然，最近忙里偷闲去学习了一下相关知识并在此做个整理。  
+
+## 起
+以前经常听到说 BFC / IFC，但是一直只是知其然不知其所以然，最近学习了一下相关知识并在此做个整理。  
 
 所谓 BFC / IFC 都是属于 Formatting Context 的一种，最新的还有 Flex Formatting Context 以及 Grid Formatting Context。直译过来就是*格式化上下文*，浏览器会依据不同的上下文来排放内部的元素。  
 
 如下三个最典型的场景会利用到 BFC：
-* 将浮动元素包裹在内避免高度塌陷
-* 排除外部的浮动元素
+* 将浮动元素包裹在内避免高度塌陷
+* 排除外部的浮动元素
 * 避免垂直方向的外边距合并
 
 ## IFC - Inline Formatting Context
@@ -16,7 +18,12 @@
 需要特别提到的一点是，当一个 `inline-block` 元素的 overflow 被设为 visible 以外的值时，它的 baseline 位置会从默认的字符x的底线位置修改为下外边沿，所以会导致同一包含块内其它内联元素会被迫向下偏移来和这个元素对齐，从而导致显示错位的问题。
 
 ## BFC — Block Formatting Context
-着重来看一下块级格式化上下文，首先 `<html>` 根元素会新建一个 Initial Block Formatting Context，也就是说默认的页面上在正常流中的元素会依照 BFC 来进行布局。这也是为什么有时候我们会主动的去新建一个 BFC 的原因，因为这样可以建立一个不受干扰相对独立的布局区域。一块 BFC 会包含内部所有的元素，例如元素的浮动，上下外边距的合并都只会发生在一个 BFC 内，不会影响到外部的布局。  
+着重来看一下块级格式化上下文，首先 `<html>` 根元素会新建一个 Initial Block Formatting Context，也就是说默认的页面上在正常流中的元素会依照 BFC 来进行布局。这也是为什么有时候我们会主动的去新建一个 BFC 的原因，因为这样可以建立一个不受干扰相对独立的布局区域。一块 BFC 会包含内部所有的元素，例如元素的浮动，上下外边距的合并都只会发生在一个 BFC 内，不会影响到外部的布局。  
+
+所以基本上我们只会出于如下几个原因来手动创建一个 BFC:
+* contain internal floats
+* exclude external floats
+* suppress margin collapsing
 
 除了根元素外，下面这些情况都会建立一个新的 BFC（只列举了常见的）：
 * 设置了 `float` 属性的浮动元素
@@ -26,3 +33,6 @@
 * `overflow` 属性不是 visible 的块级元素
   
 利用到 BFC 的典型场景可见 [MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+
+## 参考
+* [CSS level 2 revision 2 (CSS 2.2)](https://www.w3.org/TR/CSS22/visuren.html#normal-flow)
