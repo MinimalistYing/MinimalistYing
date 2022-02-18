@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { Header } from '../../components'
 import styles from './index.module.scss'
 
-
 export default function Games () {
   return (
     <>
@@ -59,6 +58,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '秦殇',
+  url: 'https://pic.imgdb.cn/item/62077af02ab3f51d9182d645.jpg',
+}, {
   title: '真人快打 11',
   url: 'https://pic.imgdb.cn/item/6203d1e42ab3f51d91667cd9.jpg',
 }, {
