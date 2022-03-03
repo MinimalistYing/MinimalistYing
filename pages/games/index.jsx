@@ -58,6 +58,18 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: "刺客信条 黑旗 Assassin's Creed IV Black Flag",
+  url: 'https://pic.imgdb.cn/item/6219f9c72ab3f51d91484f95.jpg',
+}, {
+  title: '书雁传奇',
+  url: 'https://pic.imgdb.cn/item/6214f5ad2ab3f51d91be6a0f.jpg',
+}, {
+  title: '古剑奇谭网络版',
+  url: 'https://pic.imgdb.cn/item/6210cd672ab3f51d918f5a63.jpg',
+}, {
+  title: '暗影火炬城',
+  url: 'https://pic.imgdb.cn/item/6210cd612ab3f51d918f55cc.jpg',
+}, {
   title: '秦殇',
   url: 'https://pic.imgdb.cn/item/62077af02ab3f51d9182d645.jpg',
 }, {
