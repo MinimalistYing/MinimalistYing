@@ -58,6 +58,18 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: "帝国时代1 决定版 Age of Empires Definitive Edition",
+  url: 'https://pic.imgdb.cn/item/62359dc35baa1a80ab24e512.jpg',
+}, {
+  title: "赤痕 夜之仪式 Bloodstained Ritual of the Night",
+  url: 'https://pic.imgdb.cn/item/62359dc05baa1a80ab24ded4.jpg',
+}, {
+  title: "破败之王：英雄联盟外传 Ruined King A League of Legends Story",
+  url: 'https://pic.imgdb.cn/item/622e05df5baa1a80ab618777.jpg',
+}, {
+  title: "子弹风暴 完全版",
+  url: 'https://pic.imgdb.cn/item/6220b9c65baa1a80abd6b8a3.jpg',
+}, {
   title: "刺客信条 黑旗 Assassin's Creed IV Black Flag",
   url: 'https://pic.imgdb.cn/item/6219f9c72ab3f51d91484f95.jpg',
 }, {

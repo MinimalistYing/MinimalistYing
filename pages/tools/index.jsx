@@ -80,16 +80,13 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='https://byvoid.com/'>ByVoid</a>
             <a target="_blank" rel="noreferrer" href='http://www.yinwang.org/'>王垠</a>
             <a target="_blank" rel="noreferrer" href='https://overreacted.io/'>Dan Abramov</a>
-            <a target="_blank" rel="noreferrer" href='https://yinwang1.wordpress.com/author/yinwang0/'>正常人类收容所</a>
             <a target="_blank" rel="noreferrer" href='https://jelly.jd.com/'>JELLY</a>
             <a target="_blank" rel="noreferrer" href='https://tympanus.net/codrops/'>Codrops</a>
             <a target="_blank" rel="noreferrer" href='https://hacks.mozilla.org/'>Mozilla Hacks</a>
             <a target="_blank" rel="noreferrer" href='https://isux.tencent.com/'>ISUX</a>
             <a target="_blank" rel="noreferrer" href='https://www.alloyteam.com/'>AlloyTeam</a>
             <a target="_blank" rel="noreferrer" href='https://www.ruanyifeng.com/blog/'>阮一峰</a>
-            <a target="_blank" rel="noreferrer" href='https://ltsoj.com/all-posts'>旅行熱炒店PODCAST X 終身旅人JEROME</a>
             <a target="_blank" rel="noreferrer" href='https://surmon.me/'>Surmon</a>
-            <a target="_blank" rel="noreferrer" href='https://blog.yitianshijie.net/'>一天世界</a>
             <a target="_blank" rel="noreferrer" href='https://matters.news/'>Matters</a>
             <a target="_blank" rel="noreferrer" href='https://ishadeed.com/'>ishadeed</a>
             <a target="_blank" rel="noreferrer" href='https://www.bruceyj.com/front-end-interview-summary/'>BY</a>
