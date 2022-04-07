@@ -179,6 +179,21 @@ blockquote {
 @media screen and (max-width: 1024px) {
 	.blog {
 		overflow-x: scroll;
+
+    .md-box {
+      width: 100vw;
+      padding: 1vh 4vw;
+    }
+
+    figure {
+      figcaption {
+        left: 1vw;
+
+        .blog-name {
+          white-space: normal;
+        }
+      }
+    }
 	}
 }
 

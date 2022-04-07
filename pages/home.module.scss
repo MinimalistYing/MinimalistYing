@@ -15,6 +15,15 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  ul.category {
+    :global(li) {
+      width: 91vw;
+      height: 40vh;
+    }
+  }
+}
+
 .category {
   display: flex;
   flex-flow: row wrap;

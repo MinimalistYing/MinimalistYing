@@ -58,6 +58,15 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: "帝国时代2 决定版 Age of Empires II Definitive Edition",
+  url: 'https://pic.imgdb.cn/item/624bff5a239250f7c57a1b9b.jpg',
+}, {
+  title: "毁灭战士 DOOM4",
+  url: 'https://pic.imgdb.cn/item/624005c127f86abb2ae70f0d.jpg',
+}, {
+  title: "牧剑 Tale Of Swords",
+  url: 'https://pic.imgdb.cn/item/624005bb27f86abb2ae6f026.jpg',
+}, {
   title: "帝国时代1 决定版 Age of Empires Definitive Edition",
   url: 'https://pic.imgdb.cn/item/62359dc35baa1a80ab24e512.jpg',
 }, {
