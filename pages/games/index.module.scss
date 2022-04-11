@@ -43,3 +43,29 @@
     transition: all 0.5s;
   }
 }
+
+.poetryA {
+  position: fixed;
+  left: 80px;
+  top: 100px;
+  writing-mode: vertical-lr;
+  font-size: 28px;
+  color: #666;
+}
+
+.poetryB {
+  position: fixed;
+  left: 40px;
+  top: 210px;
+  writing-mode: vertical-lr;
+  font-size: 28px;
+  color: #666;
+}
+
+.count {
+  position: fixed;
+  right: 25px;
+  bottom: 15px;
+  font-size: 28px;
+  color: #666;
+}

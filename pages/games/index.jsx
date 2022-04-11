@@ -1,9 +1,21 @@
-import Head from 'next/head'
-import React, { useState } from 'react'
-import { Header } from '../../components'
-import styles from './index.module.scss'
+import Head from 'next/head';
+import React, { useEffect, useState } from 'react';
+import { Header } from '../../components';
+import styles from './index.module.scss';
 
 export default function Games () {
+  const [curr, setCurr] = useState(1);
+
+  useEffect(() => {
+    const listener = e => {
+      const singleHeight = document.getElementsByTagName('figure')[0].clientHeight
+      setCurr(Math.ceil(document.documentElement.scrollTop / singleHeight))
+    };
+    document.addEventListener('scroll', listener);
+
+    return () => document.removeEventListener('scroll', listener);
+  }, [])
+
   return (
     <>
       <Head>
@@ -20,6 +32,11 @@ export default function Games () {
           </figure>
         ))}
       </div>
+
+      <div className={styles.poetryA}>人怀前岁忆，</div>
+      <div className={styles.poetryB}>花发故年枝。</div>
+
+      <div className={styles.count}>{curr} / {images.length}</div>
     </>
   )
 }
@@ -58,8 +75,11 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
-  title: "帝国时代2 决定版 Age of Empires II Definitive Edition",
-  url: 'https://pic.imgdb.cn/item/624bff5a239250f7c57a1b9b.jpg',
+  title: "看火人 Firewatch",
+  url: 'https://pic.imgdb.cn/item/6252a663239250f7c5c895f0.jpg',
+}, {
+  title: "灵能主宰 Masters of Anima",
+  url: 'https://pic.imgdb.cn/item/62514a19239250f7c53b7dcd.jpg',
 }, {
   title: "毁灭战士 DOOM4",
   url: 'https://pic.imgdb.cn/item/624005c127f86abb2ae70f0d.jpg',
