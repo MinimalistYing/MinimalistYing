@@ -19,13 +19,13 @@ If an opaque response serves your needs, set the request's mode to 'no-cors' to 
 
 所以后端应该没有什么能力影响到插件的工作，还有一点奇怪的是，GET 跨域请求可以通过, 但是其它的请求就不行。  
 
-要解决问题当然得先找到问题出在哪，所以我试着先用排除法来去掉一些猜测。  
+要解决问题当然得先找到问题出在哪，所以我试着先用排除法来去掉一些猜测。  
 
 首先我想确定问题究竟是不是由于后端的改动导致的，我让同事帮忙在她的项目中本地请求了一下出问题的地址，发现没有问题。  
 
 那么基本上就可以确定故障的发生与后端无关，接下来我把自己的 Moesif 配置和同事对比了一下，发现都是相同的配置，那肯定也不是我插件配置出错。
 
-相同的 Moesif 配置，相同的后端请求地址，她的项目没问题而我的有问题，那是不是我的代码有错误呢？  
+相同的 Moesif 配置，相同的后端请求地址，她的项目没问题而我的有问题，那是不是我的代码有错误呢？  
 
 接着又让同事在本地运行了一下我的项目，发现果然也有跨域问题。  
 
@@ -41,7 +41,7 @@ If an opaque response serves your needs, set the request's mode to 'no-cors' to 
 
 为什么之前都有这个请求头就没问题？  
 
-去 MDN 上查找发现
+去 MDN 上查找发现
 > HTTP headers let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (:), then by its value. Whitespace before the value is ignored.
 
 

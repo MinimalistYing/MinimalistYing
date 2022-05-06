@@ -11,7 +11,7 @@
   content: attr(data-foo) " ";
 }
 ```
-可以借助 `min()` `max()` `clamp()` 来设置动态计算但是限定了极限的值：
+可以借助 `min()` `max()` `clamp()` 来设置动态计算但是限定了极限的值：
 ```css
 /*
 当视窗宽度小于等于 400px 时宽度为视窗宽的一半，但是当视窗宽度超出时限定了最大宽度为 200px
@@ -108,7 +108,7 @@ img {
 ```
 
 ## 如何点击一图片上不同区域跳转至不同链接？
-可借助 `<area>` 和 `<map>` 标签实现，支持 circle / rect / poly 三种形状，例如：
+可借助 `<area>` 和 `<map>` 标签实现，支持 circle / rect / poly 三种形状，例如：
 ```html
 <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area -->
 <map name="primary">
@@ -145,7 +145,7 @@ let rect = elem.getBoundingClientRect()
 ```
 
 ## 关于零宽字符（Zero-width space）`\uFEFF`
-零宽字符是一种不占用宽度的空白字符，因为没有宽度所以对用户阅读信息不会造成任何影响。但是利用这种特性，可以在原信息中携带多余的加密信息，达到反爬虫或者增加版权信息的用途。例如：
+零宽字符是一种不占用宽度的空白字符，因为没有宽度所以对用户阅读信息不会造成任何影响。但是利用这种特性，可以在原信息中携带多余的加密信息，达到反爬虫或者增加版权信息的用途。例如：
 > 你‏‏‍‎‏‍‌​‏‌‌‌‎‎‏好
 
 如果你复制这段文字到浏览器控制台中可以发现间隔了很多星号，这就是文本中夹杂的零宽字符。  
@@ -156,7 +156,7 @@ let rect = elem.getBoundingClientRect()
 网上相关的文章有很多，这里仅根据个人理解做一个整理，方便记忆。  
 
 JavaScript 中的 `this` 与很多其它面向对象的编程语言不同，它是一个动态的概念，而不是通常编程语言中固定的指向当前对象。最核心的一点是：
-> 在 JavaScript 的函数中，`this` 的指向是由函数调用的方式动态决定的
+> 在 JavaScript 的函数中，`this` 的指向是由函数调用的方式动态决定的
 
 也就是说，同样一个函数，调用方式不同，`this` 的值也会不同。例如：
 ```js
@@ -214,7 +214,7 @@ obj.foo() // 1
 ```
 好在，ES6 引入的箭头函数可以很好的帮我们解决这个问题，我们终于不用再不停的重复 `var that = this` 了。  
 
-箭头函数的 `this` 等同于该函数定义时最接近的 Lexical Context 中的 `this` ，且是固定的，我们无法通过 `bind / call / apply` 等方法去改变其指向。同时这也意味着箭头函数不能像普通函数一样当作构造函数来使用。  
+箭头函数的 `this` 等同于该函数定义时最接近的 Lexical Context 中的 `this` ，且是固定的，我们无法通过 `bind / call / apply` 等方法去改变其指向。同时这也意味着箭头函数不能像普通函数一样当作构造函数来使用。  
 
 下面我们把上述例子改为使用箭头函数：
 ```js
@@ -291,7 +291,7 @@ class Alphabet extends React.Component {
 	state = {
 		num: null
 	}
-	// 通过将数据存放到 HTML 的 data-num 属性中来避免使用箭头函数引起的性能问题
+	// 通过将数据存放到 HTML 的 data-num 属性中来避免使用箭头函数引起的性能问题
 	handleClick = e => {
 		this.setState({
 			num: e.target.dataset.num

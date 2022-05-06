@@ -3,7 +3,7 @@ Ps: 根据个人经验总结 有些结论可能并不客观
 
 ## React
 * 单向数据流 声明式视图
-* 官方提供的 API 较为简单 大多数功能交给开源社区扩展 例如 Redux / React-Router 等 但是 React 的社区确实很强大
+* 官方提供的 API 较为简单 大多数功能交给开源社区扩展 例如 Redux / React-Router 等 但是 React 的社区确实很强大
 * CSS 样式文件与组件文件分离（Ps: 现在借助 [styled-components](https://styled-components.com/) 也可以将样式和组件写在同一文件了 ）
 * 实现表单以及表单验证时的写法较为繁琐
 * 父子组件通信 Props Down 只能向下单向传递

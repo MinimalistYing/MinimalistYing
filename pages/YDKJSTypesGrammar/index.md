@@ -9,7 +9,7 @@ console.log(func.length)
 `func.length` 是 3，代表着该函数有三个形参。
 
 ## 不要在数组上使用 delete
-`delete` 操作会使数组产生 Empty Slot 
+`delete` 操作会使数组产生 Empty Slot 
 ```js
 const arr = [1, 2, 3]
 console.log(arr.length, arr)
@@ -117,7 +117,7 @@ console.info(a)  // 结果为 <div id='a'></div>
 * `Infinity / Infinity` => `NaN`
 * `new Error('message')` 和 `Error('message')` 的效果是一致的
 * 在 Javascript 中 String 是不可变的，这意味着任何关于 String 的操作都不能改变原来的字符串而只能产生新的字符串。
-* 注意可能存在一些特殊的对象在被转为布尔值时是 `false` ，典型的例如 `document.all`，通常是因为一些历史遗留问题。
+* 注意可能存在一些特殊的对象在被转为布尔值时是 `false` ，典型的例如 `document.all`，通常是因为一些历史遗留问题。
 * 可以通过 `Date.now()` 以及 `new Date().getTime()` 来获取当前时间的时间戳（毫秒级），要注意 UNIX 时间戳是秒级的，所以有时需要在前端进行转换。
 * 在 Javascript 中 `||` 和 `&&` 操作符返回的不是布尔值而是根据条件返回俩个表达式中的一个。
 * 在 Javascript 中没有 `else if` 关键字，只有 `if` 和 `else` ，之所以我们可以使用 `if ... else if ... else ...` 其实是因为省略了 `{}` 的结果。

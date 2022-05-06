@@ -24,7 +24,7 @@ MDN:
 所以答案是有的，并且最新的协议也规定了最大长度为 `2^53 - 1`。
 
 ## Infinity & -Infinity
-这俩个值的出现应该是为了避免任意数字除以 0 报错，例如：
+这俩个值的出现应该是为了避免任意数字除以 0 报错，例如：
 ```js
 1 / 0 // Infinity
 -1 / 0 // -Infinity
@@ -94,7 +94,7 @@ for (let i of febonacci) {
 ## 装箱与拆箱
 事实上 JavaScript 的装箱和拆箱并不像 Java 等语言里那样常见，甚至说其实在 JavaScript 并不存在，因为在协议中并没有相关的定义，在 MDN 中也搜索不到关于 `boxing` 或者 `unboxing` 等定义的相关词条。  
 
-在协议中把相关的行为解释为 `conversion` 或者 `coercion`，可以参考 [Is boxing coercion in JavaScript?](https://stackoverflow.com/questions/34067261/is-boxing-coercion-in-javascript?noredirect=1&lq=1)。  
+在协议中把相关的行为解释为 `conversion` 或者 `coercion`，可以参考 [Is boxing coercion in JavaScript?](https://stackoverflow.com/questions/34067261/is-boxing-coercion-in-javascript?noredirect=1&lq=1)。  
 
 当出现下列俩种情况时，原始类型会被转化为对象（通俗来讲被称为装箱）：
 * 把原始类型当作 `this` 使用，例如 `Object.prototype.toString.call(true)`
@@ -150,14 +150,14 @@ o + '' // null
 
 首先我们需要了解一下 JavaScript 的原型链是如何工作的。  
 
-之前在学习相关知识的经常会被搞晕，因为相关属性有的是标准，有的是内部实现，更有的只是部分浏览器的单独实现，并且从最早期的 JavaScript 到现在很多应该是已经过时了。  
+之前在学习相关知识的经常会被搞晕，因为相关属性有的是标准，有的是内部实现，更有的只是部分浏览器的单独实现，并且从最早期的 JavaScript 到现在很多应该是已经过时了。  
 
 所以我先来理清楚原型链工作中起到重要作用的几个属性。
 
-首先是 `__proto__` 以及 `[[Prototype]]`，它们其实是同一个东西，都指的是当前对象的原型联指向的对象或者 `null` (原型链最顶端) 。并且现在更推荐使用 `Object.getPrototypeOf` 以及 `Object.setPrototypeOf` 来替代 `__proto__`，因为这其实不是一个规范中的定义。只是现在的浏览器为了保证兼容性大都实现了它，最后来看看 MDN 的定义：
+首先是 `__proto__` 以及 `[[Prototype]]`，它们其实是同一个东西，都指的是当前对象的原型联指向的对象或者 `null` (原型链最顶端) 。并且现在更推荐使用 `Object.getPrototypeOf` 以及 `Object.setPrototypeOf` 来替代 `__proto__`，因为这其实不是一个规范中的定义。只是现在的浏览器为了保证兼容性大都实现了它，最后来看看 MDN 的定义：
 > The `__proto__` property of `Object.prototype` is an accessor property (a getter function and a setter function) that exposes the internal `[[Prototype]]` (either an object or null) of the object through which it is accessed.
 
-再来看看 `prototype` ，这个属性很容易和前面的搞混，事实上只有构造函数上存在这个属性：
+再来看看 `prototype` ，这个属性很容易和前面的搞混，事实上只有构造函数上存在这个属性：
 ```js
 const o = {}
 const func = function() {}
@@ -282,7 +282,7 @@ When it comes to inheritance, JavaScript only has one construct: objects. Each o
 
 
 ## CSS Variables
-在我们日常开发中经常会碰到的这里改一下颜色那里调一下阴影的需求，在产品或者设计师看来这是一件很简单的事。  
+在我们日常开发中经常会碰到的这里改一下颜色那里调一下阴影的需求，在产品或者设计师看来这是一件很简单的事。  
 
 那么如果我们维护了一个庞大的样式库，页面上有几十个按钮和边框都使用了这种颜色，产品一句改一下颜色可能需要我们花上几小时去找到并一个个修改。  
 
@@ -290,7 +290,7 @@ When it comes to inheritance, JavaScript only has one construct: objects. Each o
 
 好消息是现在 CSS 原生支持 `CSS Variables`，借助这一特性我们可以更方便的实现一键切换网站主题色的功能。  
 
-首先提一下伪类 `:root` 代表着文档的根元素，在 HTML 中通常就是 `<html>` ，但是它的优先级会比元素选择器 `html` 高，因为伪类选择器的优先级高于元素选择器。  
+首先提一下伪类 `:root` 代表着文档的根元素，在 HTML 中通常就是 `<html>` ，但是它的优先级会比元素选择器 `html` 高，因为伪类选择器的优先级高于元素选择器。  
 
 下面我们看一下一些基础的样例：
 ```css

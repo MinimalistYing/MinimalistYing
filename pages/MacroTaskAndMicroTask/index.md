@@ -170,7 +170,7 @@ for (var i = 1; i < 10; i++) {
 ## 微任务（MicroTask）
 首先来看一下 MDN 上给出的定义:  
 
-> A microtask is a short function which is executed after the function or program which created it exits and only if the JavaScript execution stack is empty, but before returning control to the event loop being used by the user agent to drive the script's execution environment.
+> A microtask is a short function which is executed after the function or program which created it exits and only if the JavaScript execution stack is empty, but before returning control to the event loop being used by the user agent to drive the script's execution environment.
 
 微任务与宏任务有许多相似之处，但是俩者存放在不同的队列中，主要区别在于俩个队列中的任务入栈时机不同，在每个宏任务执行完后都会立马将所有在队列中的微任务执行完毕，而且在微任务中递归的新增微任务，都会在这期间执行，直至队列中不再有微任务为止，所以不小心的话会造成死循环，例如
 ```js

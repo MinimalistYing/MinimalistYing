@@ -3,7 +3,7 @@
 
 主要用来作为对象的 Key 避免命名冲突。
 
-## 如何生成 Symbol
+## 如何构造 Symbol
 ```js
 // 最基础的方式
 const a = Symbol()
@@ -49,7 +49,7 @@ b.toString() // Symbol(desc b)
 ```
 ~~通过上述对比，个人感觉用 `Symbol.for()` 来生成 `Symbol` 好像更加合适，不仅可以少声明一个变量，并且能更方便的获得其描述。~~  
 
-`Symbol.for()` 会从某种程度上破坏 `Symbol` 的唯一特性，所以上述俩种生成 `Symbol` 的方式应该各有其适用的场景。
+`Symbol.for()` 会从某种程度上破坏 `Symbol` 的唯一特性，所以上述俩种生成 `Symbol` 的方式应该各有适用的场景。
 
 ## Symbol 的使用场景
 借助 `Symbol` 来实现单例模式
@@ -66,9 +66,9 @@ const a = singleton()
 const b = singleton()
 a === b // true
 ```
-`Symbol` 作为对象的 Key 不会被当作普通的键值被遍历。  
+`Symbol` 作为对象的 Key 时不会被当作普通的键值被遍历。  
 
-但还是可以通过 `Object.getOwnPropertySymbols()` 来获得，所以通过 Symbol 并不能完全实现私有属性的需求。
+但还是可以通过 `Object.getOwnPropertySymbols()` 来获得，所以严格来说 Symbol 并不能完全实现私有属性的需求。
 ```js
 // 这里要注意 const o = { Symbol(): 2 } 这种写法会报错
 const o = {
@@ -84,7 +84,7 @@ for (let key in o ){
 ```  
 
 ## Built-in Symbols
-个人认为 ES6 自身提供的 Built-in Symbols 才是最常见的使用方式。  
+个人认为 ES6 自带的 Built-in Symbols 才是最常见的用法。  
 
 从这点来看 `Symbol` 对于语言内部实现来说确实有帮助，当协议制定者向原型链上新增属性或方法时就不用再担心与开发者产生命名冲突了，例如 `Symbol.iterator`:
 ```js
@@ -101,9 +101,8 @@ const test = {
 Object.prototype.toString.call(test) // "[object TestClass]"
 ```
 
-值得一提的是这些内部的 `Symbol` 并不是像自定义的那样注册到全局库中，而是作为 `Symbol` 构造函数的静态属性存在。
+值得一提的是这些内部的 `Symbol` 并没有注册到全局库中，而是作为 `Symbol` 的静态属性存在。
 
-
-想要更深入的了解推荐看一下[这篇文章](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)。
+想要更深入的了解推荐看一下 [ES6 In Depth: Symbols](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)。
 
 完。

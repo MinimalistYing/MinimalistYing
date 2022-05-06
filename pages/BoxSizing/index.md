@@ -3,7 +3,7 @@
 ## 序
 `box-sizing` 共支持 `content-box` 以及 `border-box` 俩种模式。  
 
-不同模式对盒子的实际宽高计算方式不同，如下图所示，左侧是浏览器默认的 `content-box` 右侧是 `border-box`。
+不同模式对盒子的实际宽高计算方式不同，如下图所示，左侧是浏览器默认的 `content-box` 右侧是 `border-box`。
 
 ![content-box & border-box](https://pic.imgdb.cn/item/61404c5944eaada739f3373b.png)
 

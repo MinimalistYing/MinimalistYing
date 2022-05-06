@@ -59,7 +59,7 @@ window.oncontextmenu = e => e.preventDefault()
 > mobile browsers will wait approximately 300ms from the time that you tap the button to fire the click event. The reason for this is that the browser is waiting to see if you are actually performing a double tap.
 
 解决方案：
-* 禁用缩放: `<meta name="viewport" content="user-scalable=no">`
+* 禁用缩放: `<meta name="viewport" content="user-scalable=no">`
 * 不禁用缩放，更改默认的视口宽度: `<meta name="viewport" content="width=device-width, initial-scale=1">`
 * 直接使用 [FastClick](https://github.com/ftlabs/fastclick)
 

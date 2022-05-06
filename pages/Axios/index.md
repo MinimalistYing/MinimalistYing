@@ -19,7 +19,7 @@ Axios 是一个发送 Ajax 请求的类库，类似于 jQuery 的 `$.ajax()` 以
 // ...
 function createInstance(defaultConfig) {
   var context = new Axios(defaultConfig);
-  // 使函数 `Axios.prototype.request` 内部的 this 指向上面通过构造函数实例化的 context 对象
+  // 使函数 `Axios.prototype.request` 内部的 this 指向上面通过构造函数实例化的 context 对象
   // 注意这里的 instance 其实仍是一个函数
   // 之所以这样做是为了可以像 axios(url, config) 这样直接调用
   var instance = bind(Axios.prototype.request, context);
@@ -85,7 +85,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = function dispatchRequest(config) {
   // ...
 
-  // 如果设置有 baseURL 并且传入的请求地址是相对路径  
+  // 如果设置有 baseURL 并且传入的请求地址是相对路径  
   // 则用 baseURL 与传入的地址拼接后作为最终的请求路径
   // 通过 /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url) 来判断是否为绝对路径
   if (config.baseURL && !isAbsoluteURL(config.url)) {

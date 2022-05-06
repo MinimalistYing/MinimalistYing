@@ -27,7 +27,7 @@ const func = a => b => c => a + b + c // => 6
 curryingAdd(1)(2)(3) // => 6
 ```
 
-## 一个简单的通用柯里化实现
+## 一个简单的通用柯里化实现
 Ps：项目里如果真需要用到柯里化建议使用 [_.curry](https://lodash.com/docs/4.17.15#curry)
 ```js
 function curry (func) {

@@ -95,7 +95,7 @@ const merged = new Map([...firstMap, ...secondMap]) // Map(3) {1 => "foo", 2 =>
 Map 的一些优势：
 * 由于对象的 Key 只能是字符串(或者是 ES6 新增的 Symbol)，这样当把对象作为 Map 使用时同样只能以字符串作为键。而 ES6 的 Map 支持任意的数据类型作为 Key。
 * 不需要担心会受到原型的影响，Map 只会包含你自己设置的值。
-* Map 中所存储的键值对是有序的,先插入的值会在遍历时优先取出。(如果浏览器实现了 ECMAScript 2015 Spec 的话，Object 中的 String Key 也会是有序的)
+* Map 中所存储的键值对是有序的,先插入的值会在遍历时优先取出。(如果浏览器实现了 ECMAScript 2015 Spec 的话，Object 中的 String Key 也会是有序的)
 * 可以很方便的通过 `Map.prototype.size` 来知道一共存储了多少值。
 * 可以很方便的通过 `for (let [key, value] of map)` 进行遍历。
 * 在频繁的操作 Map 时会获得性能上的提升。

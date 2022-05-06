@@ -1,6 +1,6 @@
 # 聊聊 package.json 中的各类依赖
 
-## 引子
+## 引子
 相信有很多同学对 `package.json` 中的 `dependencies|devDependencies|optionalDependencies|peerDependencies|bundledDependencies` 都有过疑惑，为啥一个依赖包也要分这么多类型呢？  
 
 Emmmm...对日常开发来讲可能还真没有那么必要，大不了影响到每次部署时的安装时间，但是如果你想自己开发一个库或者框架的话可能就需要去好好研究一下了。

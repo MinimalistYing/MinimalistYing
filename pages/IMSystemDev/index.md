@@ -4,11 +4,11 @@
 当听说要开发一个 IM 系统时，中后台系统已做到麻木的我无疑是惊喜的。在网上搜索了下，发现很少有相关的介绍，借此机会在这里记录一下开发中用到的技术和碰到的问题，希望能给他人带来帮助。
 
 ## 如何显示微信系统自带表情
-首先微信表情的工作机制大概是这样的（Ps：钉钉应该也类似）：系统自带的表情其实是通过纯文本传输的，只不过在显示消息的时候会把特定的文字转译成表情图案。例如 `[微笑]` => 😊。  
+首先微信表情的工作机制大概是这样的（Ps：钉钉应该也类似）：系统自带的表情其实是通过纯文本传输的，只不过在显示消息的时候会把特定的文字转译成表情图案。例如 `[微笑]` => 😊。  
 
 所以我们要做的就是找到消息中匹配的文字，并在页面上展示前转为对应的图片。  
 
-第一步，我们需要找到对应的表情资源以及存储对应关系的 Map，资源可以在 CSDN 上找到，然后我是通过如下数据结构存储的对应关系：
+第一步，我们需要找到对应的表情资源以及存储对应关系的 Map，资源可以在 CSDN 上找到，然后我是通过如下数据结构存储的对应关系：
 ```js
 const EMOJI = new Map([
   ['[微笑]', '100.gif'],
@@ -40,7 +40,7 @@ function contentToHTML(content: string) {
 ## WebSocket
 在 WebSocket 没出现之前，想要实现服务端推送消息的需求只能通过轮询。缺点很明显，会浪费大量时间在 HTTP 请求的建立上。  
 
-IM 系统对实时性要求较高，如果采用轮询的话会导致用户明显感受到延迟。所以 WebSocket 在这个场景下是必不可少的。  
+IM 系统对实时性要求较高，如果采用轮询的话会导致用户明显感受到延迟。所以 WebSocket 在这个场景下是必不可少的。  
 
 稍微提一下 WebSocket 的协议细节，连接的建立也是通过 `http` 来完成的，只不过会通过请求头携带的
 ```
@@ -100,7 +100,7 @@ ws.readyState !== ws.OPEN
 <img loading="lazy" src="xxx" />
 ```
 
-再就是要尽可能的减少页面上的 DOM 节点，这个通常的做法是分页，但是通讯录这种场景分页显得不太合适。所以最终采用的是窗口化技术，推荐使用 [react-window](https://github.com/bvaughn/react-window)，如果不能完全支持需求的话还可以使用 [react-virtualized](https://github.com/bvaughn/react-virtualized) 。都是相同的作者开发的，前者更为轻量。  
+再就是要尽可能的减少页面上的 DOM 节点，这个通常的做法是分页，但是通讯录这种场景分页显得不太合适。所以最终采用的是窗口化技术，推荐使用 [react-window](https://github.com/bvaughn/react-window)，如果不能完全支持需求的话还可以使用 [react-virtualized](https://github.com/bvaughn/react-virtualized) 。都是相同的作者开发的，前者更为轻量。  
 
 最终成功将页面初始化到加载完成的时间优化到了 1.5s 左右(Ps: 不是用户可以开始操作的时间，而是所有逻辑都运行完的时间)。  
 
@@ -298,4 +298,24 @@ function copyImageToClipboard(img) {
   [图片]
 </span>
 ```
-这样标签中的 `[图片]` 会被当作普通文本被一起选中复制，同时由于设置了 `color: transparent` 所以从界面上也看不到这个文字。
+这样标签中的 `[图片]` 会被当作普通文本被一起选中复制，同时由于设置了 `color: transparent` 所以从界面上也看不到这个文字。  
+
+## React Key 重复导致组件无法正确销毁
+**永远要确保 List 中的 Key 唯一**。血与泪的教训，虽然 React 对 Key 重复给出的只是 Warning，但是实际上会导致各种神奇的问题。  
+
+例如下面这个例子，直接清除是可以成功的。但是当你试图替换就会出现问题，拥有重复 Key 的组件不会被销毁。并且在这些组件会一直停留在页面上，就像 Warning 中所说的 `Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version`。
+
+<iframe src="https://codesandbox.io/embed/strange-behavior-about-react-repeat-keys-2wuuxi?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="strange-behavior-about-react-repeat-keys"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+至于为什么会出现重复，这又是另一个故事了。  
+
+首先聊天应用有个聊天窗，里面的聊天信息通过数组存储，每当后端通过 Websocket 推送来一条新消息我就往数组里推。但是某一天突然发现，后端在一些不明原因影响下会将同一条消息重复推送。  
+
+还有一种情况，用户正在查看第一页的聊天记录，我们假设每页记录有十条。此期间用户又接收到了五条新消息，这个时候用户突然想看看之前的记录，往上翻了一页。Boom 💣，第二页的数据跟初次加载的第一页数据就出现了五条重复记录。  
+
+解决方案其实挺笨的，依据 ID 做个去重操作即可。折腾的其实是一开始发现问题的表象是用户在切换会话时有部分聊天记录不会被清除，从这个现象到找到产生问题的原因再到确定什么情况会导致 ID 重复，整个过程还是相当坎坷。

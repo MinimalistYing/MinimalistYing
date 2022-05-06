@@ -6,7 +6,7 @@
 ## Debounce
 > The Debounce technique allow us to "group" multiple sequential calls in a single one.
 
-使一定时间内多次触发的函数最终只执行一次的技术就叫做 Debounce，下面我们先来看一个最基础的实现：
+使一定时间内多次触发的函数最终只执行一次的技术就叫做 Debounce，下面我们先来看一个最基础的实现：
 ```js
 function debounce(func, wait) {
   let timer = null
@@ -17,7 +17,7 @@ function debounce(func, wait) {
 }
 ```
 细心的同学可能已经发现了上述实现存在的问题
-* 函数至少也会被延迟 `wait` 时间执行
+* 函数至少也会被延迟 `wait` 时间执行
 * 函数执行时的参数以及上下文丢失
 
 首先我们来支持可以立即执行的问题：
@@ -61,7 +61,7 @@ function debounce(func, wait, immediate = false) {
 ```
 
 ## Throttle
-使一定时间内多次触发的函数在一定时间间隔最多执行一次的技术就叫做 Throttle，它的一个典型使用场景就是滚动加载，下面我们先来看一个最基础的实现：
+使一定时间内多次触发的函数在一定时间间隔最多执行一次的技术就叫做 Throttle，它的一个典型使用场景就是滚动加载，下面我们先来看一个最基础的实现：
 
 ```js
 function throttle(func, wait, immediate = false) {

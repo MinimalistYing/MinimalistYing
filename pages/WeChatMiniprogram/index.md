@@ -11,7 +11,7 @@
 ### wx.request 会默认的设置 Content-Type
 默认值是 `application/json`，大多数情况下没有问题。但是如果服务器端做了一些更严格的校验，例如限制了 `GET` 请求的 `content-type` 只能为 `application/x-www-form-urlencoded` 就会导致请求出错，平时注意留意一下即可。
 
-### 小程序的请求不会默认携带 Cookie
+### 小程序的请求不会默认携带 Cookie
 比较奇怪为什么微信官方会有这个限制，毕竟鉴权等信息还是通过 Cookie 传递方便。找到了一个库 [weapp-cookie](https://github.com/charleslo1/weapp-cookie) 来解决这个问题。
 
 ### wx:key
@@ -24,8 +24,8 @@
 可能是由于唤起相机时会导致小程序切至后台，然后再次进入时就会触发 onShow 事件。
 
 ### 怎么在微信小程序中使用 svg
-由于 WXML 自身不支持 `svg` 标签，可以通过 `background-image` 的 `url()` 将 svg 图片转为 Data URL 来放入其中使用。   
+由于 WXML 自身不支持 `svg` 标签，可以通过 `background-image` 的 `url()` 将 svg 图片转为 Data URL 来放入其中使用。   
 Ps: [在线 SVG 转 Data Url](https://codepen.io/jakob-e/pen/doMoML)
 
-## Tips
+## Tips
 * Warning 信息也需要留意，可能会导致小程序执行错误。

@@ -8,7 +8,7 @@ export default function Games () {
 
   useEffect(() => {
     const listener = e => {
-      const singleHeight = document.getElementsByTagName('figure')[0].clientHeight
+      const singleHeight = document.getElementsByTagName('figure')[0]?.clientHeight
       setCurr(Math.ceil(document.documentElement.scrollTop / singleHeight))
     };
     document.addEventListener('scroll', listener);
@@ -67,7 +67,6 @@ function ImageCard ({ image }) {
       loading="lazy"
       style={{
         width: '80vw',
-        height: '45vw',
         transform: `perspective(2000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
       }}
     />
@@ -75,11 +74,23 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: "虚构世界 Figment",
+  url: 'https://pic.imgdb.cn/item/626e4971239250f7c54d5e30.jpg',
+}, {
+  title: "传奇4",
+  url: 'https://pic.imgdb.cn/item/626bf406239250f7c5907d9b.jpg',
+}, {
+  title: "狂战传说 Tales of Berseria",
+  url: 'https://pic.imgdb.cn/item/62637a86239250f7c590357a.jpg',
+}, {
   title: "看火人 Firewatch",
   url: 'https://pic.imgdb.cn/item/6252a663239250f7c5c895f0.jpg',
 }, {
   title: "灵能主宰 Masters of Anima",
   url: 'https://pic.imgdb.cn/item/62514a19239250f7c53b7dcd.jpg',
+}, {
+  title: "帝国时代2 决定版 Age of Empires II Definitive Edition",
+  url: 'https://pic.imgdb.cn/item/624bff5a239250f7c57a1b9b.jpg',
 }, {
   title: "毁灭战士 DOOM4",
   url: 'https://pic.imgdb.cn/item/624005c127f86abb2ae70f0d.jpg',

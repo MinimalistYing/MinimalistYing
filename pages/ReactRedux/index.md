@@ -3,7 +3,7 @@
 ## 序
 Redux 作为一个简单的用于管理应用状态的工具，可以与任何其它的前端框架共用。当然，尤其适用于数据驱动视图的框架(Vue/React/Angular)。  
 
-React-Redux 利用高阶组件(HOC) / Context，将 React UI 的更新与 Redux Store 的变化绑定在了一起。
+React-Redux 利用高阶组件(HOC) / Context，将 React UI 的更新与 Redux Store 的变化绑定在了一起。
 
 ## 源码中学习到的小技巧
 React-Redux 默认通过以下方法来比较组件的Props是否相等  

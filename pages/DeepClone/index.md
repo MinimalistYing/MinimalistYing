@@ -83,3 +83,5 @@ function deepClone (o, refs = []) {
 深入理解这个问题对理解 JavaScript 中的原始类型和引用类型很有帮助。
 
 完。
+
+**Ps: 2022 年了，大部分现代浏览器原生支持 [structuredClone()](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone)** 
