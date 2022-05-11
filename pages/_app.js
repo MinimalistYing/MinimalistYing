@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
-import Head from 'next/head'
+import Head from 'next/head';
+import { useEffect } from 'react';
+import '../styles/globals.scss';
 
-import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

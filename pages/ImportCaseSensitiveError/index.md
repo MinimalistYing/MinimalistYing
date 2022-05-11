@@ -1,7 +1,7 @@
 # 记一次引入依赖路径未注意大小写导致的问题
 
 ## 起因
-由于是 TS 项目，所以除了正常引用 Antd 组件之外还需要额外引入一些类型申明。
+最近在做一个 TS 项目，所以除了正常引用 Antd 组件之外还需要额外引入一些类型申明。
 ```js
 import { TablePaginationConfig } from 'antd/lib/Table'
 ```
@@ -11,7 +11,7 @@ import { TablePaginationConfig } from 'antd/lib/Table'
 
 从报错信息上来看是找不到相关依赖，但是登上服务器确认在 node_modules 下是有相关依赖的，并且在本地删了 node_modules 重装后构建仍然正常。  
 
-这种本地都正常，但是一上线就出问题的情况确实比较让人头疼。
+这种本地正常，但是一上线就翻车的情况确实比较让人头疼。
 
 ## 解决方案
 经过再三检查，突然发现 node_modules 下 Antd 相关目录都是小写的，所以修改如下：

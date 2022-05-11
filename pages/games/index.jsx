@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: "刺客信条 叛变 Assassin's Creed Rogue",
+  url: 'https://pic.imgdb.cn/item/62766f130947543129a2cc31.jpg',
+}, {
   title: "虚构世界 Figment",
   url: 'https://pic.imgdb.cn/item/626e4971239250f7c54d5e30.jpg',
 }, {

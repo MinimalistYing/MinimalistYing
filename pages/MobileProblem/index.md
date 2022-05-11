@@ -23,7 +23,7 @@ Andriod 中调用 WebView 来访问 H5 页面时 HTML5 的 DOMStorage 也就是`
 当然，我相信稍微有点经验的客户端同学都会默认帮前端配置好的。
 
 ## IOS 点击上一页渲染白屏
-在用 Vue 开发 IOS WebView 内嵌 H5 SPA 页面时碰到点击APP返回上一页时出现页面白屏的问题，需要滑动一下页面，内容才会显示。  
+在用 Vue 开发 IOS WebView 内嵌 H5 SPA 页面时碰到点击 APP 返回上一页时出现页面白屏的问题，需要滑动一下页面，内容才会显示。  
 
 具体问题以及解决方式可以参考 [issue](https://github.com/vuejs/vue/issues/5533#issuecomment-343864468)  
 

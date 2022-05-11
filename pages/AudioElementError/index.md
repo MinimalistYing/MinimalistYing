@@ -13,7 +13,7 @@ const Audio = ({ url }) => (
 ```
 ![错误信息](https://pic.imgdb.cn/item/61090eb15132923bf80b1389.jpg)
 
-自从做了这个项目感觉就一直在试着挑战浏览器的极限，Google 了一番后发现 Chrome 自从 92 版本后新增了对做多加载 `<audio />` 以及 `<video />` 数量的上限，官方申明如下：
+自从做了这个项目感觉就一直在试着挑战浏览器的极限，Google 了一番后发现 Chrome 自从 92 版本后新增了对加载 `<audio />` 以及 `<video />` 数量的上限，官方申明如下：
 
 ![公告](https://pic.imgdb.cn/item/610911f85132923bf812cfff.jpg)
 

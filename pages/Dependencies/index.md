@@ -1,9 +1,11 @@
 # 聊聊 package.json 中的各类依赖
 
 ## 引子
-相信有很多同学对 `package.json` 中的 `dependencies|devDependencies|optionalDependencies|peerDependencies|bundledDependencies` 都有过疑惑，为啥一个依赖包也要分这么多类型呢？  
+相信有很多同学对 `package.json` 中的 `dependencies|devDependencies|optionalDependencies|peerDependencies|bundledDependencies` 都有过疑惑，为啥一个依赖也要分这么多类型呢？  
 
-Emmmm...对日常开发来讲可能还真没有那么必要，大不了影响到每次部署时的安装时间，但是如果你想自己开发一个库或者框架的话可能就需要去好好研究一下了。
+Emmmm...  
+
+对日常开发来讲可能还真没有那么必要，大不了影响到每次部署时的安装时间，但是如果你想自己开发一个库或者框架的话可能就需要去好好研究一下了。
 
 ## dependencies
 你的代码在生产环境运行时必须的依赖包，如果安装失败则会报错，因为这可能会导致程序无法正常执行。  
@@ -27,15 +29,16 @@ Emmmm...对日常开发来讲可能还真没有那么必要，大不了影响到
 ```
 warning "vue-loader@13.3.0" has unmet peer dependency "vue-template-compiler@^2.0.0".
 ```
-而 npm v7 会直接安装所需要的依赖，参见 [更新日志](https://github.blog/2020-10-13-presenting-v7-0-0-of-the-npm-cli/)。
+而 npm v7 会直接安装所需要的依赖，参见 [Presenting v7.0.0 of the npm CLI
+](https://github.blog/2020-10-13-presenting-v7-0-0-of-the-npm-cli/)。
 
 ## bundledDependencies
-这个更罕见，通常指的是一些不存在于 npm Registry 中的一些包，类似于一些二进制文件之类的。  
+这个更罕见，通常指的是一些非代码文件，类似于一些视频、音频、安装包之类的。  
 
 举个不那么恰当的例子，你有一份教学视频文件需要和你的代码一起被打包发布，那么你就可以将这个文件放入 `bundledDependencies`。
   
 ## 总结
-总的来说，如果你在开发前端的业务项目，那么这些东西的意义不大，你把所有的依赖都当作 `dependencies` 也行。  
+总的来说，如果你在开发日常 Web 项目，那么这些东西的意义没那么大，你把所有的依赖都当作 `dependencies` 也行。  
 
 如果是 Node 项目，那么你可能需要把一些工具类的依赖放到 `devDependencies` 中，这样可以减少最终包的体积，加快安装速度。  
 
