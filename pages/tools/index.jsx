@@ -16,7 +16,7 @@ export default function Tools () {
           <h2>日常开发</h2>
           <div className={styles.content}>
             <a target="_blank" rel="noreferrer" href='https://jsoneditoronline.org/'>JSON Editor</a>
-            <a target="_blank" rel="noreferrer" href='https://squoosh.app/'>Google 出品，图片在线压缩</a>
+            <a target="_blank" rel="noreferrer" href='https://squoosh.app/'>squoosh.app</a>
             <a target="_blank" rel="noreferrer" href='https://www.iconfont.cn/'>Iconfont</a>
             <a target="_blank" rel="noreferrer" href='https://regexper.com/'>Regexper</a>
             <a target="_blank" rel="noreferrer" href='https://www.jq22.com/code2861'>CSS3 渐变色选择器</a>
@@ -87,7 +87,6 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='https://www.alloyteam.com/'>AlloyTeam</a>
             <a target="_blank" rel="noreferrer" href='https://www.ruanyifeng.com/blog/'>阮一峰</a>
             <a target="_blank" rel="noreferrer" href='https://surmon.me/'>Surmon</a>
-            <a target="_blank" rel="noreferrer" href='https://matters.news/'>Matters</a>
             <a target="_blank" rel="noreferrer" href='https://ishadeed.com/'>ishadeed</a>
             <a target="_blank" rel="noreferrer" href='https://www.bruceyj.com/front-end-interview-summary/'>BY</a>
           </div>

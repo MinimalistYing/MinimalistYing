@@ -74,6 +74,12 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: "异界锁链 Astral Chain",
+  url: 'https://pic.imgdb.cn/item/6280cc6d09475431296e1f88.jpg',
+}, {
+  title: "重返帝国",
+  url: 'https://pic.imgdb.cn/item/627cc6e00947543129e85cdb.jpg',
+}, {
   title: "刺客信条 叛变 Assassin's Creed Rogue",
   url: 'https://pic.imgdb.cn/item/62766f130947543129a2cc31.jpg',
 }, {
