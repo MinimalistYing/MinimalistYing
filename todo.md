@@ -23,3 +23,6 @@
 scp -r /Users/mininalistying/Documents/MinimalistYing.github.io/dist root@47.96.77.197:app
 
 scp -r /Users/mininalistying/Documents/MinimalistYing.github.io/server.js root@47.96.77.197:app
+
+// 一些电子书
+http://157.7.135.42/books/
