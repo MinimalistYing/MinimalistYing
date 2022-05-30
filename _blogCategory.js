@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "对于 React 版本演进的一些探索（一）",
+		key: "React1",
+		img: "https://pic.imgdb.cn/item/628f4ecc09475431291ec79a.jpg",
+		date: '2022-05-26',
+		tags: ['技术', 'React'],
+	},
+  {
     name: "富强、民主、文明、和谐",
 		key: "ChinaStatistic2020",
 		img: "https://pic.imgdb.cn/item/61e528c02ab3f51d910fefbf.jpg",

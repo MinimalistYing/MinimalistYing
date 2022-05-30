@@ -74,6 +74,18 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: "少林九武猴",
+  url: 'https://pic.imgdb.cn/item/6292e2570947543129bc06da.jpg',
+}, {
+  title: "奥丁 神叛",
+  url: 'https://pic.imgdb.cn/item/628f614509475431293c1e99.jpg',
+}, {
+  title: "超级马里奥 奥德赛",
+  url: 'https://pic.imgdb.cn/item/6289be8c0947543129d605f7.jpg',
+}, {
+  title: "黑森町绮谭 Tales of the Black Forest",
+  url: 'https://pic.imgdb.cn/item/6288f4fe094754312959e4f8.jpg',
+}, {
   title: "异界锁链 Astral Chain",
   url: 'https://pic.imgdb.cn/item/6280cc6d09475431296e1f88.jpg',
 }, {

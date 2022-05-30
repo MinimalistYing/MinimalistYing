@@ -49,6 +49,7 @@ export default function Tools () {
               <a target="_blank" rel="noreferrer" href='https://javascriptweekly.com/'>JavaScript Weekly</a>
               <a target="_blank" rel="noreferrer" href='https://bigfrontend.dev/'>BFE.dev</a>
               <a target="_blank" rel="noreferrer" href='https://web.dev/learn/css/'>Learn CSS</a>
+              <a target="_blank" rel="noreferrer" href='https://refactoring.guru/design-patterns'>Learn Design Patterns</a>
             </div>
           </div>
           
