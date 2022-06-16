@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from '../../components';
 import styles from './index.module.scss';
 
@@ -74,6 +74,15 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '风暴奇侠 The Cycle Frontier',
+  url: 'https://pic.imgdb.cn/item/62a6993f09475431291f1e7e.jpg',
+}, {
+  title: '最后的生还者 The Last of Us Remastered',
+  url: 'https://pic.imgdb.cn/item/6294b867094754312922425a.jpg',
+}, {
+  title: '神佑释放 Bless Unleashed',
+  url: 'https://pic.imgdb.cn/item/6294b9d30947543129245825.jpg',
+}, {
   title: "少林九武猴",
   url: 'https://pic.imgdb.cn/item/6292e2570947543129bc06da.jpg',
 }, {
@@ -223,9 +232,6 @@ const images = [{
 }, {
   title: '荣耀战魂 For Honor',
   url: 'https://pic.imgdb.cn/item/6126592244eaada739c4fd47.jpg',
-}, {
-  title: '神佑释放 Bless Unleashed',
-  url: 'https://pic.imgdb.cn/item/611759125132923bf829a401.jpg',
 }, {
   title: '热血少女物语 River City Girls',
   url: 'https://pic.imgdb.cn/item/6117590d5132923bf8298ccc.jpg',

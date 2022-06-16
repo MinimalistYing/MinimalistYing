@@ -12,6 +12,8 @@
 `Cache-Control : max-age:66,must-revalidate` 允许缓存，
 并且只有在内容过期后才必须进行新鲜度验证（在缓存过期时即使服务器错误也不会将这个陈旧的缓存返回给客户端）
 
+![缓存](https://pic.imgdb.cn/item/629d70870947543129c8ad1a.jpg)  
+
 ## DNS
 ![DNS](https://pic.imgdb.cn/item/61d7b3bf2ab3f51d91cc1ddf.png)  
 
