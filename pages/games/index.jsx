@@ -74,6 +74,21 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '三星亚索追梦成功',
+  url: 'https://pic.imgdb.cn/item/62cedb28f54cd3f9377bb0ca.jpg',
+}, {
+  title: '路易吉洋馆 3',
+  url: 'https://pic.imgdb.cn/item/62c95f02f54cd3f937da205a.jpg',
+}, {
+  title: '异度神剑 终极版',
+  url: 'https://pic.imgdb.cn/item/62c8c5e0f54cd3f9371687d1.jpg',
+}, {
+  title: '致命躯壳 Mortal Shell',
+  url: 'https://pic.imgdb.cn/item/62b3cd1d094754312951613a.jpg',
+}, {
+  title: '质量效应3 Mass.Effect.3',
+  url: 'https://pic.imgdb.cn/item/62b0794209475431294b6fcd.jpg',
+}, {
   title: '风暴奇侠 The Cycle Frontier',
   url: 'https://pic.imgdb.cn/item/62a6993f09475431291f1e7e.jpg',
 }, {

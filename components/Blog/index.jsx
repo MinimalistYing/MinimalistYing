@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Markdown, Header } from '../index'
+import { Header, Markdown } from '../index'
 
 import category from '../../_blogCategory'
 
@@ -7,7 +7,7 @@ export default function Blog ({ content }) {
   const index = content.indexOf('\n')
   const title = content.slice(2, index)
   const body = content.slice(index + 1)
-  const cat = category.find(({ name }) => name === title)
+  const cat = category.find(({ name }) => title.startsWith(name))
 
   return (
     <>
