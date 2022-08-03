@@ -140,8 +140,8 @@ JavaScript 一共有 `false`/`0`/`""`/`null`/`undefined`/`NaN`/`0n` 这七种假
 })()
 
 (function() {
-	'use strict'// 严格模式下不加var声明会直接报错
-	a = 2 // Uncaught ReferenceError: b is not defined
+  'use strict'// 严格模式下不加var声明会直接报错
+  a = 2 // Uncaught ReferenceError: b is not defined
 })()
 
 

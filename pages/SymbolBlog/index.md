@@ -54,8 +54,8 @@ b.toString() // Symbol(desc b)
 ## Symbol 的使用场景
 借助 `Symbol` 来实现单例模式
 ```js
-const Instance = Symbol.for('instance')
 function singleton() {
+  const Instance = Symbol.for('instance')
 	if (singleton[Instance]) {
 		return singleton[Instance]
 	}

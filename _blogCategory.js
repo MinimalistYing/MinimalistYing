@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "React Hooks In Depth",
+		key: "ReactHooks",
+		img: "https://pic.imgdb.cn/item/62d4d634f54cd3f9379e8bf3.jpg",
+		date: '2022-07-18',
+		tags: ['技术', 'React'],
+	},
+  {
     name: "React Refs",
 		key: "ReactRefs",
 		img: "https://pic.imgdb.cn/item/62d21d60f54cd3f93744f3f8.jpg",

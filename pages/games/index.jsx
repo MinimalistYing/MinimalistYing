@@ -74,6 +74,12 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '无间冥寺 Curse of the Dead Gods',
+  url: 'https://pic.imgdb.cn/item/62e8e96016f2c2beb1f2b23b.jpg',
+}, {
+  title: '仙剑奇侠传二',
+  url: 'https://pic.imgdb.cn/item/62d9036ff54cd3f937f1586f.jpg',
+}, {
   title: '三星亚索追梦成功',
   url: 'https://pic.imgdb.cn/item/62cedb28f54cd3f9377bb0ca.jpg',
 }, {

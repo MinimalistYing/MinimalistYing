@@ -52,7 +52,7 @@ Sec-WebSocket-Version: 13
 ```
 来实现一个协议升级过程。当实现了 WebSocket 的服务器接收到该请求时就会将连接升级，然后连接就成功建立了。  
 
-在前端建立一个 WebSocket 链接个人感觉比发起 AJAX 请求要简单：
+在前端建立一个 WebSocket 连接个人感觉比发起 AJAX 请求要简单：
 ```js
 // 与 https 相对应的 WebSocket 也有 wss
 const ws = new WebSocket('ws://xxx.com/api')
@@ -82,7 +82,7 @@ ws.readyState !== ws.OPEN
 
 发自内心的讲，我觉得这么做就是跟自己过不去，碰到过无数 Bug 都是因为全局状态没有及时清除或者被不小心改变引起的。再算上引入 Redux 后需要多写的 Boilerplate ，这么做的同学们估计真的是嫌自己加班加少了。  
 
-但这次上手做 IM 系统的前端开发，让我彻底领悟了 Redux 文档里所说的
+但这次上手做 IM 系统，让我彻底领悟了 Redux 文档里所说的
 > You'll know when you need Flux. If you aren't sure if you need it, you don't need it.
 
 以及 Dan Abramov 说的
