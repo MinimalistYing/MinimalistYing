@@ -84,4 +84,5 @@ function deepClone (o, refs = []) {
 
 完。
 
-**Ps: 2022 年了，大部分现代浏览器原生支持 [structuredClone()](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone)** 
+**Ps: 2022 年了，大部分现代浏览器原生支持 [structuredClone()](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone) 但是该方法不支持类似 `Symbol/Function` 等类型的拷贝。** 
+

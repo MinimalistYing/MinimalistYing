@@ -1,32 +1,39 @@
 # 从输入 URL 到浏览器显示页面发生了什么
-对于这个问题相信大家或多或少都能答上几点，但是估计很少有人能详细的描述整个过程。  
+对于这个问题相信大家或多或少都能答上几点，但是要详细的描述整个过程就没那么容易了。  
 
 作为一名 Web 开发者来说，深入理解在浏览器背后发生的事情对于日常开发或者 Debug 来说都很有意义。  
 
 下面我会试着尽可能详细的整理一下从我们输入 URL 到浏览器显示页面的整个流程。
 
-## 浏览器本地缓存
+## 浏览器本地强缓存
+输入域名后首先通过 Cache-Control/Expires 判断是否存在强缓存，如果俩种响应头都存在优先采用 Cache-Control。Cache-Control 可以设置如下几个字段：
+* max-age 最长缓存的期限，单位为秒
+* no-cache 禁止使用强缓存，必须与服务器进行协商
+* no-store 禁用所有缓存  
 
-`Cache-Control : no-store` 禁止代理缓存 `Cache-Control : no-cache  Pragma : no-cache// 兼容HTTP/1.0` 
-允许缓存，但必须先与服务器进行新鲜度验证，之后才能将内容返回给客户端
-`Cache-Control : max-age:66,must-revalidate` 允许缓存，
-并且只有在内容过期后才必须进行新鲜度验证（在缓存过期时即使服务器错误也不会将这个陈旧的缓存返回给客户端）
-
-![缓存](https://pic.imgdb.cn/item/629d70870947543129c8ad1a.jpg)  
+如果存在缓存并且未超过设置的 max-age/Expires 则直接 200 返回对应资源。这里还存在俩种不同的情况，优先从内存中获取对应 Chrome Network 展示的是 `200 from memory cache` 然后再从本地硬盘中获取对应展示 `200 from disk cache`。
 
 ## DNS
+如果本地没有符合条件的强缓存，则需要向服务器发起请求获取资源。首先进行的是域名查找工作，目的是根据域名找到对应的服务器 IP 地址。  
+
+这一步能做的优化是尽可能的把样式、脚本、图片等文件放到相同域名的服务器下。
+
 ![DNS](https://pic.imgdb.cn/item/61d7b3bf2ab3f51d91cc1ddf.png)  
 
 **图片来自** [surmon.me](https://surmon.me/article/21)  
 
-浏览器缓存->系统缓存(hosts 文件)->路由器缓存->IPS服务器缓存，根域名服务器缓存，顶级域名服务器缓存，主域名服务器缓存
+域名缓存的查找顺序：浏览器缓存->系统缓存(hosts 文件)->路由器缓存->IPS服务器缓存，根域名服务器缓存，顶级域名服务器缓存，主域名服务器缓存
 
-## HTTP 请求以及 HTTP 缓存
-三次握手四次挥手，网上相关谈论太多了，不在赘述。
+## 建立 TCP 连接
+拿到 IP 地址后首先需要在浏览器与服务器之间建立起 TCP 连接。也就是通常说的“三次握手”[TCP three-way handshake](https://developer.mozilla.org/en-US/docs/Glossary/TCP_handshake)：
+* 首先客户端发送 `SYN` 给服务端，此时双方都还无法得到任何信息。
+* 服务端收到客户端发来的 `SYN` 后，发送 `SYN + ACK` 给客户端，此时服务端能得知客户端可以正常发送信息。
+* 客户端收到服务端发来的 `SYN + ACK` 后，发送 `ACK` 给服务端，此时客户端能得知服务端可以正常收发信息，在服务端收到该消息后也能得知客户端能正常收到信息。
+  
+这个过程主要是为了确保客户端、服务端双方都能正常收发消息。
 
 ## HTTPS
-
-HTTPS
+如果是 HTTPS 请求，还需要多增加一个加密过程。
 SSL/TLS
 过程
 
@@ -48,72 +55,53 @@ SSL/TLS
 
 (8) 接下来的数据传输都使用该对称密钥key进行加密。
 
-## 解析 HTML
-css js
 
-## 构建 DOM 树
+## 协商缓存
+连接建立后就可以发送 HTTP/HTTPS 请求了，浏览器首先向服务器发送一个 GET 请求获取 HTML。  
 
-## 重绘和回流
+此时还需先判断一下是否能采用协商缓存，先验证 Etag/If-None-Match，再验证 Last-Modifed/If-Modified-Since。  
+
+任意一个规则匹配则请求返回 304，浏览器直接使用本地缓存的资源。反之请求返回 200，同时带上最新的资源并对本地缓存进行更新。
+
+
+![缓存](https://pic.imgdb.cn/item/629d70870947543129c8ad1a.jpg)  
+
+## 断开连接
+一个 HTTP/HTTPS 请求完成后，浏览器可能会选择断开 TCP 连接（当然也可能会保留连接以供后续使用）。此时需要进行“四次挥手”：
+* 客户端向服务端发送 `FIN + SEQ` 通知我这边消息已经发送完了正打算关闭连接。
+* 服务端收到后先发送 `ACK` 告知已收到关闭请求，但肯能我这边还有些信息未发送完成。
+* 服务端向客户端发送 `FIN + SEQ` 告知消息都已经发送完成，做好了关闭连接的准备。
+* 客户端收到 `FIN` 消息后发送 `ACK` 告知服务端双方都可以关闭连接了。
+
+需要“四次挥手”主要是由于 TCP 的半关闭（half-close）特性，在一端在结束它的发送后还能继续接收来自另一端数据。
+
+## 解析 HTML 构建 DOM 树
+当浏览器拿到 HTML 后则开始对其进行解析生成 DOM 树。在此期间如果碰到非 `async`/`defer` 的 `<script>` 会暂停解析并优先下载并执行脚本。  
+
+这也是为什么在早期总是建议将 `<script>` 标签放在文档最后面的原因。
+
+## 构建 CSSOM 树
+接下来浏览器会根据已生成的 DOM 树和 CSS 文件来组合生成 CSSOM 树。这个过程很快，通常没有什么可优化的空间。  
+
+## Render
+组合 DOM 树和 CSSOM 树来生成最终的渲染树。
+
+渲染树不会包含不可见的节点，例如 `display:none` 的节点以及 `<head>` 标签下的所有节点。  
+
+具体渲染细节待后续研究...
 
 ## 参考文档
 * [http://taligarsiel.com/Projects/howbrowserswork1.htm](http://taligarsiel.com/Projects/howbrowserswork1.htm)
 
-### 从浏览器地址栏输入 url 到显示页面的步骤(以 HTTP 为例)
+### 总结
 
 1. 在浏览器地址栏输入 URL
-2. 浏览器查看**缓存**，如果请求资源在缓存中并且新鲜，跳转到转码步骤
-   1. 如果资源未缓存，发起新请求
-   2. 如果已缓存，检验是否足够新鲜，足够新鲜直接提供给客户端，否则与服务器进行验证。
-   3. 检验新鲜通常有两个 HTTP 头进行控制`Expires`和`Cache-Control`：
-      - HTTP1.0 提供 Expires，值为一个绝对时间表示缓存新鲜日期
-      - HTTP1.1 增加了 Cache-Control: max-age=,值为以秒为单位的最大新鲜时间
-3. 浏览器**解析 URL**获取协议，主机，端口，path
-4. 浏览器**组装一个 HTTP（GET）请求报文**
-5. 浏览器**获取主机 ip 地址**，过程如下：
-   1. 浏览器缓存
-   2. 本机缓存
-   3. hosts 文件
-   4. 路由器缓存
-   5. ISP DNS 缓存
-   6. DNS 递归查询（可能存在负载均衡导致每次 IP 不一样）
-6. **打开一个 socket 与目标 IP 地址，端口建立 TCP 链接**，三次握手如下：
-   1. 客户端发送一个 TCP 的**SYN=1，Seq=X**的包到服务器端口
-   2. 服务器发回**SYN=1， ACK=X+1， Seq=Y**的响应包
-   3. 客户端发送**ACK=Y+1， Seq=Z**
-7. TCP 链接建立后**发送 HTTP 请求**
-8. 服务器接受请求并解析，将请求转发到服务程序，如虚拟主机使用 HTTP Host 头部判断请求的服务程序
-9. 服务器检查**HTTP 请求头是否包含缓存验证信息**如果验证缓存新鲜，返回**304**等对应状态码
-10. 处理程序读取完整请求并准备 HTTP 响应，可能需要查询数据库等操作
-11. 服务器将**响应报文通过 TCP 连接发送回浏览器**
-12. 浏览器接收 HTTP 响应，然后根据情况选择**关闭 TCP 连接或者保留重用，关闭 TCP 连接的四次握手如下**：
-    1. 主动方发送**Fin=1， Ack=Z， Seq= X**报文
-    2. 被动方发送**ACK=X+1， Seq=Z**报文
-    3. 被动方发送**Fin=1， ACK=X， Seq=Y**报文
-    4. 主动方发送**ACK=Y， Seq=X**报文
-13. 浏览器检查响应状态吗：是否为 1XX，3XX， 4XX， 5XX，这些情况处理与 2XX 不同
-14. 如果资源可缓存，**进行缓存**
-15. 对响应进行**解码**（例如 gzip 压缩）
-16. 根据资源类型决定如何处理（假设资源为 HTML 文档）
-17. **解析 HTML 文档，构件 DOM 树，下载资源，构造 CSSOM 树，执行 js 脚本**，这些操作没有严格的先后顺序，以下分别解释
-18. **构建 DOM 树**：
-    1. **Tokenizing**：根据 HTML 规范将字符流解析为标记
-    2. **Lexing**：词法分析将标记转换为对象并定义属性和规则
-    3. **DOM construction**：根据 HTML 标记关系将对象组成 DOM 树
-19. 解析过程中遇到图片、样式表、js 文件，**启动下载**
-20. 构建**CSSOM 树**：
-    1. **Tokenizing**：字符流转换为标记流
-    2. **Node**：根据标记创建节点
-    3. **CSSOM**：节点创建 CSSOM 树
-21. **[根据 DOM 树和 CSSOM 树构建渲染树](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction)**:
-    1. 从 DOM 树的根节点遍历所有**可见节点**，不可见节点包括：1）`script`,`meta`这样本身不可见的标签。2)被 css 隐藏的节点，如`display: none`
-    2. 对每一个可见节点，找到恰当的 CSSOM 规则并应用
-    3. 发布可视节点的内容和计算样式
-22. **js 解析如下**：
-    1. 浏览器创建 Document 对象并解析 HTML，将解析到的元素和文本节点添加到文档中，此时**document.readystate 为 loading**
-    2. HTML 解析器遇到**没有 async 和 defer 的 script 时**，将他们添加到文档中，然后执行行内或外部脚本。这些脚本会同步执行，并且在脚本下载和执行时解析器会暂停。这样就可以用 document.write()把文本插入到输入流中。**同步脚本经常简单定义函数和注册事件处理程序，他们可以遍历和操作 script 和他们之前的文档内容**
-    3. 当解析器遇到设置了**async**属性的 script 时，开始下载脚本并继续解析文档。脚本会在它**下载完成后尽快执行**，但是**解析器不会停下来等它下载**。异步脚本**禁止使用 document.write()**，它们可以访问自己 script 和之前的文档元素
-    4. 当文档完成解析，document.readState 变成 interactive
-    5. 所有**defer**脚本会**按照在文档出现的顺序执行**，延迟脚本**能访问完整文档树**，禁止使用 document.write()
-    6. 浏览器**在 Document 对象上触发 DOMContentLoaded 事件**
-    7. 此时文档完全解析完成，浏览器可能还在等待如图片等内容加载，等这些**内容完成载入并且所有异步脚本完成载入和执行**，document.readState 变为 complete,window 触发 load 事件
-23. **显示页面**（HTML 解析过程中会逐步显示页面）
+2. 判断是否有强缓存
+3. 域名解析获得 IP 地址
+4. 三次握手建立 TCP 连接
+5. 发送 GET 请求并判断是否有协商缓存
+6. 请求成功返回，如有需要在本地缓存该资源，可能会四次挥手断开连接
+7. 解析 HTML 生成 DOM 树，构建完成并等待同步的（非`async`/`defer`）脚本执行完成后触发 `DOMContentLoaded` 事件。然后等所有资源都加载完毕后才会触发 `load` 事件。
+8. 生成 CSSOM 树
+9. **[根据 DOM 树和 CSSOM 树构建渲染树](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction)**:
+10. 渲染最终页面

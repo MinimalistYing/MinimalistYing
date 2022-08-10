@@ -1,7 +1,7 @@
 # React Hooks In Depth
 
 ## 序
-除了最常见的 `useState` 以及 `useEffect`，React 其实还提供了不少其它 Hooks。这些 Hooks 由于平时在项目里使用场景较少，所以很容易被人忽略。但这些他们往往也是必须要掌握的，所以在此做一个整理，以便记忆。
+除了最常见的 `useState` 以及 `useEffect`，React 其实还提供了不少其它 Hooks。这些 Hooks 由于平时在项目里使用场景较少，所以很容易被人忽略。但这些往往也是必须要掌握的，所以在此做一个整理，以便记忆。
 
 ## useImperativeHandle
 必须配合 `React.forwardRef()` 一起使用，用于在函数组件中子组件向父组件暴露自身的状态以及方法。  

@@ -61,7 +61,7 @@ Ps: 虽然大多数人不会完全禁用 Cookie，但是估计有少数注重隐
 例如在 `www.a.com/page/one.html` 我们按默认属性设置了一个 Cookie，那么在 `www.a.com/page/two.html` `www.a.com/page/son/three.html` 这些页面下都可以获取这个 Cookie，但是在 `www.a.com/another/four.html` 页面上便无法获取这个 Cookie。  
 可以将 path 设为 `/` 使得访问当前域名下所有路径的网页都能拿到设置的 Cookie。
 
-* Max-Age 最大存储时间，以秒为单位，为 0 时立即删除当前 Cookie,默认（或者为负数）当浏览器 Session 结束时清除。
+* Max-Age 最大存储时间，以秒为单位，为 0 时立即删除当前 Cookie,默认（或者为负数）当浏览器 Session 结束时清除。**当同时设置了 Max-Age 以及 Expires 时，前者优先级更高。**
 
 * Expires 存储失效的 GMT 时间，这个日期只与客户端有关，默认当浏览器 Session 结束时清除。
 

@@ -71,3 +71,82 @@ new Promise((resolve, reject) => resolve('a'))
   .catch(err => console.log(`catched ${err}`))
 // catched Error: err
 ```
+
+## 为什么说 `async` + `await` 是 Generate + Promise 结合而成的语法糖？
+先看下例：
+```js
+async function a() {
+  const v1 = await new Promise(resolve => resolve(1))
+  const v2 = await new Promise(resolve => resolve(2))
+
+  return v1 + v2
+}
+
+// 初看是不是和 async/await 很像？
+function* b() {
+  const v1 = yield new Promise(resolve => resolve(1))
+  const v2 = yield new Promise(resolve => resolve(2))
+
+  return v1 + v2
+}
+
+// 但实际上想要 Generator 实现和 async/await 一致的逻辑还需要一些额外的工作
+const g = b()
+const p1 = g.next().value
+p1.then(v1 => {
+  const p2 = g.next(v1).value
+  
+  p2.then(v2 => {
+    // 这里才能拿到最后 return 出来的 v1 + v2
+    const ret = g.next(v2)
+
+    console.log(ret.value)
+  })
+})
+
+a().then(console.log)
+
+```
+所以可以认为 async/await 替我们做了这些执行操作外加一些错误处理。接着我们可以试着写一个简单的自动执行器：
+```js
+function async (generator, ...params) {
+  return new Promise((resolve, reject) => {
+    const gen = generator(...params)
+
+    function next(result) {
+      if (result.done) {
+        resolve(result.value)
+      } else {
+        // If the value is not a Promise, it converts the value to a resolved Promise, and waits for it.
+        Promise.resolve(result.value).then(v => {
+          let ret
+          try {
+            ret = gen.next(v)
+          } catch (e) {
+            return reject(e)
+          }
+
+          next(ret)
+        }).catch(err => {
+          let ret
+          try {
+            ret = gen.throw(err)
+          } catch (e) {
+            return reject(e)
+          }
+          next(ret)
+        })
+      }
+    }
+
+    next(gen.next())
+  })
+}
+
+async(function* () {
+  const v1 = yield new Promise(resolve => resolve(1))
+  const v2 = yield new Promise(resolve => resolve(2))
+
+  return v1 + v2
+}).then(console.log)
+```

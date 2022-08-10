@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '帝国时代3 决定版 Age of Empires III Definitive Edition',
+  url: 'https://pic.imgdb.cn/item/62ea4cb416f2c2beb145ba19.jpg',
+}, {
   title: '无间冥寺 Curse of the Dead Gods',
   url: 'https://pic.imgdb.cn/item/62e8e96016f2c2beb1f2b23b.jpg',
 }, {
