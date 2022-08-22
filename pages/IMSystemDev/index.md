@@ -278,9 +278,9 @@ function copyImageToClipboard(img) {
 
 用户希望复制一条聊天消息时能连带表情代码一起复制出来，可以直接粘贴继续发送。
 
-最简单的方法就是借助 `title` 属性：
+最简单的方法就是借助 `alt` 属性，**虽说使用 `title` 也能实现相同效果但是不建议这么做，原因请参考** [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#accessibility_concerns)：
 ```html
-<p>文字<img src="xxx.jpg" title="[图片]" />文字</p>
+<p>文字<img src="xxx.jpg" alt="[图片]" />文字</p>
 ```
 上述例子复制出来的就是 `文字[图片]文字`。
 

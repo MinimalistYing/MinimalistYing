@@ -124,6 +124,7 @@ localStorage.length // 总共存储的键值对数量
 
 ### Storage Event
 WebStorage 还提供了事件机制，用于监听存储发生的变化。  
+
 当打开俩个窗口访问同域网站，如果在其中一个窗口中修改了存储数据，在另一个窗口中可以通过如下代码监听到存储改变的事件：  
 ```js
 // 会被 setItem() removeItem() clear() 触发
@@ -147,13 +148,12 @@ window.addEventListener('storage', e => {
 并且通过 `localStorage.removeItem('notExist')` 试图移除一个不存在的属性时也不会触发事件。  
 
 Ps:（由于 SessionStorage 是基于浏览器窗口存储，所以只有当使用 `<iframe>` 处理内嵌页面时才可能会触发事件）  
-这个机制可以用于实现应用的广播功能，当用户在一个窗口的页面进行操作时同步对另一个窗口的页面做出修改  
-例如用户在一个窗口中修改了应用的主题色，我们通过 `localStorage.color = 'red'` 来保存这一改变  
-另一个窗口通过监听到 `localStorage` 的变化同步的将应用的主题色也修改为 `red`
+
+这个机制可以用于实现应用的广播功能，当用户在一个窗口的页面进行操作时同步对另一个窗口的页面做出修改。例如用户在一个窗口中修改了应用的主题色，我们通过 `localStorage.color = 'red'` 来保存这一改变，另一个窗口通过监听到 `localStorage` 的变化同步的将应用的主题色也修改为 `red`。
 
 
 ### WebStorage 的优势
-* 每个域下允许存储超过 5Mb 的数据（各个浏览器有所不同 Ps: Chrome 目前最多能存储 5Mb 数据）
+* 每个域下允许存储超过 5Mb 的数据（各个浏览器有所不同 Ps: Chrome 目前最多能存储 5Mb 数据，另外 LocalStorage 与 SessionStorage 应该是分开存储的。）
 * 更友好的 API
 
 ## WebStroge 可不可以完全替代 Cookies ?
@@ -170,9 +170,12 @@ Ps:（由于 SessionStorage 是基于浏览器窗口存储，所以只有当使�
 
 * 当浏览器设置 Cookie 失败时并不会报错，这个过程是静默的。例如当你试图跨域的去设置 Cookie 时只会发现不生效，但不会在控制台中看到相应错误信息。  
 
-* 虽然 WebStorage 的规范希望能支持对类似数组对象等结构化数据进行存储，但目前为止大多数浏览器仅支持字符串作为 Value，传入非字符串的值会被强制转化为字符串。例如试图通过 `localStorage.o = {a: 1}` 存储一个对象，会发现实际存储的是 `o: "[object Object]"`。
+* 虽然 WebStorage 的规范希望能支持对类似数组对象等结构化数据进行存储，但目前为止大多数浏览器仅支持字符串作为 Value，传入非字符串的值会被强制转化为字符串。例如试图通过 `localStorage.o = {a: 1}` 存储一个对象，会发现实际存储的是 `o: "[object Object]"`。  
+
+* WebStorage 的读取是同步操作，所以数据量大时会阻塞浏览器的主线程。
 
 
 ## 参考文档
 * [https://stackoverflow.com/questions/1062963/how-do-browser-cookie-domains-work?rq=1](https://stackoverflow.com/questions/1062963/how-do-browser-cookie-domains-work?rq=1)
 * [https://www.mxsasha.eu/blog/2014/03/04/definitive-guide-to-cookie-domains/](https://www.mxsasha.eu/blog/2014/03/04/definitive-guide-to-cookie-domains/)
+* [Storage for the web](https://web.dev/i18n/en/storage-for-the-web/)

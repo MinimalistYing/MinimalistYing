@@ -61,6 +61,10 @@ SSL/TLS
 
 此时还需先判断一下是否能采用协商缓存，先验证 Etag/If-None-Match，再验证 Last-Modifed/If-Modified-Since。  
 
+**特别提一下 Etag 是由服务端生成的，其实没有一个绝对的定义，只不过通常是取静态资源的一个 Hash 值，当然你也可以在服务端实现时采用一个类似于版本号的特殊字符串。**
+
+**另外 Etag 还区分为 Strong Validation 和 Weak Validation，其中弱校验会以 W/ 开头，类似 `W/"151e7-z9W90pgoaVCLvfVNoqSuizhxrGE"`。至于具体采用哪种，还是得看服务端的实现方式，详情可参考 [Where does the W/ in an etag appear from?](https://stackoverflow.com/questions/51973120/where-does-the-w-in-an-etag-appear-from) 以及 [Etag: weak vs strong example](https://stackoverflow.com/questions/56663203/etag-weak-vs-strong-example?noredirect=1&lq=1)**
+
 任意一个规则匹配则请求返回 304，浏览器直接使用本地缓存的资源。反之请求返回 200，同时带上最新的资源并对本地缓存进行更新。
 
 

@@ -74,6 +74,15 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '神秘海域 德雷克船长的宝藏',
+  url: 'https://pic.imgdb.cn/item/63036c4f16f2c2beb10c4468.jpg',
+}, {
+  title: '灵魂行者 SoulWorker',
+  url: 'https://pic.imgdb.cn/item/63036c4b16f2c2beb10c4297.jpg',
+}, {
+  title: '轩辕剑 汉之云',
+  url: 'https://pic.imgdb.cn/item/62fe3fe316f2c2beb175dfd1.jpg',
+}, {
   title: '帝国时代3 决定版 Age of Empires III Definitive Edition',
   url: 'https://pic.imgdb.cn/item/62ea4cb416f2c2beb145ba19.jpg',
 }, {
