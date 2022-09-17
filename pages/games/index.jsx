@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '火焰纹章 风花雪月',
+  url: 'https://pic.imgdb.cn/item/6325cfa016f2c2beb16179df.jpg',
+}, {
   title: '神秘海域 德雷克船长的宝藏',
   url: 'https://pic.imgdb.cn/item/63036c4f16f2c2beb10c4468.jpg',
 }, {

@@ -21,6 +21,7 @@
 
 // 更新网站
 scp -r /Users/mininalistying/Documents/MinimalistYing.github.io/dist root@47.96.77.197:app
+scp -r ./dist root@47.96.77.197:app
 
 scp -r /Users/mininalistying/Documents/MinimalistYing.github.io/server.js root@47.96.77.197:app
 
