@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '鬼谷八荒',
+  url: 'https://pic.imgdb.cn/item/632fd0fa16f2c2beb1079096.jpg',
+}, {
   title: '火焰纹章 风花雪月',
   url: 'https://pic.imgdb.cn/item/6325cfa016f2c2beb16179df.jpg',
 }, {
