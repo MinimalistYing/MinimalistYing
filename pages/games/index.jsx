@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '神秘海域2 纵横四海',
+  url: 'https://pic1.imgdb.cn/item/633fe6bd16f2c2beb1aefe8b.jpg',
+}, {
   title: '鬼谷八荒',
   url: 'https://pic.imgdb.cn/item/632fd0fa16f2c2beb1079096.jpg',
 }, {
