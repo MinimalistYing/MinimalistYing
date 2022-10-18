@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '轩辕剑六 凤凌长空千载云',
+  url: 'https://pic1.imgdb.cn/item/634ec0e616f2c2beb1627085.jpg',
+}, {
   title: '神秘海域2 纵横四海',
   url: 'https://pic1.imgdb.cn/item/633fe6bd16f2c2beb1aefe8b.jpg',
 }, {
