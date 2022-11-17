@@ -74,6 +74,15 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '圣女战旗',
+  url: 'https://pic.imgdb.cn/item/63763b3316f2c2beb1b0ef5e.jpg',
+}, {
+  title: '神秘海域3 德雷克的欺骗',
+  url: 'https://pic1.imgdb.cn/item/635d2eea16f2c2beb1be62dd.jpg',
+}, {
+  title: '教团 1886 The Order 1886',
+  url: 'https://pic1.imgdb.cn/item/6353edab16f2c2beb1f934a8.jpg',
+}, {
   title: '轩辕剑六 凤凌长空千载云',
   url: 'https://pic1.imgdb.cn/item/634ec0e616f2c2beb1627085.jpg',
 }, {
