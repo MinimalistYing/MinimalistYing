@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '恶月十三 Undecember',
+  url: 'https://pic.imgdb.cn/item/6382fca416f2c2beb16901b8.jpg',
+}, {
   title: '圣女战旗',
   url: 'https://pic.imgdb.cn/item/63763b3316f2c2beb1b0ef5e.jpg',
 }, {
