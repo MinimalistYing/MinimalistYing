@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '星辰变',
+  url: 'https://pic.imgdb.cn/item/639ae453b1fccdcd3666555c.jpg',
+}, {
   title: '恶月十三 Undecember',
   url: 'https://pic.imgdb.cn/item/6382fca416f2c2beb16901b8.jpg',
 }, {
