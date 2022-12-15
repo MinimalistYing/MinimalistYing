@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '轩辕剑外传 穹之扉',
+  url: 'https://pic.imgdb.cn/item/639b1d6ab1fccdcd36cbecc0.jpg',
+}, {
   title: '星辰变',
   url: 'https://pic.imgdb.cn/item/639ae453b1fccdcd3666555c.jpg',
 }, {
