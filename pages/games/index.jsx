@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '天涯明月刀',
+  url: 'https://pic.imgdb.cn/item/63ae8c0308b6830163211b6e.jpg',
+}, {
   title: '宝可梦 紫',
   url: 'https://pic.imgdb.cn/item/63ae6f5c08b6830163f15039.jpg',
 }, {
