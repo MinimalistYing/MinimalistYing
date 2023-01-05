@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: 'DmC 鬼泣',
+  url: 'https://pic.imgdb.cn/item/63b6dd4dbe43e0d30e8878a3.jpg',
+}, {
   title: '天涯明月刀',
   url: 'https://pic.imgdb.cn/item/63ae8c0308b6830163211b6e.jpg',
 }, {
