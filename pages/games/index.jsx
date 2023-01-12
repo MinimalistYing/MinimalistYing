@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '我的朋友佩德罗 My Friend Pedro',
+  url: 'https://pic.imgdb.cn/item/63c002efbe43e0d30e448cee.jpg',
+}, {
   title: 'DmC 鬼泣',
   url: 'https://pic.imgdb.cn/item/63b6dd4dbe43e0d30e8878a3.jpg',
 }, {
