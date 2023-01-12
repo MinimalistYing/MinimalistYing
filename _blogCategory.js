@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "Dynamic Programming 入门（一）",
+		key: "DP1",
+		img: "https://pic.imgdb.cn/item/63bfb414be43e0d30eaf688f.jpg",
+		date: '2023-01-12',
+		tags: ['技术', '算法', 'Dynamic Programming'],
+	},
+  {
     name: "React Hooks In Depth",
 		key: "ReactHooks",
 		img: "https://pic.imgdb.cn/item/62d4d634f54cd3f9379e8bf3.jpg",
