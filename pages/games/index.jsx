@@ -33,8 +33,8 @@ export default function Games () {
         ))}
       </div>
 
-      <div className={styles.poetryA}>人怀前岁忆，</div>
-      <div className={styles.poetryB}>花发故年枝。</div>
+      <div className={styles.poetryA}>人怀<span style={{ color: 'var(--dark-pink)' }}>前岁</span>忆，</div>
+      <div className={styles.poetryB}>花发<span style={{ color: 'var(--dark-pink)' }}>故年</span>枝。</div>
 
       <div className={styles.count}>{curr} / {images.length}</div>
     </>

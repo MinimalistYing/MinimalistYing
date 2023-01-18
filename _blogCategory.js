@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "动态清零中的三亚之旅",
+		key: "SanYa",
+		img: "https://pic.imgdb.cn/item/63c66895be43e0d30eefebaf.jpg",
+		date: '2023-01-18',
+		tags: ['旅行'],
+	},
+  {
     name: "Dynamic Programming 入门（一）",
 		key: "DP1",
 		img: "https://pic.imgdb.cn/item/63bfb414be43e0d30eaf688f.jpg",
