@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     var _hmt = _hmt || [];
 		if (!window.location.href.includes('localhost')) {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?fed163afdce80f948bb0612c53ef3889";
+      hm.src = "https://hm.baidu.com/hm.js?b745eed9a32858c60c4cb8df99e38744";
       var s = document.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
     }

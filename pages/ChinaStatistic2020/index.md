@@ -1,6 +1,6 @@
 # 富强、民主、文明、和谐
 
-## 起
+## 序
 最近国家统计局公布了去年的 [China Statistical Yearbook 2021](http://www.stats.gov.cn/tjsj/ndsj/2021/indexch.htm)。  
 
 在这里仅对个人感兴趣的数据做些探讨，当然一切的前提是相信统计局的数据是相对准确的，具有参考意义。  
