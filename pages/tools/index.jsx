@@ -42,7 +42,6 @@ export default function Tools () {
             <div className={styles.content}>
               <a target="_blank" rel="noreferrer" href='https://javascript.info/'>The Modern JavaScript Tutorial</a>
               <a target="_blank" rel="noreferrer" href='https://mostly-adequate.gitbooks.io/mostly-adequate-guide/'>Mostly Adequate Guide to FP</a>
-              <a target="_blank" rel="noreferrer" href='https://learnlayout.com/'>Learn CSS Layout</a>
               <a target="_blank" rel="noreferrer" href='https://css-tricks.com/'>CSS Tricks</a>
               <a target="_blank" rel="noreferrer" href='https://developers.google.com/web'>Google Developers</a>
               <a target="_blank" rel="noreferrer" href='https://medium.com/dailyjs'>JavaScript Daily</a>

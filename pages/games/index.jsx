@@ -74,6 +74,12 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '毒奶粉国服',
+  url: 'https://pic.imgdb.cn/item/63f03f5ef144a0100716b932.jpg',
+}, {
+  title: '恶魔狩猎 Devil\'s Hunt',
+  url: 'https://pic.imgdb.cn/item/63eebbdef144a010079c94ad.jpg',
+}, {
   title: '我的朋友佩德罗 My Friend Pedro',
   url: 'https://pic.imgdb.cn/item/63c002efbe43e0d30e448cee.jpg',
 }, {
