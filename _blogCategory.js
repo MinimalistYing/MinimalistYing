@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "微信小程序性能优化小结",
+		key: "WxminiPerformance",
+		img: "https://pic.imgdb.cn/item/640712ddf144a010075ecdfb.jpg",
+		date: '2023-03-07',
+		tags: ['技术', '小程序'],
+	},
+  {
     name: "动态清零中的三亚之旅",
 		key: "SanYa",
 		img: "https://pic.imgdb.cn/item/63c66895be43e0d30eefebaf.jpg",

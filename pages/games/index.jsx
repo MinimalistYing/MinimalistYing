@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '星之卡比 新星同盟',
+  url: 'https://pic.imgdb.cn/item/641daa06a682492fcc1ddbfe.png',
+}, {
   title: '毒奶粉国服',
   url: 'https://pic.imgdb.cn/item/63f03f5ef144a0100716b932.jpg',
 }, {
