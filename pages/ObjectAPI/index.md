@@ -1,7 +1,7 @@
 # Object's New API In ES6
 
 ## Object.is()
-该方法用于比较俩个值是否全等，与 `===` 的区别仅在于下面俩个特例：
+用于比较俩个值是否全等，与 `===` 的区别仅在于下面俩个特例：
 ```js
 const x = NaN
 x === x // false
@@ -14,7 +14,7 @@ Object.is(y, z) // false
 ```
 
 ## Object.getOwnPropertySymbols()
-该方法可以获得对象上所有类型为 `Symbol` 的 Key ：
+获得对象上所有类型为 `Symbol` 的 Key ：
 ```js
 const o = {
 	foo: 'hello',
@@ -26,7 +26,7 @@ o[symbols[0]] // 'world'
 ```
 
 ## Object.setPrototypeOf()
-该方法提供了一种更优雅的方式来修改一个对象的原型：
+以一种更优雅的方式来修改一个对象的原型：
 ```js
 const o1 = {
 	bar: 1

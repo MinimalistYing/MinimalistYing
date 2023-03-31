@@ -10,7 +10,7 @@ const IteratorResult = {
 
 const Iterator = {
 	// 必须 用于返回每次迭代的结果集
-	next() { return IteratorResult},
+	next() { return IteratorResult },
 	// 可选 提前结束迭代时做相应的资源清理操作并返回最后的结果集
 	return() {},
 	// 可选 抛出异常信息并返回最后的结果集

@@ -127,7 +127,7 @@ arr.some(v => v.name === 'hello') // true
 
 arr.includes(1) // true
 ```
-大部分情况下这种方法都没有问题，但当如果我们想要直接获得正确匹配到的值就可以借助ES6的 `find()`：
+另外，如果我们想要直接获取匹配值可以借助 ES6 的 `find()`：
 ```js
 const arr = [1, '2', {name: 'hello'}]
 arr.find(v => v == 2) // '2'
@@ -136,11 +136,12 @@ arr.find(v => v === 666) // undefined
 ```
 
 ### findIndex()
-总结一下上述数组的查找方法，可以发现，当我们只想确定是否存在特定值时可以采用`some()`。  
+总结一下上述数组的查找方法：
+* 确认是否存在匹配值 => `some()`  
+* 获取匹配值 => `find()`  
+* 获取匹配值的下标 => `findIndex()`  
 
-当我们想拿到符合比较条件的值时可以采用 `find()`。  
 
-如果我们想要拿到符合比较条件值的下标时就需要用到ES6的 `findIndex()`。
 ```js
 const arr = [1, '2', {name: 'hello'}]
 arr.findIndex(v => v == 2) // 1

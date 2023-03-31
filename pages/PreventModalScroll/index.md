@@ -16,7 +16,7 @@ Bootstrap 的 Modal 采取的就是这种方式，缺点在于滚动条消失会
 
 另外移动端的大多浏览器对给 `<body>` 设置 `overflow: hidden` 并不感冒，绝大多数情况下这种方式在移动端不起作用(亲测 ios Chrome 下无效)。  
 
-AntD 的弹窗的 [ScrollLocker](https://github.com/react-component/util/blob/master/src/Dom/scrollLocker.ts) 也使用的这种方式，不过更贴心的对滚动条宽度做了写特殊处理。
+AntD 的弹窗的 [ScrollLocker](https://github.com/react-component/util/blob/master/src/Dom/scrollLocker.ts) 也使用的这种方式，不过更贴心的对滚动条宽度做了些特殊处理。
 
 ## 通过 Javascript 禁止滚动事件的默认行为
 ```js
