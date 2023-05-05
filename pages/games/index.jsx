@@ -74,6 +74,12 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '仙剑奇侠传四',
+  url: 'https://pic2.imgdb.cn/item/644d29500d2dde5777db35f3.jpg',
+}, {
+  title: '劳拉与光之守护者',
+  url: 'https://pic.imgdb.cn/item/6430cb640d2dde5777c19f70.jpg',
+}, {
   title: '多伦塔 Toren',
   url: 'https://pic.imgdb.cn/item/6425a282a682492fcc9eac8a.jpg',
 }, {
