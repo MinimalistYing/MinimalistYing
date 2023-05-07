@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '魔兽争霸三 Reforged',
+  url: 'https://pic2.imgdb.cn/item/64573f920d2dde57770e45cb.jpg',
+}, {
   title: '仙剑奇侠传四',
   url: 'https://pic2.imgdb.cn/item/644d29500d2dde5777db35f3.jpg',
 }, {
