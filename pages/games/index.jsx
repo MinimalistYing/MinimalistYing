@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '妖怪手表4++',
+  url: 'https://pic2.imgdb.cn/item/645f8cac0d2dde57771cec84.jpg',
+}, {
   title: '魔兽争霸三 Reforged',
   url: 'https://pic2.imgdb.cn/item/64573f920d2dde57770e45cb.jpg',
 }, {
