@@ -74,8 +74,11 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
-  title: '妖怪手表4++',
-  url: 'https://pic2.imgdb.cn/item/645f8cac0d2dde57771cec84.jpg',
+  title: '尘埃 幸福的轨迹 Dust An Elysian Tail',
+  url: 'https://pic.imgdb.cn/item/647c68051ddac507ccf71e52.jpg',
+}, {
+  title: 'Mirror 2 Project X',
+  url: 'https://pic.imgdb.cn/item/6468e203e03e90d8745bf94d.jpg',
 }, {
   title: '魔兽争霸三 Reforged',
   url: 'https://pic2.imgdb.cn/item/64573f920d2dde57770e45cb.jpg',
