@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '黑道圣徒 杀出地狱 Saints Row Gat Out of Hell',
+  url: 'https://pic.imgdb.cn/item/648549e41ddac507cc25a90e.jpg',
+}, {
   title: '尘埃 幸福的轨迹 Dust An Elysian Tail',
   url: 'https://pic.imgdb.cn/item/647c68051ddac507ccf71e52.jpg',
 }, {

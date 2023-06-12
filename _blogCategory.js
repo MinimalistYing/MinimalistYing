@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "「中央帝国的财政密码」",
+		key: "PublicFinance",
+		img: "https://pic.imgdb.cn/item/648022561ddac507cc958e6b.jpg",
+		date: '2023-06-07',
+		tags: ['阅读', '人文社科'],
+	},
+  {
     name: "微信小程序性能优化小结",
 		key: "WxminiPerformance",
 		img: "https://pic.imgdb.cn/item/640712ddf144a010075ecdfb.jpg",
