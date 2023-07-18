@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '魔兽世界怀旧服',
+  url: 'https://pic.imgdb.cn/item/64b5599f1ddac507cccef2a1.jpg',
+}, {
   title: '黑道圣徒 杀出地狱 Saints Row Gat Out of Hell',
   url: 'https://pic.imgdb.cn/item/648549e41ddac507cc25a90e.jpg',
 }, {

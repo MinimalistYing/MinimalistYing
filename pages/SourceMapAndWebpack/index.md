@@ -46,7 +46,7 @@ Ps: 还可以通过服务器端的配置来禁止普通用户下载 .map 文件�
 ### Source Map 对开发环境的意义何在
 开发环境我们通常不会采用混淆代码，对于简单的 Javascript 应用可能意义并不大。  
 
-但当我们在开发 React App 或者 Vue App 时，Source Map 可以将我们 Webpack 打包后的文件直接映射为源代码中的 .jsx/.vue 文件。而不利用 Source Map 我们就只能去 Debug 编译过后的文件。所以即是在开发环境下，Source Map 也是能给我们提供很大帮助的。  
+但当我们在使用 React 或者 Vue 时，Source Map 可以将 Webpack 打包后的文件直接映射为源代码中的 .jsx/.vue 文件。而不利用 Source Map 我们就只能去 Debug 编译过后的文件。所以即使在开发环境下，Source Map 也是能给开发者带来很大帮助的。  
 
 ## Webpack 的 Devtool
 Webpack 中可以通过这项配置来决定具体使用何种 Source Map，默认值为 `false` 也就是不启用 Source Map。  

@@ -81,3 +81,7 @@ setTimeout(() => {
 	document.body.appendChild(iframe)
 }, 0)
 ```
+
+## Tips
+* IOS 13.7 及以下版本 Webview 不支持 WebP 格式图片。
+* IOS 14.4 及以下版本 Webview 不支持 Flexbox 的 `gap` 属性。

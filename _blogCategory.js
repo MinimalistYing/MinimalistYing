@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "「有闲阶级论」",
+		key: "LeisureClass",
+		img: "https://pic.imgdb.cn/item/64880b781ddac507cca8c161.jpg",
+		date: '2023-06-',
+		tags: ['阅读', '人文社科'],
+	},
+  {
     name: "「中央帝国的财政密码」",
 		key: "PublicFinance",
 		img: "https://pic.imgdb.cn/item/648022561ddac507cc958e6b.jpg",

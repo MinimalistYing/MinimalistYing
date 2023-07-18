@@ -1,7 +1,7 @@
 # New Collections In ES6
 
 ## Map
-以往当我们需要一种键/值对形式的数据结构时通常使用的是原生的 `Object`。
+早期的 JavaScript 世界通常把 `Object` 来当作 Map 使用。
 ```js
 // 这里不直接通过 const o = {} 来创建对象是为了避免从原型上继承不必要的属性
 const o = Object.create(null)
@@ -21,7 +21,7 @@ console.log(map) // {[object Object]: 2}
 ```
 可以看到这种方法其实有很多缺陷，稍后我们再具体分析。  
     
-ES6 提供了对 Map 的原生支持，它可以将任何数据类型（Function / Object / Primitive Type）作为 Key。  
+ES6 提供了对 Map 的原生支持，可以将任何数据类型（Function / Object / Primitive Type）作为 Key。  
 ```js
 const map = new Map()
 const x = { a: 1 }

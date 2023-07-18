@@ -56,11 +56,11 @@ b.toString() // Symbol(desc b)
 ```js
 function singleton() {
   const Instance = Symbol.for('instance')
-	if (singleton[Instance]) {
-		return singleton[Instance]
-	}
+  if (singleton[Instance]) {
+    return singleton[Instance]
+  }
 	
-	return singleton[Instance] = {}
+  return singleton[Instance] = {}
 }
 const a = singleton()
 const b = singleton()
@@ -72,19 +72,19 @@ a === b // true
 ```js
 // 这里要注意 const o = { Symbol(): 2 } 这种写法会报错
 const o = {
-	foo: 1,
-	[Symbol.for('bar')]: 2
+  foo: 1,
+  [Symbol.for('bar')]: 2
 }
 Object.getOwnPropertyNames(o) // ['foo']
 Object.getOwnPropertySymbols(o) // [Symbol(for)]
 Object.keys(o) // ['foo']
 for (let key in o ){
-	console.log(key) // 'foo'
+  console.log(key) // 'foo'
 }
 ```  
 
 ## Built-in Symbols
-个人认为 ES6 自带的 Built-in Symbols 才是最常见的用法。  
+个人认为 ES6 自带的 Built-in Symbols(aka. Well-known Symbols) 才是最常见的用法。  
 
 从这点来看 `Symbol` 对于语言内部实现来说确实有帮助，当协议制定者向原型链上新增属性或方法时就不用再担心与开发者产生命名冲突了，例如 `Symbol.iterator`:
 ```js
