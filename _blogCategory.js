@@ -3,7 +3,7 @@ module.exports = [
     name: "「有闲阶级论」",
 		key: "LeisureClass",
 		img: "https://pic.imgdb.cn/item/64880b781ddac507cca8c161.jpg",
-		date: '2023-06-',
+		date: '2023-08-08',
 		tags: ['阅读', '人文社科'],
 	},
   {
