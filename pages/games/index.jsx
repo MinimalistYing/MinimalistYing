@@ -74,6 +74,15 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '塞尔达传说 王国之泪',
+  url: 'https://pic.imgdb.cn/item/64f47d7f661c6c8e5414ffc7.jpg',
+}, {
+  title: '元能失控',
+  url: 'https://pic.imgdb.cn/item/64eaf867661c6c8e547e5967.jpg',
+}, {
+  title: '弈仙牌',
+  url: 'https://pic.imgdb.cn/item/64d766fa1ddac507cceaf9ec.jpg',
+}, {
   title: '阿尔戈英雄的崛起 Rise of the Argonauts',
   url: 'https://pic.imgdb.cn/item/64c632d01ddac507cc99098b.jpg',
 }, {
