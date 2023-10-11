@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "日本自由行札记",
+		key: "Japan",
+		img: "https://pic.imgdb.cn/item/64f710b6661c6c8e54b249cc.jpg",
+		date: '2023-10-10',
+		tags: ['旅行'],
+	},
+  {
     name: "「有闲阶级论」",
 		key: "LeisureClass",
 		img: "https://pic.imgdb.cn/item/64880b781ddac507cca8c161.jpg",

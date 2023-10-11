@@ -85,8 +85,8 @@ export default function Tools () {
             <a target="_blank" rel="noreferrer" href='https://hacks.mozilla.org/'>Mozilla Hacks</a>
             <a target="_blank" rel="noreferrer" href='https://isux.tencent.com/'>ISUX</a>
             <a target="_blank" rel="noreferrer" href='https://www.ruanyifeng.com/blog/'>阮一峰</a>
-            <a target="_blank" rel="noreferrer" href='https://surmon.me/'>Surmon</a>
             <a target="_blank" rel="noreferrer" href='https://ishadeed.com/'>ishadeed</a>
+            <a target="_blank" rel="noreferrer" href='https://world.hey.com/jason'>jason</a>
           </div>
         </div>
 

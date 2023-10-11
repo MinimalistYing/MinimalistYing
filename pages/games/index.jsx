@@ -74,6 +74,15 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '火焰纹章无双 风花雪月',
+  url: 'https://pic.imgdb.cn/item/65193c4cc458853aefa80e36.png',
+}, {
+  title: '米德加尔的部落',
+  url: 'https://pic.imgdb.cn/item/64fc362f661c6c8e54f41074.jpg',
+}, {
+  title: '玄女诛魔录',
+  url: 'https://pic.imgdb.cn/item/64f9d3c4661c6c8e5465ac9c.jpg',
+}, {
   title: '塞尔达传说 王国之泪',
   url: 'https://pic.imgdb.cn/item/64f47d7f661c6c8e5414ffc7.jpg',
 }, {
