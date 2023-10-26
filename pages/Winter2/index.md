@@ -64,6 +64,9 @@ img {
 
     <!-- 页面内容的相关信息，通常会被搜索引擎用于 SEO -->
     <meta name="description" content="....">
+
+    <!-- 由于被过于滥用，大部分浏览器可能不再识别这个了 -->
+    <!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#active_learning_the_descriptions_use_in_search_engines -->
     <meta name="keyword" content=".....">
 
     <!-- 禁用 Edge / IE11 / Safari 试图去识别页面上的数字是否像电话号码的特性 -->  

@@ -85,7 +85,7 @@ SSL/TLS
 这也是为什么在早期总是建议将 `<script>` 标签放在文档最后面的原因。
 
 ## 构建 CSSOM 树
-接下来浏览器会根据已生成的 DOM 树和 CSS 文件来组合生成 CSSOM 树。这个过程很快，通常没有什么可优化的空间。  
+接下来浏览器会根据已生成的 DOM 树和 CSS 文件来组合生成 CSSOM 树。需要注意 CSS 的加载也会阻塞页面的渲染以及 Javascript 的执行，因为浏览器需求完整的 DOM Tree 以及 CSSOM Tree 才能继续后续的渲染流程。  
 
 ## Render
 组合 DOM 树和 CSSOM 树来生成最终的渲染树。

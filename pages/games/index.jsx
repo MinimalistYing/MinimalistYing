@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '逆水寒手游',
+  url: 'https://pic.imgdb.cn/item/652b7ac4c458853aef0b0327.jpg',
+}, {
   title: '火焰纹章无双 风花雪月',
   url: 'https://pic.imgdb.cn/item/65193c4cc458853aefa80e36.png',
 }, {
