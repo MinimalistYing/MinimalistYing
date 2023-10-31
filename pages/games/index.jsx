@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '异度神剑 2 黄金之国伊拉',
+  url: 'https://pic.imgdb.cn/item/653e5084c458853aef1d68cd.jpg',
+}, {
   title: '逆水寒手游',
   url: 'https://pic.imgdb.cn/item/652b7ac4c458853aef0b0327.jpg',
 }, {
