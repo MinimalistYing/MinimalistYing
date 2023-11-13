@@ -78,7 +78,6 @@ export default function Tools () {
           <h2>博客</h2>
           <div className={styles.content}>
             <a target="_blank" rel="noreferrer" href='https://byvoid.com/'>ByVoid</a>
-            <a target="_blank" rel="noreferrer" href='https://yinwang1.substack.com/'>王垠</a>
             <a target="_blank" rel="noreferrer" href='https://overreacted.io/'>Dan Abramov</a>
             <a target="_blank" rel="noreferrer" href='https://jelly.jd.com/'>JELLY</a>
             <a target="_blank" rel="noreferrer" href='https://tympanus.net/codrops/'>Codrops</a>

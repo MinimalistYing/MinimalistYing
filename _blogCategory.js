@@ -3,7 +3,7 @@ module.exports = [
     name: "Year End Review",
 		key: "2023",
 		img: "https://pic.imgdb.cn/item/653a5af0c458853aef2afbd2.jpg",
-		date: '2023-11-',
+		date: '2023-11-13',
 		tags: ['英文'],
 	},
   {
