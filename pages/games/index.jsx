@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '猛兽派对',
+  url: 'https://pic.imgdb.cn/item/656c1309c458853aef01f654.jpg',
+}, {
   title: '降世神通 科拉传奇 Avatar The Legend of Korra',
   url: 'https://pic.imgdb.cn/item/65426a64c458853aef3275f7.jpg',
 }, {
