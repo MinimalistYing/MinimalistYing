@@ -74,8 +74,11 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
-  title: '猛兽派对',
-  url: 'https://pic.imgdb.cn/item/656c1309c458853aef01f654.jpg',
+  title: '胜利女神 NIKKE',
+  url: 'https://pic.imgdb.cn/item/65758d6dc458853aeff0b3bd.jpg',
+}, {
+  title: '光明记忆 第一章',
+  url: 'https://pic.imgdb.cn/item/6573239dc458853aefaa943b.jpg',
 }, {
   title: '降世神通 科拉传奇 Avatar The Legend of Korra',
   url: 'https://pic.imgdb.cn/item/65426a64c458853aef3275f7.jpg',
