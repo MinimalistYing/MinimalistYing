@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '底特律 化身为人 Detroit Become Human',
+  url: 'https://pic.imgdb.cn/item/657dc246c458853aef4396ca.jpg',
+}, {
   title: '胜利女神 NIKKE',
   url: 'https://pic.imgdb.cn/item/65758d6dc458853aeff0b3bd.jpg',
 }, {

@@ -35,3 +35,4 @@ SEO => Search Engine Optimization
 <em> => emphasis
 HTTP => HyperText Transfer Protocol
 SVG => Scalable Vector Graphics
+SRE => Site Reliability Engineering
