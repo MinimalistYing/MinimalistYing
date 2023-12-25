@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: '魔兽世界',
+  url: 'https://pic.imgdb.cn/item/6586ee4bc458853aef409f60.jpg',
+}, {
   title: '底特律 化身为人 Detroit Become Human',
   url: 'https://pic.imgdb.cn/item/657dc246c458853aef4396ca.jpg',
 }, {
