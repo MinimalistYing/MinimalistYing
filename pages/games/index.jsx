@@ -74,6 +74,9 @@ function ImageCard ({ image }) {
 }
 
 const images = [{
+  title: 'DNF Duel',
+  url: 'https://pic.imgdb.cn/item/6598f359871b83018a1bae08.jpg',
+}, {
   title: '仙剑奇侠传五前传',
   url: 'https://pic.imgdb.cn/item/659027aac458853aef685a7c.jpg',
 }, {

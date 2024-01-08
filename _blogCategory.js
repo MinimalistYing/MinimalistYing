@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "TypeScript Tips",
+		key: "TypeScriptTips",
+		img: "https://pic.imgdb.cn/item/65968492871b83018a5b0a73.jpg",
+		date: '2024-01-04',
+		tags: ['技术', 'TypeScript'],
+	},
+  {
     name: "Year End Review",
 		key: "2023",
 		img: "https://pic.imgdb.cn/item/653a5af0c458853aef2afbd2.jpg",
