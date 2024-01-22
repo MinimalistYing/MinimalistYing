@@ -82,6 +82,10 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "Paragon The Overprime",
+    url: "https://pic.imgdb.cn/item/65aa6347871b83018ae1b852.jpg",
+  },
+  {
     title: "圣歌 Anthem",
     url: "https://pic.imgdb.cn/item/65a3ca18871b83018afe8d51.jpg",
   },
