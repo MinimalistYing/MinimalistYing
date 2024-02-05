@@ -82,6 +82,10 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "The Pedestrian",
+    url: "https://pic.imgdb.cn/item/65be4731871b83018a3f30cc.jpg",
+  },
+  {
     title: "Paragon The Overprime",
     url: "https://pic.imgdb.cn/item/65aa6347871b83018ae1b852.jpg",
   },
