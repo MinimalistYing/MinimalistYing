@@ -82,6 +82,14 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "新超级马里奥兄弟U豪华版",
+    url: "https://pic.imgdb.cn/item/65d206cb9f345e8d03d24a5c.jpg",
+  },
+  {
+    title: "Warhaven",
+    url: "https://pic.imgdb.cn/item/65d193c09f345e8d03281e30.jpg",
+  },
+  {
     title: "The Pedestrian",
     url: "https://pic.imgdb.cn/item/65be4731871b83018a3f30cc.jpg",
   },
