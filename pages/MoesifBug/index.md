@@ -15,7 +15,7 @@ If an opaque response serves your needs, set the request's mode to 'no-cors' to 
 ## 探究原因
 出现这个错误时我的第一想法是会不会后端做了什么改动，因为此时我的另一个项目是可以正常发起跨域请求的。  
 
-但是仔细想想又不对，因为 Moesif 插件是通过在所有响应的 ReponsseHeader 中加上相关的 Access-Control-Allow-xxx 响应头来绕开浏览器限制的。  
+但是仔细想想又不对，因为 Moesif 插件是通过在所有响应的 Response Header 中加上相关的 Access-Control-Allow-xxx 响应头来绕开浏览器限制的。  
 
 所以后端应该没有什么能力影响到插件的工作，还有一点奇怪的是，GET 跨域请求可以通过, 但是其它的请求就不行。  
 

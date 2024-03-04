@@ -82,6 +82,14 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "对马岛之鬼",
+    url: "https://pic.imgdb.cn/item/65e32c059f345e8d03f96a6c.jpg",
+  },
+  {
+    title: "Astro's Playroom",
+    url: "https://pic.imgdb.cn/item/65df4acf9f345e8d03f640ad.webp",
+  },
+  {
     title: "新超级马里奥兄弟U豪华版",
     url: "https://pic.imgdb.cn/item/65d206cb9f345e8d03d24a5c.jpg",
   },
