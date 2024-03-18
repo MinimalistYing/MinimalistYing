@@ -202,13 +202,6 @@ export default function Tools() {
               >
                 TradingView
               </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="http://www.cninfo.com.cn/new/index"
-              >
-                巨潮资讯
-              </a>
               <a target="_blank" rel="noreferrer" href="https://duibiao.info/">
                 职级对标
               </a>

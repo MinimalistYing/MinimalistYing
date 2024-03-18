@@ -3,7 +3,6 @@ import LazyLoad from 'react-lazyload'
 import Link from 'next/link'
 
 import { Header } from '../components'
-import Blog from '../components/Blog'
 import category from '../_blogCategory'
 import styles from './home.module.scss'
 
@@ -19,7 +18,7 @@ export default function Home() {
       <main className={styles.home}>
         <ul className={styles.category}>
           {
-            category.map((item, index) => (
+            category.map((item) => (
               <Link href={`${item.key}`} key={item.key}>
                 <li
                   id={item.key}
