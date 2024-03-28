@@ -82,6 +82,10 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "失落的方舟 Lost Ark",
+    url: "https://pic.imgdb.cn/item/6604bfd59f345e8d039c3424.jpg",
+  },
+  {
     title: "对马岛之鬼",
     url: "https://pic.imgdb.cn/item/65e32c059f345e8d03f96a6c.jpg",
   },
@@ -720,7 +724,7 @@ const images = [
   },
   {
     title: "永恒轮回 黑色幸存者 Eternal Return Black Survival",
-    url: "https://pic2.imgdb.cn/item/64564f380d2dde577714cb60.jpg",
+    url: "https://pic.imgdb.cn/item/65fec9b19f345e8d03987495.jpg",
   },
   {
     title: "在远方 追云者编年史 Yonder The Cloud Catcher Chronicles",
