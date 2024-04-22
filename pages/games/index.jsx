@@ -82,6 +82,14 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "死光 Deadlight",
+    url: "https://pic.imgdb.cn/item/6624f0f90ea9cb14036f9b01.jpg",
+  },
+  {
+    title: "猎天使魔女 2",
+    url: "https://pic.imgdb.cn/item/662397ba0ea9cb1403d9f263.jpg",
+  },
+  {
     title: "射雕",
     url: "https://pic.imgdb.cn/item/661a954f68eb935713a281d4.jpg",
   },
