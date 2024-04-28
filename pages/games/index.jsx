@@ -82,6 +82,10 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "河洛群侠传",
+    url: "https://pic.imgdb.cn/item/662cac310ea9cb1403682491.jpg",
+  },
+  {
     title: "死光 Deadlight",
     url: "https://pic.imgdb.cn/item/6624f0f90ea9cb14036f9b01.jpg",
   },
