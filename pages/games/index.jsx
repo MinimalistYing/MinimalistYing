@@ -82,6 +82,10 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "以闪亮之名",
+    url: "https://pic.imgdb.cn/item/6649d853d9c307b7e93dc3eb.jpg",
+  },
+  {
     title: "异界之上",
     url: "https://pic.imgdb.cn/item/6635af2d0ea9cb1403d0fa3a.jpg",
   },
