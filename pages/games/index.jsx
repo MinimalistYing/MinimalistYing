@@ -82,6 +82,14 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "仙剑奇侠传五",
+    url: "https://pic.imgdb.cn/item/66548a62d9c307b7e9a1d749.jpg",
+  },
+  {
+    title: "晶核",
+    url: "https://pic.imgdb.cn/item/6651ee1fd9c307b7e905f677.jpg",
+  },
+  {
     title: "以闪亮之名",
     url: "https://pic.imgdb.cn/item/6649d853d9c307b7e93dc3eb.jpg",
   },
