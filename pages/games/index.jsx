@@ -82,6 +82,10 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "影子武士",
+    url: "https://pic.imgdb.cn/item/666e8408d9c307b7e9da4369.jpg",
+  },
+  {
     title: "仙剑奇侠传五",
     url: "https://pic.imgdb.cn/item/66548a62d9c307b7e9a1d749.jpg",
   },
