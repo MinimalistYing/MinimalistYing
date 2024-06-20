@@ -82,6 +82,10 @@ function ImageCard({ image }) {
 
 const images = [
   {
+    title: "塔瑞斯世界",
+    url: "https://pic.imgdb.cn/item/6672e96ad9c307b7e908f1d9.webp",
+  },
+  {
     title: "影子武士",
     url: "https://pic.imgdb.cn/item/666e8408d9c307b7e9da4369.jpg",
   },
